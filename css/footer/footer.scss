@@ -1,0 +1,182 @@
+.footer {
+  padding: 20px 0;
+  * {
+    font-family: "Pragmatica";
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 117%;
+    letter-spacing: -1px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-left: 78px;
+    flex: 0 1 660px;
+    min-height: 362px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../images/cross.png") 0 0 / 15px 15px no-repeat,
+      url("../../images/cross.png") 0 100% / 15px 15px no-repeat,
+      url("../../images/cross.png") 100% 0 / 15px 15px no-repeat,
+      url("../../images/cross.png") 100% 100% / 15px 15px no-repeat;
+    @media (max-width: 1919px) {
+      flex: 0 0 460px;
+      margin-left: 65px;
+    }
+    @media (max-width: 1279px) {
+      flex: 0 0 390px;
+      margin-left: 65px;
+    }
+    @media (max-width: 1279px) {
+      flex: 0 0 270px;
+      margin-left: 30px;
+    }
+    @media (max-width: 639px) {
+      display: none;
+    }
+  }
+  &__main {
+    padding-left: 80px;
+    @media (max-width: 1919px) {
+      padding-left: 60px;
+    }
+    @media (max-width: 1279px) {
+      padding-left: 30px;
+      max-width: 290px;
+    }
+    @media (max-width: 639px) {
+      padding-left: 0;
+    }
+  }
+  &__top {
+    ul {
+      display: flex;
+      @media (max-width: 1279px) {
+        flex-wrap: wrap;
+      }
+      li {
+        &:first-child {
+          width: 360px;
+          @media (max-width: 1279px) {
+            margin-bottom: 16px;
+          }
+        }
+        a {
+          font-size: 34px;
+          line-height: 100%;
+          @media (max-width: 1279px) {
+            font-size: 30px;
+          }
+        }
+        @media (max-width: 1279px) {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+  &__menu {
+    a {
+      display: block;
+      padding: 3px 4px;
+      transition: all 0.3s ease 0s;
+      position: relative;
+      max-width: 290px;
+      margin-top: 3px;
+      @media (max-width: 1279px) {
+        font-size: 18px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 20px;
+        width: 15px;
+        height: 15px;
+        background-color: #f55f24;
+        transform: translate(0, -4px);
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+        border-radius: 50%;
+      }
+      &:hover {
+        background-color: #000000;
+        color: #ffffff;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__menu1 {
+    margin-top: 100px;
+    @media (max-width: 1279px) {
+      margin-top: 50px;
+    }
+    @media (max-width: 639px) {
+      margin-top: 30px;
+    }
+  }
+  &__menu2 {
+    margin-top: 44px;
+    @media (max-width: 1279px) {
+      margin-top: 50px;
+    }
+    @media (max-width: 639px){
+        margin-top: 30px;
+    }
+  }
+  &__bottom {
+    margin-top: 60px;
+    @media (max-width: 1279px) {
+      margin-top: 50px;
+    }
+    @media (max-width: 639px){
+        margin-top: 30px;
+    }
+    ul {
+      display: flex;
+      @media (max-width: 1919px) {
+        flex-wrap: wrap;
+      }
+      li {
+        a {
+
+          @media (max-width: 639px){
+            font-size: 18px;
+          }
+        }
+        &:first-child {
+          width: 360px;
+          @media (max-width: 1919px) {
+            flex: 1 1 100%;
+            margin-bottom: 9px;
+          }
+        }
+        &:last-child {
+          margin-left: 68px;
+          @media (max-width: 1279px) {
+            margin-left: 0;
+            margin-bottom: 0;
+          }
+        }
+        @media (max-width: 1279px) {
+          flex: 1 1 100%;
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+}
+.logo-footer {
+  &__inner {
+    width: 144px;
+    height: 52px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

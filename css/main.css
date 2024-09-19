@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+}
+.main {
+    flex: 1 1 auto;
+}
+.main * {
+    color: #212121;
+    font-family: "Pragmatica";
+}
+.container {
+    width: 1880px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    @media (max-width: 1279px){
+        padding: 0 10px;
+    }
+}
+.title-h2 {
+    font-family: "Literata";
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 120%;
+    color: #212121;
+    font-weight: 800;
+}
+@media (max-width: 1279px){
+    .title-h2 {
+        font-size: 50px;
+    }
+}
+@media (max-width: 639px){
+    .title-h2 {
+        font-size: 26px;
+    }
+}

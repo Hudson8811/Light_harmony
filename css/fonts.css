@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Gravitas One";
+    src: url('../fonts/GravitasOne/GravitasOne.eot');
+    src: local('GravitasOne'), local('../fonts/GravitasOne/GravitasOne'),
+        url('../fonts/GravitasOne/GravitasOne.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GravitasOne/GravitasOne.woff') format('woff'),
+        url('../fonts/GravitasOne/GravitasOne.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Literata";
+    src: url('../fonts/Literata_Bold/Literata_Bold.eot');
+    src: local('Literata_Bold'), local('../fonts/Literata_Bold/Literata_Bold'),
+        url('../fonts/Literata_Bold/Literata_Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Literata_Bold/Literata_Bold.woff') format('woff'),
+        url('../fonts/Literata_Bold/Literata_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Literata";
+    src: url('../fonts/Literata_ExtraBold/Literata_ExtraBold.eot');
+    src: local('Literata_ExtraBold'), local('../fonts/Literata_ExtraBold/Literata_ExtraBold'),
+        url('../fonts/Literata_ExtraBold/Literata_ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Literata_ExtraBold/Literata_ExtraBold.woff') format('woff'),
+        url('../fonts/Literata_ExtraBold/Literata_ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pragmatica";
+    src: url('../fonts/Pragmatica_Bold/Pragmatica_Bold.eot');
+    src: local('Pragmatica_Bold'), local('../fonts/Pragmatica_Bold/Pragmatica_Bold'),
+        url('../fonts/Pragmatica_Bold/Pragmatica_Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pragmatica_Bold/Pragmatica_Bold.woff') format('woff'),
+        url('../fonts/Pragmatica_Bold/Pragmatica_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pragmatica";
+    src: url('../fonts/Pragmatica_Book/Pragmatica_Book.eot');
+    src: local('Pragmatica_Book'), local('../fonts/Pragmatica_Book/Pragmatica_Book'),
+        url('../fonts/Pragmatica_Book/Pragmatica_Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pragmatica_Book/Pragmatica_Book.woff') format('woff'),
+        url('../fonts/Pragmatica_Book/Pragmatica_Book.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pragmatica";
+    src: url('../fonts/Pragmatica_Light/Pragmatica_Light.eot');
+    src: local('Pragmatica_Light'), local('../fonts/Pragmatica_Light/Pragmatica_Light'),
+        url('../fonts/Pragmatica_Light/Pragmatica_Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pragmatica_Light/Pragmatica_Light.woff') format('woff'),
+        url('../fonts/Pragmatica_Light/Pragmatica_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pragmatica";
+    src: url('../fonts/Pragmatica_Medium/Pragmatica_Medium.eot');
+    src: local('Pragmatica_Medium'), local('../fonts/Pragmatica_Medium/Pragmatica_Medium'),
+        url('../fonts/Pragmatica_Medium/Pragmatica_Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pragmatica_Medium/Pragmatica_Medium.woff') format('woff'),
+        url('../fonts/Pragmatica_Medium/Pragmatica_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
