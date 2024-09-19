@@ -106,11 +106,11 @@
   }
 }
 .list-projects__name.hovered .list-projects__title a {
-  color: #ff5722;
+  color: var(--orange-theme);
 }
 @media (max-width: 1279px) {
   .list-projects__name.hovered .list-projects__title a {
-    color: #212121;
+    color: var(--light-theme-dark-text);
   }
 }
 .list-projects__name.hovered + .list-projects__image {
@@ -124,7 +124,7 @@
 .list-projects__title a {
   position: relative;
   transition: all 0.3s ease 0s;
-  color: #212121;
+  color: var(--light-theme-dark-text);
   font-weight: 300;
   font-size: 32px;
 }
@@ -146,19 +146,19 @@
   left: 60%;
   width: 15px;
   height: 15px;
-  background-color: #f55f24;
+  background-color: var(--orange-theme);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
 .list-projects__title a:hover {
-  color: #f55f24;
+  color: var(--orange-theme);
 }
 .list-projects__title a:hover::before {
   opacity: 1;
 }
 .list-projects__subtitle {
-  color: #818181;
+  color: var(--light-theme-light-text);
   font-size: 21px;
   font-weight: 300;
   line-height: 117%;
@@ -182,9 +182,9 @@
   font-weight: 300;
 }
 .list-projects__inprocess {
-  color: #a8a8a8;
+  color: var(--light-theme-progress-text);
   padding: 5px 12px;
-  border: 1px solid #a8a8a8;
+  border: 1px solid var(--light-theme-progress-border);
   margin-left: 15px;
   font-weight: 300;
 }
@@ -207,7 +207,7 @@
   margin-left: 820px;
   padding-left: 50px;
   font-size: 21px;
-  color: #818181;
+  color: var(--light-theme-light-text);
   display: block;
   font-weight: 300;
 }
@@ -229,7 +229,7 @@
   left: 0;
   width: 24px;
   height: 24px;
-  background-color: #1b1b1b;
+  background-color: var(--light-theme-dark-text);
   transform: translate(0, -50%);
 }
 @media (max-width: 639px) {

@@ -1,39 +1,82 @@
+:root {
+    /*фон страницы в светлой теме*/
+    --light-theme-bg: rgba(226, 226, 226, 1);
+    /*тёмный текст светлой темы*/
+    --light-theme-dark-text: rgba(33, 33, 33, 1);
+    /*светлый текст светлой темы*/
+    --light-theme-light-text: rgba(129, 129, 129, 1);
+    /*тёмные фоны в светлой теме*/
+    --light-theme-dark-grey: rgba(85, 85, 85, 1);
+    /*серые фоны в светлой теме*/
+    --light-theme-grey-bg: rgba(201, 201, 201, 1);
+    /*фоны полей в форме*/
+    --light-theme-form: rgba(217, 217, 217, 1);
+    /*квадраты в баннерах на главной*/
+    --light-theme-banner: rgba(27, 27, 27, 1);
+    /*проект в работе (текст)*/
+    --light-theme-progress-text: rgba(139, 139, 139, 1);
+    /*проект в работе (бордер)*/
+    --light-theme-progress-border: rgba(168, 168, 168, 1);
+
+    /*оранжевые элементы*/
+    --orange-theme: rgba(245, 95, 36, 1);
+
+    /*фон страницы в тёмной теме*/
+    --dark-theme-bg: rgba(33, 33, 33, 1);
+    /*тёмный фон в тёмной теме*/
+    --dark-theme-dark-bg: rgba(78, 78, 78, 1);
+    /*текст в тёмной теме*/
+    --dark-theme-light-text: rgba(219, 219, 219, 1);
+
+}
+
+body {
+    background-color: var(--light-theme-bg);
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100%;
     position: relative;
 }
+
 .main {
     flex: 1 1 auto;
 }
+
 .main * {
-    color: #212121;
+    color: var(--light-theme-dark-text);
     font-family: "Pragmatica";
 }
+
 .container {
     width: 1880px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-    @media (max-width: 1279px){
+
+    @media (max-width: 1279px) {
         padding: 0 10px;
     }
 }
+
 .title-h2 {
     font-family: "Literata";
     font-weight: 800;
     font-size: 64px;
     line-height: 120%;
-    color: #212121;
+    color: var(--light-theme-dark-text);
     font-weight: 800;
 }
-@media (max-width: 1279px){
+
+@media (max-width: 1279px) {
     .title-h2 {
         font-size: 50px;
     }
 }
-@media (max-width: 639px){
+
+@media (max-width: 639px) {
     .title-h2 {
         font-size: 26px;
     }

@@ -78,8 +78,8 @@
   display: grid;
 }
 .swiper-suppliers__icon {
-  background-color: #e2e2e2;
-  border: 1px solid #c9c9c9;
+  background-color: var(--light-theme-bg);
+  border: 1px solid var(--light-theme-grey-bg);
   display: flex;
   justify-content: center;
   align-items: center;

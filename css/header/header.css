@@ -61,7 +61,7 @@
 .header__options-btn {
   min-width: 30px;
   min-height: 30px;
-  background-color: #c9c9c9;
+  background-color: var(--light-theme-grey-bg);
   position: relative;
   display: flex;
   justify-content: center;
@@ -72,7 +72,7 @@
   .header__options-btn {
     width: 30px;
     height: 30px;
-    background-color: #e2e2e2;
+    background-color: var(--light-theme-grey-bg);
     display: none;
   }
 }
@@ -85,7 +85,7 @@
   position: relative;
   margin-left: 20px;
   min-height: 30px;
-  background-color: #c9c9c9;
+  background-color: var(--light-theme-grey-bg);
 }
 .header__search-input {
   width: 100%;
@@ -120,7 +120,7 @@
 }
 .header__lang .dropdown__btn {
   cursor: pointer;
-  background-color: #c9c9c9;
+  background-color: var(--light-theme-grey-bg);
   width: 33px;
   height: 32px;
   display: flex;
@@ -150,15 +150,15 @@
   }
   .header__lang .dropdown__menu-mobile.dropdown__menu .dropdown__btn {
     display: flex;
-    background-color: #e2e2e2;
-    color: #555555;
+    background-color: var(--light-theme-bg);
+    color: var(--light-theme-dark-grey);
     font-size: 15px;
     width: 30px;
     height: 30px;
   }
   .header__lang .dropdown__menu-mobile.dropdown__menu .dropdown__btn.active {
-    background-color: #555555;
-    color: #e2e2e2;
+    background-color: var(--light-theme-dark-grey);
+    color: var(--light-theme-bg);
   }
 }
 @media (max-width: 1279px) {
@@ -189,13 +189,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #c9c9c9;
+    background-color: var(--light-theme-grey-bg);
   }
   .burder-header span {
     display: block;
     width: 22px;
     height: 1px;
-    background-color: #555555;
+    background-color: var(--light-theme-dark-grey);
     margin-top: 4px;
     transition: all 0.3s ease 0s;
     top: 0;
@@ -230,7 +230,7 @@
     top: 85px;
     right: 130%;
     flex-direction: column;
-    background-color: #c9c9c9;
+    background-color: var(--light-theme-grey-bg);
     width: 300px;
     height: 500px;
     transition: all 0.3s ease 0s;
@@ -283,7 +283,7 @@
   cursor: pointer;
 }
 .menu__dropdown .dropdown__menu {
-  background-color: #c9c9c9;
+  background-color: var(--light-theme-grey-bg);
   padding: 20px;
 }
 .menu__dropdown .dropdown__menu > li {
@@ -319,7 +319,7 @@
   }
 }
 .lang__dropdown {
-  color: #555555;
+  color: var(--light-theme-dark-grey);
 }
 
 .dropdown {

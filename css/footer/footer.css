@@ -113,15 +113,15 @@
   right: 20px;
   width: 15px;
   height: 15px;
-  background-color: #f55f24;
+  background-color: var(--orange-theme);
   transform: translate(0, -4px);
   opacity: 0;
   transition: all 0.3s ease 0s;
   border-radius: 50%;
 }
 .footer__menu a:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--light-theme-dark-text);
+  color: var(--light-theme-dark-text);
 }
 .footer__menu a:hover::before {
   opacity: 1;

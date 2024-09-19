@@ -58,7 +58,7 @@
   left: 0;
   width: 24px;
   height: 24px;
-  background-color: #1b1b1b;
+  background-color: var(--light-theme-banner);
   transform: translate(0, -50%);
 }
 @media (max-width: 639px) {
@@ -70,7 +70,7 @@
 .item-banners__title a {
   position: relative;
   transition: all 0.3s ease 0s;
-  color: #212121;
+  color: var(--light-theme-dark-text);
   font-weight: 300;
   font-size: 32px;
 }
@@ -92,19 +92,19 @@
   left: 60%;
   width: 15px;
   height: 15px;
-  background-color: #f55f24;
+  background-color: var(--orange-theme);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
 .item-banners__title a:hover {
-  color: #f55f24;
+  color: var(--orange-theme);
 }
 .item-banners__title a:hover::before {
   opacity: 1;
 }
 .item-banners__subtitle {
-  color: #818181;
+  color: var(--light-theme-light-text);
   font-size: 21px;
   font-weight: 300;
   line-height: 117%;

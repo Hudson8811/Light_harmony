@@ -112,7 +112,7 @@
   right: 300px;
   width: 69px;
   height: 69px;
-  border: 1px solid #f55f24;
+  border: 1px solid var(--orange-theme);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -126,7 +126,7 @@
 }
 .intro__point::before {
   content: "";
-  background-color: #f55f24;
+  background-color: var(--orange-theme);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -154,7 +154,7 @@
   margin-left: 50px;
   font-size: 14px;
   font-weight: 300;
-  color: #818181;
+  color: var(--light-theme-light-text);
 }
 .intro__socials a:first-child {
   margin-left: 0;

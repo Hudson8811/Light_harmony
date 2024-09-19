@@ -6,8 +6,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #E2E2E2;
+    background-color: var(--light-theme-bg);
     animation: preloader 2s 1.7s ease forwards;
+
     &__anim {
         position: absolute;
         bottom: 50%;
@@ -16,40 +17,46 @@
         width: 270px;
         height: 270px;
         background: url("../../images/cross.png") 0 0 / 15px 15px no-repeat,
-        url("../../images/cross.png") 0 100% / 15px 15px no-repeat,
-        url("../../images/cross.png") 100% 0 / 15px 15px no-repeat,
-        url("../../images/cross.png") 100% 100% / 15px 15px no-repeat; 
+            url("../../images/cross.png") 0 100% / 15px 15px no-repeat,
+            url("../../images/cross.png") 100% 0 / 15px 15px no-repeat,
+            url("../../images/cross.png") 100% 100% / 15px 15px no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
         animation: preloader__anim 1.5s 3s ease forwards;
     }
+
     &__squares {
         width: 66px;
         height: 66px;
-        background-color: #C9C9C9;
+        background-color: var(--light-theme-grey-bg);
         display: flex;
         flex-wrap: wrap;
         animation: preloader__squares 1s 2.2s ease forwards;
     }
 }
+
 .squares-anim {
     &__square {
-        background-color: #212121;
+        background-color: var(--light-theme-dark-text);
         flex: 0 1 50%;
     }
+
     &__square1 {
         opacity: 0;
         animation: square1 0.6s 0s ease forwards infinite;
     }
+
     &__square2 {
         opacity: 0;
         animation: square2 0.6s 0.3s ease forwards infinite;
     }
+
     &__square4 {
         opacity: 0;
         animation: square3 0.6s 0.6s ease forwards infinite;
     }
+
     &__square3 {
         opacity: 0;
         animation: square4 0.6s 0.9s ease forwards infinite;
@@ -60,54 +67,69 @@
     25% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
+
     75% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 @keyframes square2 {
     25% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
+
     75% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
 }
+
 @keyframes square3 {
     25% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     75% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
 }
+
 @keyframes square4 {
     25% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     75% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
@@ -117,41 +139,48 @@
     0% {
         opacity: 1;
     }
+
     75% {
         opacity: 1;
     }
+
     99% {
         opacity: 0;
         z-index: 10;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
         z-index: -1;
     }
 }
+
 @keyframes preloader__anim {
     0% {
         width: 270px;
         height: 270px;
         bottom: 50%;
-        transform: translate(-50%, 50%);     
+        transform: translate(-50%, 50%);
     }
-    20% {
-    }
+
+    20% {}
+
     40% {
         width: 470px;
         height: 800px;
     }
+
     60% {
         bottom: 55px;
-        transform: translate(-50%, 0%);     
+        transform: translate(-50%, 0%);
     }
+
     100% {
         width: 470px;
         height: 800px;
         bottom: 55px;
-        transform: translate(-50%, 0%);     
+        transform: translate(-50%, 0%);
     }
 }
 
@@ -159,6 +188,7 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
