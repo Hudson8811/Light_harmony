@@ -3,7 +3,7 @@
 
   * {
     font-family: "Pragmatica";
-    font-weight: 400;
+    font-weight: 300;
     font-size: 21px;
     line-height: 117%;
     letter-spacing: -1px;
@@ -16,7 +16,7 @@
 
   &__logo {
     margin-left: 78px;
-    flex: 0 1 660px;
+    flex: 0 1 585px;
     min-height: 362px;
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@
   }
 
   &__main {
-    padding-left: 80px;
+    padding-left: 90px;
 
     @media (max-width: 1919px) {
       padding-left: 60px;
@@ -74,13 +74,14 @@
       li {
         &:first-child {
           width: 360px;
-
+          
           @media (max-width: 1279px) {
             margin-bottom: 16px;
           }
         }
-
+        
         a {
+          font-weight: 400;
           font-size: 34px;
           line-height: 100%;
 
@@ -125,7 +126,7 @@
 
       &:hover {
         background-color: var(--light-theme-dark-text);
-        color: var(--light-theme-dark-text);
+        color: var(--light-theme-form);
 
         &::before {
           opacity: 1;

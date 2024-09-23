@@ -21,13 +21,15 @@
     /*оранжевые элементы*/
     --orange-theme: rgba(245, 95, 36, 1);
 
+    /*красные элементы*/
+    --red-theme: rgba(235, 35, 5, 1);
+
     /*фон страницы в тёмной теме*/
     --dark-theme-bg: rgba(33, 33, 33, 1);
     /*тёмный фон в тёмной теме*/
     --dark-theme-dark-bg: rgba(78, 78, 78, 1);
     /*текст в тёмной теме*/
     --dark-theme-light-text: rgba(219, 219, 219, 1);
-
 }
 
 body {
@@ -51,13 +53,37 @@ body {
 }
 
 .container {
-    width: 1880px;
+    width: 1920px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 
     @media (max-width: 1279px) {
         padding: 0 10px;
+    }
+}
+
+.title-h1 {
+    font-family: "Literata";
+    font-weight: 800;
+    font-size: 104px;
+    line-height: 120%;
+    color: var(--light-theme-dark-text);
+    font-weight: 800;
+}
+@media (max-width: 1919px) {
+    .title-h1 {
+        font-size: 80px;
+    }
+}
+@media (max-width: 1279px) {
+    .title-h1 {
+        font-size: 50px;
+    }
+}
+@media (max-width: 639px) {
+    .title-h1 {
+        font-size: 26px;
     }
 }
 
@@ -69,15 +95,58 @@ body {
     color: var(--light-theme-dark-text);
     font-weight: 800;
 }
-
 @media (max-width: 1279px) {
     .title-h2 {
         font-size: 50px;
     }
 }
-
 @media (max-width: 639px) {
     .title-h2 {
         font-size: 26px;
     }
+}
+
+
+.internal-page {
+    padding-top: 180px;
+    padding-bottom: 180px;
+}
+@media (max-width: 1279px) {
+    .internal-page {
+        padding-top: 145px;
+        padding-bottom: 145px;
+    }
+}
+@media (max-width: 639px) {
+    .internal-page {
+        padding-top: 115px;
+        padding-bottom: 115px;
+    }
+}
+
+
+.follow {
+    border-radius: 50%;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+@media (max-width: 992px) {
+    .follow {
+        display: none;
+    }
+}
+.follow-big {
+    width: 69px;
+    height: 69px;
+    border: 1px solid var(--orange-theme);
+    transition: all 0.15s ease 0s;
+}
+.follow-small {
+    width: 15px;
+    height: 15px;
+    background-color: var(--orange-theme);
+    transition: all 0.1s ease 0s;
 }

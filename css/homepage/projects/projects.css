@@ -1,5 +1,5 @@
 .projects {
-  margin-top: 140px;
+  margin-top: 125px;
 }
 @media (max-width: 639px) {
   .projects {
@@ -7,8 +7,8 @@
   }
 }
 .projects__title {
-  margin-left: 820px;
-  margin-bottom: 100px;
+  margin-left: 760px;
+  margin-bottom: 90px;
 }
 @media (max-width: 1919px) {
   .projects__title {
@@ -38,7 +38,7 @@
   position: relative;
   margin-bottom: 20px;
   transition: color 0.3s;
-  padding-left: 820px;
+  padding-left: 760px;
 }
 @media (max-width: 1919px) {
   .list-projects li {
@@ -204,7 +204,7 @@
 .list-projects__more-btn {
   position: relative;
   margin-top: 50px;
-  margin-left: 820px;
+  margin-left: 760px;
   padding-left: 50px;
   font-size: 21px;
   color: var(--light-theme-light-text);

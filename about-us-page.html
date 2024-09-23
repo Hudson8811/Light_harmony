@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Harmony</title>
+
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header/header.css" />
+    <link rel="stylesheet" href="css/footer/footer.css" />
+    <link rel="stylesheet" href="css/preloader/preloader.css" />
+    <link rel="stylesheet" href="css/options/options.css" />
+
+    <link rel="stylesheet" href="css/about-us-page/about-us-page-title.css" />
+  </head>
+
+  <body>
+    <div id="followBig" class="follow follow-big"></div>
+    <div id="followSmall" class="follow follow-small"></div>
+    <div class="preloader">
+      <div class="preloader__anim">
+        <div id="squaresAnim" class="preloader__squares squares-anim">
+          <div class="squares-anim__square squares-anim__square1"></div>
+          <div class="squares-anim__square squares-anim__square2"></div>
+          <div class="squares-anim__square squares-anim__square3"></div>
+          <div class="squares-anim__square squares-anim__square4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div id="headerOptions" class="header__options options-header">
+          <div class="options-header__row">
+            <div class="settings">
+              <div class="setting">
+                <label for="darkMode">Тёмный режим</label>
+                <input type="checkbox" id="darkMode" class="toggle" />
+              </div>
+              <div class="setting">
+                <label for="orangeTheme">Оранжевая тема</label>
+                <input type="checkbox" id="orangeTheme" class="toggle" />
+              </div>
+              <div class="setting">
+                <label for="animation">Анимация</label>
+                <input type="checkbox" id="animation" class="toggle" checked />
+              </div>
+            </div>
+            <div class="sliders">
+              <div class="slider">
+                <label for="generalLight">Общий свет</label>
+                <input
+                  type="range"
+                  id="generalLight"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider-range"
+                />
+              </div>
+              <div class="slider">
+                <label for="accentLight">Акцентный свет</label>
+                <input
+                  type="range"
+                  id="accentLight"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider-range"
+                />
+              </div>
+              <div class="slider">
+                <label for="fontBrightness">Яркость шрифтов</label>
+                <input
+                  type="range"
+                  id="fontBrightness"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider-range"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__container container">
+          <div class="header__logo">
+            <div class="header__logo-inner">
+              <a href="#"><img src="images/logo.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="header__btns">
+            <div id="headerOptionsBtn1" class="header__options-btn">
+              <img src="images/options.png" alt="" />
+            </div>
+            <div class="header__search">
+              <input
+                class="header__search-input"
+                type="text"
+                placeholder="Новости"
+              />
+              <div class="header__search-btn">
+                <img src="images/arrow.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <nav class="header__nav">
+            <div id="burderHeader" class="header__burger burder-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div id="menu" class="header__menu menu">
+              <ul class="menu__list">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li class="menu__dropdown dropdown">
+                  <a class="dropdown__btn">Услуги</a>
+                  <ul class="dropdown__menu">
+                    <li><a href="#">Светодизайн</a></li>
+                    <li><a href="#">Проектирование</a></li>
+                    <li><a href="#">Поставка</a></li>
+                    <li><a href="#">Сопровождение</a></li>
+                    <li><a href="#">Консалтинг</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <div class="header__bottom-mob">
+                <div class="header__lang lang">
+                  <div class="lang__dropdown dropdown">
+                    <div class="dropdown__btn">ru</div>
+                    <ul class="dropdown__menu">
+                      <li class="dropdown__btn"><a href="#">en</a></li>
+                    </ul>
+                    <ul class="dropdown__menu-mobile dropdown__menu">
+                      <li class="dropdown__btn active"><a href="#">ru</a></li>
+                      <li class="dropdown__btn"><a href="#">en</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="headerOptionsBtn2" class="header__options-btn">
+                  <img src="images/options.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="main about-us-page internal-page">
+        <div class="about-us-page__container container">
+          <section class="about-us-page__title">
+            <h1 class="title-h1">
+              Реализуем светотехнические проекты с 2001 года
+            </h1>
+          </section>
+          <section class="sec1-about-us-page">
+            <div class="sec1-about-us-page__first-row sec1-about-us-page__row">
+              <div class="sec1-about-us-page__left">
+                <p>О компании</p>
+              </div>
+              <div class="sec1-about-us-page__right">
+                <p class="sec1-about-us-page__right-bigger-paragraph">
+                  В нашей компании мы убеждены, что свет - нечто гораздо
+                  большее, чем просто светильники. Он создает атмосферу, в
+                  которой вы живете, трудитесь, творите и отдыхаете. Работая над
+                  проектами домов, офисов, музеев, парков или ресторанов, мы
+                  стремимся наполнить их жизнью. Наша цель - превратить каждое
+                  из этих пространств в источник вдохновения, комфорта и эмоций.
+                </p>
+                <div class="sec1-about-us-page__row-inner">
+                  <p></p>
+                  <p>
+                    Благодаря более чем 20-ти летнему опыту и профессиональной
+                    команде мы можем предложить полный спектр услуг, начиная от
+                    консультаций и проектирования, заканчивая поставкой
+                    оборудования и сопровождением проекта на всех его этапах.
+                  </p>
+                  <p>
+                    Наши инженеры и дизайнеры тщательно прорабатывают каждую
+                    деталь, чтобы обеспечить идеальное сочетание
+                    функциональности и эстетики, основываясь не только на знании
+                    современных технологий, но и на глубоком понимании философии
+                    света.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="sec1-about-us-page__second-row sec1-about-us-page__row">
+              <div class="sec1-about-us-page__left">
+                <p>Принципы</p>
+              </div>
+              <div class="sec1-about-us-page__right">
+                <div class="sec1-about-us-page__row-inner">
+                  <p class="sec1-about-us-page__point">Опираться на опыт</p>
+                  <p>
+                    Компания существует с 2001 года. За годы работы компания
+                    накопила огромный опыт в области реализации проектов любого
+                    направления и сложности.
+                  </p>
+                  <p></p>
+                </div>
+                <div class="sec1-about-us-page__row-inner">
+                  <p class="sec1-about-us-page__point">Лучшее здесь и сейчас</p>
+                  <p>
+                    Для любой сложной задачи мы выбираем лучшее решение,
+                    основываясь на широком спектре технологий и партнеров,
+                    доступных только профессионалам.
+                  </p>
+                  <p></p>
+                </div>
+                <div class="sec1-about-us-page__row-inner">
+                  <p class="sec1-about-us-page__point">Учиться новому</p>
+                  <p>
+                    Мы никогда не останавливаемся на достигнутом. Находимся в
+                    постоянном процессе обучения новым технологиям, тенденциям в
+                    области освещения, открываем новых партнеров по всему миру.
+                  </p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="sec1-about-us-page__third-row sec1-about-us-page__row">
+              <div class="sec1-about-us-page__left">
+                <span>Команда</span>
+                <span class="sec1-about-us-page__left-big-text">35 чел.</span>
+              </div>
+              <div class="sec1-about-us-page__right">
+                <div class="sec1-about-us-page__row-inner">
+                  <p></p>
+                  <p class="sec1-about-us-page__row-with-text">
+                    <span>Работаем с</span>
+                    <span class="sec1-about-us-page__left-big-text"
+                      >2001 г.</span
+                    >
+                  </p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="about-us-page__big-image">
+            <img src="images/about-us-page/1.jpg" alt="" />
+          </section>
+          <section class="about-us-page__director director-about-us-page">
+            <div class="director-about-us-page__title">Руководитель</div>
+            <div class="director-about-us-page__row">
+              <div class="director-about-us-page__left">
+                <div class="director-about-us-page__image">
+                  <img src="images/about-us-page/director.png" alt="" />
+                </div>
+              </div>
+              <div class="director-about-us-page__right">
+                <div class="director-about-us-page__quote">
+                  Каждый проект для нас означает создание качества для других,
+                  как для себя, потому что в проекте для нас важна каждая деталь
+                  освещения, которая позволяет нам фокусироваться на усилении
+                  эмоционального воздействия света.
+                </div>
+                <div class="director-about-us-page__name">
+                  Директор по развитию
+                  <br />
+                  Загайная Елена
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="about-us-page__last last-about-us-page">
+            <h2
+              class="last-about-us-page__title last-about-us-page__title--top title-h2"
+            >
+              Наша миссия - создавать Гармонию Света в пространстве
+            </h2>
+            <div class="last-about-us-page__content">
+              <div class="last-about-us-page__left">
+                <span>Направления деятельности</span>
+              </div>
+              <div class="last-about-us-page__right">
+                <div class="last-about-us-page__row">
+                  <div class="last-about-us-page__item item-last-about-us-page">
+                    <div class="item-last-about-us-page__title">
+                      Светодизайн
+                    </div>
+                    <div class="item-last-about-us-page__text">
+                      <div class="item-last-about-us-page__el"></div>
+                      Мы создаем уникальные световые решения, которые сочетают в
+                      себе эстетику и функциональность. Наш подход заключается в
+                      том, чтобы подчеркнуть архитектурные особенности объектов
+                      с помощью индивидуально разработанных световых сценариев,
+                      делая каждое пространство уникальным и запоминающимся.
+                    </div>
+                  </div>
+                  <div class="last-about-us-page__item item-last-about-us-page">
+                    <div class="item-last-about-us-page__title">
+                      Проектирование
+                    </div>
+                    <div class="item-last-about-us-page__text">
+                      <div class="item-last-about-us-page__el"></div>
+                      Наши инженеры тщательно продумывают каждую деталь,
+                      обеспечивая идеальное сочетание функциональности и
+                      эстетики. Мы применяем передовые технологии и следуем
+                      актуальным нормам и стандартам, обеспечивая высокое
+                      качество и точность во всех технических решениях.
+                    </div>
+                  </div>
+                  <div class="last-about-us-page__item item-last-about-us-page">
+                    <div class="item-last-about-us-page__title">Поставка</div>
+                    <div class="item-last-about-us-page__text">
+                      <div class="item-last-about-us-page__el"></div>
+                      Мы предлагаем комплексные поставки оборудования и
+                      материалов необходимых для реализации проектов любой
+                      сложности. Благодаря сотрудничеству с ведущими
+                      производителями светотехнического оборудования, мы
+                      обеспечиваем оптимальные сроки и выгодные условия для
+                      каждого клиента.
+                    </div>
+                  </div>
+                  <div class="last-about-us-page__item item-last-about-us-page">
+                    <div class="item-last-about-us-page__title">
+                      Сопровождение
+                    </div>
+                    <div class="item-last-about-us-page__text">
+                      <div class="item-last-about-us-page__el"></div>
+                      Наши услуги включают полное сопровождение проекта на всех
+                      этапах его реализации. Мы контролируем ход выполнения
+                      работ, координируем действия всех участников проекта и
+                      обеспечиваем соблюдение всех технических требований,
+                      помогаем в решении возникающих в процессе реализации
+                      вопросов.
+                    </div>
+                  </div>
+                  <div class="last-about-us-page__item item-last-about-us-page">
+                    <div class="item-last-about-us-page__title">Консалтинг</div>
+                    <div class="item-last-about-us-page__text">
+                      <div class="item-last-about-us-page__el"></div>
+                      Мы предоставляем профессиональные консультационные услуги
+                      по оптимизации проектных решений, выбору оборудования и
+                      материалов, а также помогаем адаптировать проекты к
+                      изменяющимся регуляторным и экономическим условиям рынка.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2
+              class="last-about-us-page__title last-about-us-page__title--bottom title-h2"
+            >
+              Для любой сложной задачи мы выбираем лучшее решение
+            </h2>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__logo logo-footer">
+            <div class="logo-footer__inner">
+              <img src="images/logo.png" alt="" />
+            </div>
+          </div>
+          <div class="footer__main">
+            <div class="footer__top">
+              <ul>
+                <li>
+                  <a href=""> info@lharmony.ru </a>
+                </li>
+                <li>
+                  <a href=""> +7(495) 660-0475 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu footer__menu1">
+              <ul>
+                <li>
+                  <a href="">О нас</a>
+                </li>
+                <li>
+                  <a href="">Проекты</a>
+                </li>
+                <li>
+                  <a href="">Услуги</a>
+                </li>
+                <li>
+                  <a href="">Новости</a>
+                </li>
+                <li>
+                  <a href="">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu footer__menu2">
+              <ul>
+                <li>
+                  <a href="">Светодизайн</a>
+                </li>
+                <li>
+                  <a href="">Проектирование</a>
+                </li>
+                <li>
+                  <a href="">Поставка</a>
+                </li>
+                <li>
+                  <a href="">Сопровождение</a>
+                </li>
+                <li>
+                  <a href="">Консалтинг</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__bottom">
+              <ul>
+                <li><a href="">© LightHarmony 2001-2024 </a></li>
+                <li><a href="">Политика конфиденциальности</a></li>
+                <li><a href="">Разработано в Bofer.ru</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src="js/options.js"></script>
+    <script src="js/cursor.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

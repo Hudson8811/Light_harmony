@@ -3,7 +3,7 @@
 }
 .footer * {
   font-family: "Pragmatica";
-  font-weight: 400;
+  font-weight: 300;
   font-size: 21px;
   line-height: 117%;
   letter-spacing: -1px;
@@ -14,7 +14,7 @@
 }
 .footer__logo {
   margin-left: 78px;
-  flex: 0 1 660px;
+  flex: 0 1 585px;
   min-height: 362px;
   display: flex;
   justify-content: center;
@@ -45,7 +45,7 @@
   }
 }
 .footer__main {
-  padding-left: 80px;
+  padding-left: 90px;
 }
 @media (max-width: 1919px) {
   .footer__main {
@@ -80,6 +80,7 @@
   }
 }
 .footer__top ul li a {
+  font-weight: 400;
   font-size: 34px;
   line-height: 100%;
 }
@@ -121,7 +122,7 @@
 }
 .footer__menu a:hover {
   background-color: var(--light-theme-dark-text);
-  color: var(--light-theme-dark-text);
+  color: var(--light-theme-form);
 }
 .footer__menu a:hover::before {
   opacity: 1;
