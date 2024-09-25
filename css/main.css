@@ -126,6 +126,7 @@ body {
 
 
 .follow {
+    /* display: none; */
     border-radius: 50%;
     position: absolute;
     z-index: 99;

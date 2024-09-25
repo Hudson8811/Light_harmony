@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Harmony</title>
+
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header/header.css" />
+    <link rel="stylesheet" href="css/footer/footer.css" />
+    <link rel="stylesheet" href="css/preloader/preloader.css" />
+    <link rel="stylesheet" href="css/options/options.css" />
+
+    <link rel="stylesheet" href="css/project-page/project-page.css" />
+  </head>
+
+  <body>
+    <div id="followBig" class="follow follow-big"></div>
+    <div id="followSmall" class="follow follow-small"></div>
+    <div class="preloader">
+      <div class="preloader__anim">
+        <div id="squaresAnim" class="preloader__squares squares-anim">
+          <div class="squares-anim__square squares-anim__square1"></div>
+          <div class="squares-anim__square squares-anim__square2"></div>
+          <div class="squares-anim__square squares-anim__square3"></div>
+          <div class="squares-anim__square squares-anim__square4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div id="headerOptions" class="header__options options-header">
+          <div class="options-header__row">
+            <div class="settings">
+              <div class="setting">
+                <label for="darkMode">Тёмный режим</label>
+                <input type="checkbox" id="darkMode" class="toggle" />
+              </div>
+              <div class="setting">
+                <label for="orangeTheme">Оранжевая тема</label>
+                <input type="checkbox" id="orangeTheme" class="toggle" />
+              </div>
+              <div class="setting">
+                <label for="animation">Анимация</label>
+                <input type="checkbox" id="animation" class="toggle" checked />
+              </div>
+            </div>
+            <div class="sliders">
+              <div class="slider">
+                <label for="generalLight">Общий свет</label>
+                <input
+                  type="range"
+                  id="generalLight"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider-range"
+                />
+              </div>
+              <div class="slider">
+                <label for="accentLight">Акцентный свет</label>
+                <input
+                  type="range"
+                  id="accentLight"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider-range"
+                />
+              </div>
+              <div class="slider">
+                <label for="fontBrightness">Яркость шрифтов</label>
+                <input
+                  type="range"
+                  id="fontBrightness"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider-range"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__container container">
+          <div class="header__logo">
+            <div class="header__logo-inner">
+              <a href="#"><img src="images/logo.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="header__btns">
+            <div id="headerOptionsBtn1" class="header__options-btn">
+              <img src="images/options.png" alt="" />
+            </div>
+            <div class="header__search">
+              <input
+                class="header__search-input"
+                type="text"
+                placeholder="Новости"
+              />
+              <div class="header__search-btn">
+                <img src="images/arrow.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <nav class="header__nav">
+            <div id="burderHeader" class="header__burger burder-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div id="menu" class="header__menu menu">
+              <ul class="menu__list">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li class="menu__dropdown dropdown">
+                  <a class="dropdown__btn">Услуги</a>
+                  <ul class="dropdown__menu">
+                    <li><a href="#">Светодизайн</a></li>
+                    <li><a href="#">Проектирование</a></li>
+                    <li><a href="#">Поставка</a></li>
+                    <li><a href="#">Сопровождение</a></li>
+                    <li><a href="#">Консалтинг</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <div class="header__bottom-mob">
+                <div class="header__lang lang">
+                  <div class="lang__dropdown dropdown">
+                    <div class="dropdown__btn">ru</div>
+                    <ul class="dropdown__menu">
+                      <li class="dropdown__btn"><a href="#">en</a></li>
+                    </ul>
+                    <ul class="dropdown__menu-mobile dropdown__menu">
+                      <li class="dropdown__btn active"><a href="#">ru</a></li>
+                      <li class="dropdown__btn"><a href="#">en</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="headerOptionsBtn2" class="header__options-btn">
+                  <img src="images/options.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="main project-page internal-page">
+        <div class="project-page__container container">
+          <div class="project-page__header header-project-page">
+            <h1 class="project-page__title title-h1">
+              Музей истории «Океанрыбфлота» на Камчатке
+            </h1>
+            <span>Музеи и галереи</span>
+          </div>
+          <div class="project-page__block1">
+            <div class="project-page__row">
+              <div class="project-page__date">
+                <span>2021 - 2024</span>
+              </div>
+              <div class="project-page__info">
+                <div class="project-page__info-item">
+                  <div class="project-page__info-title">Локация:</div>
+                  <ul class="project-page__info-list">
+                    <li class="project-page__info-point">
+                      Петропавловск-Камчатский, Россия
+                    </li>
+                  </ul>
+                </div>
+                <div class="project-page__info-item">
+                  <div class="project-page__info-title">Архитекторы:</div>
+                  <ul class="project-page__info-list">
+                    <li class="project-page__info-point">
+                      Gikalo Kuptsov Architects
+                    </li>
+                    <li class="project-page__info-point">Gikalo</li>
+                    <li class="project-page__info-point">Gikalo</li>
+                  </ul>
+                </div>
+                <div class="project-page__info-item">
+                  <div class="project-page__info-title">Оборудование:</div>
+                  <ul class="project-page__info-list">
+                    <li class="project-page__info-point">Aled­o</li>
+                    <li class="project-page__info-point">Intiled</li>
+                    <li class="project-page__info-point">Vitrulux </li>
+                    <li class="project-page__info-point">Vitrulux </li>
+                    <li class="project-page__info-point">Vitrulux </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="project-page__desc">
+                <div class="project-page__desc-btn project-page-spoiler-btn">
+                  Описание<svg
+                    width="13"
+                    height="12"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z"
+                      fill="#212121"
+                    />
+                  </svg>
+                </div>
+                <div class="project-page__desc-row">
+                  <div class="project-page__desc-item">
+                    АО «ОКЕАНРЫБФЛОТ» — одно из крупнейших рыбопромышленных
+                    предприятий Российской Федерации и ведущий поставщик
+                    высококачественной рыбопродукции первичной заморозки
+                    глубокой переработки на отечественном и мировом рынках.
+                    Весной 2022 года компания открыла первый на камчатке
+                    ультрасовременный интерактивный корпоративный музей.
+                  </div>
+                  <div class="project-page__desc-item">
+                    В музее можно изучить историю промышленного рыболовства и
+                    развития компании «Окенрыбфлот» и ее большой роли в развитии
+                    региона. Предметную часть экспозиции составляют настоящие
+                    артефакты: подлинные образцы орудий труда и быта рыбаков и
+                    мореходов, судовые приборы, предметы связанные с историей
+                    создания супертраулера «Георгий Мещеряков».
+                  </div>
+                  <div class="project-page__desc-item">
+                    Кульминацией экспозиции Музея служит виртуальная экскурсия
+                    на новейший супертраулер «Георгий Мещеряков», в ходе которой
+                    каждый сможет осмотреть все отсеки новейшего рыболовного
+                    судна и почувствовать себя капитаном, ведущим свой мощный
+                    корабль сквозь бурю и непогоду.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-page__block2">
+            <div class="project-page__image">
+              <img src="images/img-project.png" alt="" />
+            </div>
+          </div>
+          <div class="project-page__block3 project-page__task">
+            <div class="project-page__row">
+              <div class="project-page__task-title">Задача</div>
+              <div class="project-page__task-desc">
+                <div
+                  class="project-page__task-desc-btn project-page-spoiler-btn"
+                >
+                  Задача<svg
+                    width="13"
+                    height="12"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z"
+                      fill="#212121"
+                    />
+                  </svg>
+                </div>
+                <div class="project-page__task-desc-row">
+                  <div class="project-page__task-desc-item">
+                    Перед нами стояла непростая задача светового
+                    решение сложного мультимедийного пространства с большим
+                    количеством проекций и интерактивных. Были подобраны
+                    специальные прожекторы с большой вариативностью оптики и
+                    возможностью управления каждой световой точкой в
+                    отдельности. Большое внимание было уделено зрительному
+                    комфорту посетителей и работников музея.
+                  </div>
+                  <div class="project-page__task-desc-item">
+                    Помимо внутреннего освещения самого музея были реализованы
+                    масштабные проекты медиафасада музея, реновация освещения
+                    основного здания компании и прилегающей территории.  На
+                    данный момент комплекс зданий «Океанрыбфлот» и окружающий
+                    ландшафт является самым современным пространством в столице
+                    региона и центром притяжения туристов и жителей полуострова.
+                  </div>
+                  <div class="project-page__task-desc-item">
+                    Помимо внутреннего освещения самого музея были реализованы
+                    масштабные проекты медиафасада музея, реновация освещения
+                    основного здания компании и прилегающей территории.  На
+                    данный момент комплекс зданий «Океанрыбфлот» и окружающий
+                    ландшафт является самым современным пространством в столице
+                    региона и центром притяжения туристов и жителей полуострова.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-page__block4 project-page__media">
+            <div class="project-page__row">
+              <div class="project-page__media-title">СМИ и упоминания</div>
+              <div class="project-page__media-desc">
+                <div
+                  class="project-page__media-desc-btn project-page-spoiler-btn"
+                >
+                  СМИ и упоминания<svg
+                    width="13"
+                    height="12"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z"
+                      fill="#212121"
+                    />
+                  </svg>
+                </div>
+                <div class="project-page__media-desc-row">
+                  <div class="project-page__media-desc-item">
+                    <p>Музей «Океанрыбфлот» в Петропавловске-Камчатском</p>
+                    <a href="#"><span></span>Перейти</a>
+                  </div>
+                  <div class="project-page__media-desc-item">
+                    <p>Статья дизайнера о проекте “Дом для двоих”</p>
+                    <a href="#"><span></span>Перейти</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-page__image project-page__image--big">
+            <img src="images/img-project2.jpg" alt="" />
+          </div>
+          <div class="project-page__image project-page__image--big">
+            <img src="images/img-project1.jpg" alt="" />
+          </div>
+          <div class="project-page__quote quote-project-page">
+            <div class="quote-project-page__row">
+              <div class="quote-project-page__text">
+                <span>
+                  Помимо внутреннего освещения самого музея были
+                  реализованымасштабные проекты медиафасада музея, реновация
+                  освещения основного здания компании и прилегающей территории. 
+                  На данный момент комплекс зданий «Океанрыбфлот» и окружающий
+                  ландшафт является самым современным пространством в столице
+                  региона и центром притяжения туристов и жителей полуострова.
+                </span>
+              </div>
+              <div class="project-page__image project-page__image--vertical">
+                <img src="images/img-project4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="project-page__image project-page__image--big">
+            <img src="images/img1.jpg" alt="" />
+          </div>
+          <div class="project-page__quote quote-project-page">
+            <div class="quote-project-page__row">
+              <div class="quote-project-page__text quote-project-page__text--empty">
+                <span>
+                  
+                </span>
+              </div>
+              <div class="project-page__image project-page__image--vertical">
+                <img src="images/img2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="project-page__image project-page__image--big">
+            <img src="images/img3.jpg" alt="" />
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__logo logo-footer">
+            <div class="logo-footer__inner">
+              <img src="images/logo.png" alt="" />
+            </div>
+          </div>
+          <div class="footer__main">
+            <div class="footer__top">
+              <ul>
+                <li>
+                  <a href=""> info@lharmony.ru </a>
+                </li>
+                <li>
+                  <a href=""> +7(495) 660-0475 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu footer__menu1">
+              <ul>
+                <li>
+                  <a href="">О нас</a>
+                </li>
+                <li>
+                  <a href="">Проекты</a>
+                </li>
+                <li>
+                  <a href="">Услуги</a>
+                </li>
+                <li>
+                  <a href="">Новости</a>
+                </li>
+                <li>
+                  <a href="">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu footer__menu2">
+              <ul>
+                <li>
+                  <a href="">Светодизайн</a>
+                </li>
+                <li>
+                  <a href="">Проектирование</a>
+                </li>
+                <li>
+                  <a href="">Поставка</a>
+                </li>
+                <li>
+                  <a href="">Сопровождение</a>
+                </li>
+                <li>
+                  <a href="">Консалтинг</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__bottom">
+              <ul>
+                <li><a href="">© LightHarmony 2001-2024 </a></li>
+                <li><a href="">Политика конфиденциальности</a></li>
+                <li><a href="">Разработано в Bofer.ru</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src="js/options.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/project-page.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
