@@ -15,6 +15,9 @@
 
   &__row {
     display: flex;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
 
   .setting,
@@ -25,8 +28,24 @@
     margin-bottom: 15px;
   }
 
+  .setting {
+    width: 160px;
+  }
+
+  .sliders {
+    margin-left: 70px;
+    width: 340px;
+    @media (max-width: 700px){
+        margin-left: 0;
+        margin-top: 20px;
+    }
+  }
+
+  .slider {
+  }
+
   label {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .toggle {
@@ -59,13 +78,12 @@
     left: 22px;
   }
 
-  .slider-range {
-    width: 150px;
+  input.slider-range {
+    width: 200px;
   }
 
   input[type="range"] {
     -webkit-appearance: none;
-    width: 100%;
     height: 5px;
     background: var(--dark-theme-dark-bg);
     outline: none;
@@ -76,9 +94,8 @@
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    width: 3px;
+    height: 15px;
     background: var(--light-theme-bg);
     cursor: pointer;
   }

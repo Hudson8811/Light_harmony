@@ -6,6 +6,7 @@
     <title>Light Harmony</title>
 
     <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
 
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/fonts.css" />
@@ -21,6 +22,20 @@
   <body>
     <div id="followBig" class="follow follow-big"></div>
     <div id="followSmall" class="follow follow-small"></div>
+    <div class="up-click">
+      <svg
+        width="12"
+        height="11"
+        viewBox="0 0 12 11"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.05217 6.16048L0.271529 5.37984L5.65121 0.000155992L11.0309 5.37982L10.2417 6.16896L7.75556 3.68277L6.20275 2.04511L6.2282 10.7595L5.10814 10.7595L5.07421 2.05359L3.45351 3.75915L1.05217 6.16048Z"
+          fill="#C9C9C9"
+        />
+      </svg>
+    </div>
     <div class="preloader">
       <div class="preloader__anim">
         <div id="squaresAnim" class="preloader__squares squares-anim">
@@ -353,10 +368,10 @@
           </div>
           <div class="project-page__quote quote-project-page">
             <div class="quote-project-page__row">
-              <div class="quote-project-page__text quote-project-page__text--empty">
-                <span>
-                  
-                </span>
+              <div
+                class="quote-project-page__text quote-project-page__text--empty"
+              >
+                <span> </span>
               </div>
               <div class="project-page__image project-page__image--vertical">
                 <img src="images/img2.jpg" alt="" />
@@ -365,6 +380,192 @@
           </div>
           <div class="project-page__image project-page__image--big">
             <img src="images/img3.jpg" alt="" />
+          </div>
+
+          <div class="gallery">
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <a href="images/galary1.jpg" data-fancybox="gallery"
+                        ><img src="images/galary1.jpg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-galary-container">
+                    <div class="swiper-slide-galary-container__image">
+                      <img src="images/galary1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-block">
+            <div class="video-block__container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/5wBuRKZ9-e4"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
           </div>
         </div>
       </main>
@@ -438,11 +639,13 @@
 
     <script src="js/libs/jquery-3.7.1.min.js"></script>
     <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/jquery.fancybox.min.js"></script>
 
     <script src="js/header.js"></script>
     <script src="js/options.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/project-page.js"></script>
+    <script src="js/galary.js"></script>
 
     <script src="js/script.js"></script>
   </body>

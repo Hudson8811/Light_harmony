@@ -126,7 +126,7 @@ body {
 
 
 .follow {
-    /* display: none; */
+    display: none;
     border-radius: 50%;
     position: absolute;
     z-index: 99;
@@ -149,4 +149,46 @@ body {
     height: 15px;
     background-color: var(--orange-theme);
     transition: all 0.1s ease 0s;
+}
+
+
+.up-click {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 99;
+}
+.up-click::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    background-color: var(--light-theme-progress-text);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+}
+.up-click::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: var(--light-theme-banner);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.up-click:hover::before {
+    opacity: 1;
+}
+.up-click svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 99;
 }

@@ -4,7 +4,11 @@
   top: 0;
   left: 0;
   width: 100%;
-
+  a {
+    &:hover{
+      color: var(--orange-theme);
+    }
+  }
   * {
     font-family: "Pragmatica";
     font-size: 21px;

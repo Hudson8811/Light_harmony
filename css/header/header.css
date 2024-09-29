@@ -5,6 +5,9 @@
   left: 0;
   width: 100%;
 }
+.header a:hover {
+  color: var(--orange-theme);
+}
 .header * {
   font-family: "Pragmatica";
   font-size: 21px;
