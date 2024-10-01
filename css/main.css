@@ -50,6 +50,7 @@ body {
 .main * {
     color: var(--light-theme-dark-text);
     font-family: "Pragmatica";
+    font-weight: 300;
 }
 
 .container {
@@ -126,7 +127,6 @@ body {
 
 
 .follow {
-    display: none;
     border-radius: 50%;
     position: absolute;
     z-index: 99;

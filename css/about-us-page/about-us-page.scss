@@ -1,5 +1,8 @@
 .about-us-page {
   font-weight: 300;
+  b {
+    font-weight: 400;
+  }
   p,
   span {
     font-size: 21px;
@@ -29,7 +32,7 @@
 }
 
 .sec1-about-us-page {
-  margin-top: 100px;
+  margin-top: 120px;
   @media (max-width: 639px) {
     margin-top: 60px;
   }
