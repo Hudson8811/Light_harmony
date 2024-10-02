@@ -139,17 +139,39 @@
     flex-wrap: wrap;
   }
 }
-.sec1-about-us-page__row-inner > p {
+.sec1-about-us-page__row-inner > p,
+.sec1-about-us-page__row-inner > div {
   flex: 0 0 calc(33.333% - 20px);
 }
+@media (max-width: 1919px) {
+  .sec1-about-us-page__row-inner > p,
+  .sec1-about-us-page__row-inner > div {
+    flex: 0 0 358px;
+  }
+}
 @media (max-width: 1279px) {
-  .sec1-about-us-page__row-inner > p {
-    flex: 0 1 calc(50% - 20px);
+  .sec1-about-us-page__row-inner > p,
+  .sec1-about-us-page__row-inner > div {
+    flex: 0 0 calc(50% - 20px);
   }
 }
 @media (max-width: 639px) {
-  .sec1-about-us-page__row-inner > p {
+  .sec1-about-us-page__row-inner > p,
+  .sec1-about-us-page__row-inner > div {
     flex: 1 1 100%;
+  }
+}
+@media (max-width: 1919px) {
+  .sec1-about-us-page__row-inner > p._last,
+  .sec1-about-us-page__row-inner > div._last {
+    order: -1;
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 1279px) {
+  .sec1-about-us-page__row-inner > p._last,
+  .sec1-about-us-page__row-inner > div._last {
+    display: none;
   }
 }
 .sec1-about-us-page__second-row {
@@ -172,28 +194,28 @@
   margin-top: 0;
 }
 @media (max-width: 1919px) {
-  .sec1-about-us-page__second-row .sec1-about-us-page__right p {
+  .sec1-about-us-page__second-row .sec1-about-us-page__right div:not(.sec1-about-us-page__row-inner) {
     flex: 0 1 358px;
   }
 }
 @media (max-width: 1279px) {
-  .sec1-about-us-page__second-row .sec1-about-us-page__right p {
+  .sec1-about-us-page__second-row .sec1-about-us-page__right div:not(.sec1-about-us-page__row-inner) {
     flex: 0 1 calc(50% - 20px);
   }
 }
 @media (max-width: 639px) {
-  .sec1-about-us-page__second-row .sec1-about-us-page__right p {
+  .sec1-about-us-page__second-row .sec1-about-us-page__right div:not(.sec1-about-us-page__row-inner) {
     flex: 0 1 100%;
   }
 }
 @media (max-width: 1919px) {
-  .sec1-about-us-page__second-row .sec1-about-us-page__right p:last-child {
+  .sec1-about-us-page__second-row .sec1-about-us-page__right div:not(.sec1-about-us-page__row-inner):last-child {
     order: -1;
     flex: 1 1 auto;
   }
 }
 @media (max-width: 1279px) {
-  .sec1-about-us-page__second-row .sec1-about-us-page__right p:last-child {
+  .sec1-about-us-page__second-row .sec1-about-us-page__right div:not(.sec1-about-us-page__row-inner):last-child {
     display: none;
   }
 }

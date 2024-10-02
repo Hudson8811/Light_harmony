@@ -1,9 +1,19 @@
 .projects {
   margin-top: 125px;
 }
+@media (max-width: 1919px) {
+  .projects {
+    margin-top: 176px;
+  }
+}
+@media (max-width: 1279px) {
+  .projects {
+    margin-top: 75px;
+  }
+}
 @media (max-width: 639px) {
   .projects {
-    margin-top: 100px;
+    margin-top: 55px;
   }
 }
 .projects__title {
@@ -12,7 +22,12 @@
 }
 @media (max-width: 1919px) {
   .projects__title {
-    margin-left: 110px;
+    margin-left: 124px;
+  }
+}
+@media (max-width: 1279px) {
+  .projects__title {
+    margin-bottom: 43px;
   }
 }
 @media (max-width: 992px) {
@@ -22,7 +37,7 @@
 }
 @media (max-width: 639px) {
   .projects__title {
-    margin-bottom: 50px;
+    margin-bottom: 27px;
   }
 }
 
@@ -43,7 +58,7 @@
 }
 @media (max-width: 1919px) {
   .list-projects li {
-    padding-left: 110px;
+    padding-left: 124px;
   }
 }
 @media (max-width: 992px) {
@@ -102,7 +117,6 @@
 @media (max-width: 992px) {
   .list-projects__name {
     gap: 6px;
-    margin-top: 12px;
     flex-wrap: wrap;
   }
 }
@@ -128,6 +142,7 @@
   color: var(--light-theme-dark-text);
   font-weight: 300;
   font-size: 32px;
+  letter-spacing: -0.01em;
 }
 @media (max-width: 1279px) {
   .list-projects__title a {
@@ -190,6 +205,12 @@
 @media (max-width: 992px) {
   .list-projects__date-mark {
     left: 0;
+    font-size: 18px;
+  }
+}
+@media (max-width: 639px) {
+  .list-projects__date-mark {
+    transform-origin: 45% 145%;
   }
 }
 .list-projects__inprocess {

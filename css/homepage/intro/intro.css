@@ -30,11 +30,17 @@
     padding-bottom: 60px;
   }
 }
+@media (max-width: 639px) {
+  .intro__inner {
+    padding-left: 0;
+    padding-bottom: 62px;
+  }
+}
 .intro__title {
   font-family: "Gravitas One";
   font-size: 101px;
   line-height: 100%;
-  letter-spacing: -5px;
+  letter-spacing: -0.05em;
   font-weight: 400;
 }
 @media (max-width: 1279px) {
@@ -50,7 +56,7 @@
 .intro__subtitle {
   font-size: 32px;
   line-height: 100%;
-  letter-spacing: -1px;
+  letter-spacing: -0.01em;
   font-weight: 300;
   margin-top: 20px;
 }
@@ -62,6 +68,7 @@
 @media (max-width: 639px) {
   .intro__subtitle {
     font-size: 24px;
+    margin-top: 10px;
   }
 }
 .intro__anim {

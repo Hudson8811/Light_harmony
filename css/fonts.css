@@ -9,6 +9,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Literata";
     src: url('../fonts/Literata_Bold/Literata_Bold.eot');
@@ -20,6 +21,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Literata";
     src: url('../fonts/Literata_ExtraBold/Literata_ExtraBold.eot');
@@ -31,6 +33,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Pragmatica";
     src: url('../fonts/Pragmatica_Bold/Pragmatica_Bold.eot');
@@ -42,6 +45,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Pragmatica";
     src: url('../fonts/Pragmatica_Book/Pragmatica_Book.eot');
@@ -53,6 +57,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Pragmatica";
     src: url('../fonts/Pragmatica_Light/Pragmatica_Light.eot');
@@ -64,6 +69,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Pragmatica";
     src: url('../fonts/Pragmatica_Medium/Pragmatica_Medium.eot');
