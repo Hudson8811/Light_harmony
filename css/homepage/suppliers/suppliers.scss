@@ -1,6 +1,7 @@
 .suppliers {
   margin-top: 200px;
-position: relative;
+  position: relative;
+
   @media (max-width: 1239px) {
     margin-top: 100px;
   }
@@ -40,26 +41,30 @@ position: relative;
     gap: 24px;
     margin-top: 35px;
     position: relative;
-    @media (max-width: 1279px){
-        margin-top: 25px;
+
+    @media (max-width: 1279px) {
+      margin-top: 25px;
     }
-    @media (max-width: 639px){
-        margin-top: 0;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
+
+    @media (max-width: 639px) {
+      margin-top: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
+
     .swiper-arrow {
       position: relative;
       width: 22px;
       height: 22px;
       cursor: pointer;
-      @media (max-width: 1279px){
-          display: none;
+
+      @media (max-width: 1279px) {
+        display: none;
       }
     }
-    
+
     .swiper-button {
 
       img {
@@ -78,6 +83,7 @@ position: relative;
         background-color: var(--light-theme-banner);
         opacity: 1;
         transition: all 0.3s ease 0s;
+
         &.swiper-pagination-bullet-active {
           width: 27px;
           height: 5px;
@@ -92,9 +98,14 @@ position: relative;
 
   &__swiper {
     overflow: hidden;
-    @media (max-width: 639px){
+
+    @media (max-width: 639px) {
       padding-bottom: 30px;
     }
+  }
+
+  &__swiper .swiper-wrapper>.swiper-slide:first-child .swiper-suppliers__grid {
+    border-left-width: 1px;
   }
 }
 
@@ -129,22 +140,27 @@ position: relative;
   &__grid {
     display: grid;
     justify-items: stretch;
+    border: 1px solid var(--light-theme-grey-bg);
+    border-width: 1px 0 0 0;
   }
 
   &__icon {
     background-color: var(--light-theme-bg);
     border: 1px solid var(--light-theme-grey-bg);
+    border-width: 0 1px 1px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease 0s;
     position: relative;
     min-height: 135px;
-    @media (max-width: 639px){
-        min-height: 105px;
+
+    @media (max-width: 639px) {
+      min-height: 105px;
     }
-    &::before{
-      content:'';
+
+    &::before {
+      content: '';
       position: absolute;
       top: 5px;
       left: 30%;
@@ -154,32 +170,37 @@ position: relative;
       border-radius: 50%;
       opacity: 0;
     }
-    &:hover{
+
+    &:hover {
       background-color: var(--orange-theme);
-      &::before{
+
+      &::before {
         opacity: 1;
       }
+
       svg {
         path {
           fill: var(--dark-theme-light-text);
         }
       }
     }
+
     svg {
       max-width: 100%;
       max-height: 100%;
     }
+
     img {
       max-width: 100%;
       max-height: 100%;
     }
   }
-  
+
   &__grid--first-row {
     grid-template: 1fr 1fr 2fr / 0.5fr 0.5fr;
     grid-template-areas: "small11 small12" "small13 small14" "big1 big1";
   }
-  
+
   &__grid--second-row {
     grid-template: 2fr 1fr 1fr / 0.5fr 0.5fr;
     grid-template-areas: "big2 big2" "small21 small22" "small23 small24";

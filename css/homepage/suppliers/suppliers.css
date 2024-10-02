@@ -95,6 +95,9 @@
     padding-bottom: 30px;
   }
 }
+.suppliers__swiper .swiper-wrapper > .swiper-slide:first-child .swiper-suppliers__grid {
+  border-left-width: 1px;
+}
 
 .swiper-suppliers {
   margin-left: 760px;
@@ -118,10 +121,13 @@
 .swiper-suppliers__grid {
   display: grid;
   justify-items: stretch;
+  border: 1px solid var(--light-theme-grey-bg);
+  border-width: 1px 0 0 0;
 }
 .swiper-suppliers__icon {
   background-color: var(--light-theme-bg);
   border: 1px solid var(--light-theme-grey-bg);
+  border-width: 0 1px 1px 0;
   display: flex;
   justify-content: center;
   align-items: center;

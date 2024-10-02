@@ -6,7 +6,7 @@
     font-weight: 300;
     font-size: 21px;
     line-height: 117%;
-    letter-spacing: -1px;
+    letter-spacing: -0.01em;
   }
 
   &__container {
@@ -27,8 +27,9 @@
       url("../../images/cross.png") 100% 100% / 15px 15px no-repeat;
 
     @media (max-width: 1919px) {
-      flex: 0 0 460px;
-      margin-left: 65px;
+      flex: 0 0 31.7%;
+      margin-left: 45px;
+      margin-top: 22px;
     }
 
     @media (max-width: 1279px) {
@@ -50,7 +51,7 @@
     padding-left: 90px;
 
     @media (max-width: 1919px) {
-      padding-left: 60px;
+      padding-left: 66px;
     }
 
     @media (max-width: 1279px) {
@@ -74,12 +75,16 @@
       li {
         &:first-child {
           width: 360px;
-          
+
+          @media (max-width: 1919px) {
+            width: 380px;
+          }
+
           @media (max-width: 1279px) {
             margin-bottom: 16px;
           }
         }
-        
+
         a {
           font-weight: 400;
           font-size: 34px;
@@ -138,6 +143,10 @@
   &__menu1 {
     margin-top: 100px;
 
+    @media (max-width: 1919px) {
+      margin-top: 110px;
+    }
+
     @media (max-width: 1279px) {
       margin-top: 50px;
     }
@@ -150,6 +159,10 @@
   &__menu2 {
     margin-top: 44px;
 
+    @media (max-width: 1919px) {
+      margin-top: 50px;
+    }
+
     @media (max-width: 1279px) {
       margin-top: 50px;
     }
@@ -161,6 +174,10 @@
 
   &__bottom {
     margin-top: 60px;
+
+    @media (max-width: 1279px) {
+      margin-top: 64px;
+    }
 
     @media (max-width: 1279px) {
       margin-top: 50px;

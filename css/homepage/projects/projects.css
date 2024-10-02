@@ -30,6 +30,7 @@
   position: relative;
 }
 .list-projects ul {
+  position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -175,11 +176,21 @@
 }
 .list-projects__date-mark {
   position: absolute;
-  left: 0;
-  transform-origin: 50% 50%;
-  transform: translate(-15px, 0) rotate(-90deg);
+  left: 760px;
+  transform-origin: 50% 115%;
+  transform: translate(9px, 0) rotate(-90deg);
   font-size: 21px;
   font-weight: 300;
+}
+@media (max-width: 1919px) {
+  .list-projects__date-mark {
+    left: 110px;
+  }
+}
+@media (max-width: 992px) {
+  .list-projects__date-mark {
+    left: 0;
+  }
 }
 .list-projects__inprocess {
   color: var(--light-theme-progress-text);
@@ -222,8 +233,13 @@
     font-size: 18px;
   }
 }
-.list-projects__more-btn::before {
-  content: "";
+.list-projects__more-btn:hover span {
+  color: var(--light-theme-grey-bg);
+}
+.list-projects__more-btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 50%;
   left: 0;
@@ -231,9 +247,19 @@
   height: 24px;
   background-color: var(--light-theme-dark-text);
   transform: translate(0, -50%);
+  color: var(--light-theme-dark-text);
+  transition: color 0.3s;
+}
+.list-projects__more-btn span svg {
+  color: inherit;
+  width: 16px;
+  height: 16px;
+}
+.list-projects__more-btn span svg * {
+  color: inherit;
 }
 @media (max-width: 639px) {
-  .list-projects__more-btn::before {
+  .list-projects__more-btn span {
     top: 0;
     transform: translate(0, 0);
   }

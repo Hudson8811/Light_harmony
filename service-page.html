@@ -20,492 +20,505 @@
   </head>
 
   <body>
-    <div id="followBig" class="follow follow-big"></div>
-    <div id="followSmall" class="follow follow-small"></div>
-    <div class="up-click">
-      <svg
-        width="12"
-        height="11"
-        viewBox="0 0 12 11"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1.05217 6.16048L0.271529 5.37984L5.65121 0.000155992L11.0309 5.37982L10.2417 6.16896L7.75556 3.68277L6.20275 2.04511L6.2282 10.7595L5.10814 10.7595L5.07421 2.05359L3.45351 3.75915L1.05217 6.16048Z"
-          fill="#C9C9C9"
-        />
-      </svg>
-    </div>
-    <div class="preloader">
-      <div class="preloader__anim">
-        <div id="squaresAnim" class="preloader__squares squares-anim">
-          <div class="squares-anim__square squares-anim__square1"></div>
-          <div class="squares-anim__square squares-anim__square2"></div>
-          <div class="squares-anim__square squares-anim__square3"></div>
-          <div class="squares-anim__square squares-anim__square4"></div>
+    <div class="page">
+      <div id="followBig" class="follow follow-big"></div>
+      <div id="followSmall" class="follow follow-small"></div>
+      <div class="up-click">
+        <svg
+          width="12"
+          height="11"
+          viewBox="0 0 12 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.05217 6.16048L0.271529 5.37984L5.65121 0.000155992L11.0309 5.37982L10.2417 6.16896L7.75556 3.68277L6.20275 2.04511L6.2282 10.7595L5.10814 10.7595L5.07421 2.05359L3.45351 3.75915L1.05217 6.16048Z"
+            fill="#C9C9C9"
+          />
+        </svg>
+      </div>
+      <div class="preloader">
+        <div class="preloader__anim">
+          <div id="squaresAnim" class="preloader__squares squares-anim">
+            <div class="squares-anim__square squares-anim__square1"></div>
+            <div class="squares-anim__square squares-anim__square2"></div>
+            <div class="squares-anim__square squares-anim__square3"></div>
+            <div class="squares-anim__square squares-anim__square4"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="wrapper">
-      <header class="header">
-        <div id="headerOptions" class="header__options options-header">
-          <div class="options-header__row">
-            <div class="settings">
-              <div class="setting">
-                <label for="darkMode">Тёмный режим</label>
-                <input type="checkbox" id="darkMode" class="toggle" />
+      <div class="wrapper">
+        <header class="header">
+          <div id="headerOptions" class="header__options options-header">
+            <div class="options-header__row">
+              <div class="settings">
+                <div class="setting">
+                  <label for="darkMode">Тёмный режим</label>
+                  <input type="checkbox" id="darkMode" class="toggle" />
+                </div>
+                <div class="setting">
+                  <label for="orangeTheme">Оранжевая тема</label>
+                  <input type="checkbox" id="orangeTheme" class="toggle" />
+                </div>
+                <div class="setting">
+                  <label for="animation">Анимация</label>
+                  <input type="checkbox" id="animation" class="toggle" checked />
+                </div>
               </div>
-              <div class="setting">
-                <label for="orangeTheme">Оранжевая тема</label>
-                <input type="checkbox" id="orangeTheme" class="toggle" />
-              </div>
-              <div class="setting">
-                <label for="animation">Анимация</label>
-                <input type="checkbox" id="animation" class="toggle" checked />
-              </div>
-            </div>
-            <div class="sliders">
-              <div class="slider">
-                <label for="generalLight">Общий свет</label>
-                <input
-                  type="range"
-                  id="generalLight"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="slider-range"
-                />
-              </div>
-              <div class="slider">
-                <label for="accentLight">Акцентный свет</label>
-                <input
-                  type="range"
-                  id="accentLight"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="slider-range"
-                />
-              </div>
-              <div class="slider">
-                <label for="fontBrightness">Яркость шрифтов</label>
-                <input
-                  type="range"
-                  id="fontBrightness"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="slider-range"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="header__container container">
-          <div class="header__logo">
-            <div class="header__logo-inner">
-              <a href="#"><img src="images/logo.png" alt="" /></a>
-            </div>
-          </div>
-          <div class="header__btns">
-            <div id="headerOptionsBtn1" class="header__options-btn">
-              <img src="images/options.png" alt="" />
-            </div>
-            <div class="header__search">
-              <input
-                class="header__search-input"
-                type="text"
-                placeholder="Новости"
-              />
-              <div class="header__search-btn">
-                <img src="images/arrow.png" alt="" />
+              <div class="sliders">
+                <div class="slider">
+                  <label for="generalLight">Общий свет</label>
+                  <input
+                    type="range"
+                    id="generalLight"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider-range"
+                  />
+                </div>
+                <div class="slider">
+                  <label for="accentLight">Акцентный свет</label>
+                  <input
+                    type="range"
+                    id="accentLight"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider-range"
+                  />
+                </div>
+                <div class="slider">
+                  <label for="fontBrightness">Яркость шрифтов</label>
+                  <input
+                    type="range"
+                    id="fontBrightness"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider-range"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <nav class="header__nav">
-            <div id="burderHeader" class="header__burger burder-header">
-              <span></span>
-              <span></span>
-              <span></span>
+  
+          <div class="header__container container">
+            <div class="header__logo">
+              <div class="header__logo-inner">
+                <a href="#"><img src="images/logo.png" alt="" /></a>
+              </div>
             </div>
-            <div id="menu" class="header__menu menu">
-              <ul class="menu__list">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Проекты</a></li>
-                <li class="menu__dropdown dropdown">
-                  <a class="dropdown__btn">Услуги</a>
-                  <ul class="dropdown__menu">
-                    <li><a href="#">Светодизайн</a></li>
-                    <li><a href="#">Проектирование</a></li>
-                    <li><a href="#">Поставка</a></li>
-                    <li><a href="#">Сопровождение</a></li>
-                    <li><a href="#">Консалтинг</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Контакты</a></li>
-              </ul>
-              <div class="header__bottom-mob">
-                <div class="header__lang lang">
-                  <div class="lang__dropdown dropdown">
-                    <div class="dropdown__btn">ru</div>
+            <div class="header__btns">
+              <div id="headerOptionsBtn1" class="header__options-btn">
+                <img src="images/options.png" alt="" />
+              </div>
+              <div class="header__search">
+                <input
+                  class="header__search-input"
+                  type="text"
+                  placeholder="Новости"
+                />
+                <div class="header__search-btn">
+                  <img src="images/arrow.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <nav class="header__nav">
+              <div id="burderHeader" class="header__burger burder-header">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div id="menu" class="header__menu menu">
+                <ul class="menu__list">
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Проекты</a></li>
+                  <li class="menu__dropdown dropdown">
+                    <a class="dropdown__btn">Услуги</a>
                     <ul class="dropdown__menu">
-                      <li class="dropdown__btn"><a href="#">en</a></li>
+                      <li><a href="#">Светодизайн</a></li>
+                      <li><a href="#">Проектирование</a></li>
+                      <li><a href="#">Поставка</a></li>
+                      <li><a href="#">Сопровождение</a></li>
+                      <li><a href="#">Консалтинг</a></li>
                     </ul>
-                    <ul class="dropdown__menu-mobile dropdown__menu">
-                      <li class="dropdown__btn active"><a href="#">ru</a></li>
-                      <li class="dropdown__btn"><a href="#">en</a></li>
+                  </li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="header__bottom-mob">
+                  <div class="header__lang lang">
+                    <div class="lang__dropdown dropdown">
+                      <div class="dropdown__btn">ru</div>
+                      <ul class="dropdown__menu">
+                        <li class="dropdown__btn"><a href="#">en</a></li>
+                      </ul>
+                      <ul class="dropdown__menu-mobile dropdown__menu">
+                        <li class="dropdown__btn active"><a href="#">ru</a></li>
+                        <li class="dropdown__btn"><a href="#">en</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="headerOptionsBtn2" class="header__options-btn">
+                    <img src="images/options.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <main class="main service-page internal-page">
+          <div class="service-page__container container">
+            <section class="service-page__header header-service-page">
+              <div class="service-page__title title-h1">Светодизайн</div>
+              <div class="header-service-page__row header-service-page__row1">
+                <div class="header-service-page__left">
+                  <span>Как мы работаем</span>
+                </div>
+                <div class="header-service-page__right">
+                  Мы создаем уникальные световые решения, которые сочетают в себе
+                  эстетику и функциональность.
+                </div>
+              </div>
+              <div class="header-service-page__row header-service-page__row2">
+                <div class="header-service-page__right">
+                  Наш подход заключается в том, чтобы подчеркнуть архитектурные
+                  особенности объектов с помощью индивидуально разработанных
+                  световых сценариев, делая каждое пространство уникальным и
+                  запоминающимся.
+                </div>
+              </div>
+              <div class="header-service-page__row header-service-page__row3">
+                <div class="header-service-page__right">
+                  <div class="header-service-page__nums">
+                    <ul>
+                      <li>
+                        <span class="header-service-page__nums-small">
+                          Поставщики
+                        </span>
+                        <span class="header-service-page__nums-big">
+                          500 брендов
+                        </span>
+                      </li>
+                      <li>
+                        <span class="header-service-page__nums-small">
+                          Опыт более
+                        </span>
+                        <span class="header-service-page__nums-big">
+                          23 лет
+                        </span>
+                      </li>
                     </ul>
                   </div>
                 </div>
-                <div id="headerOptionsBtn2" class="header__options-btn">
-                  <img src="images/options.png" alt="" />
-                </div>
               </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <main class="main service-page internal-page">
-        <div class="service-page__container container">
-          <section class="service-page__header header-service-page">
-            <div class="service-page__title title-h1">Светодизайн</div>
-            <div class="header-service-page__row header-service-page__row1">
-              <div class="header-service-page__left">
-                <span>Как мы работаем</span>
-              </div>
-              <div class="header-service-page__right">
-                Мы создаем уникальные световые решения, которые сочетают в себе
-                эстетику и функциональность.
-              </div>
-            </div>
-            <div class="header-service-page__row header-service-page__row2">
-              <div class="header-service-page__right">
-                Наш подход заключается в том, чтобы подчеркнуть архитектурные
-                особенности объектов с помощью индивидуально разработанных
-                световых сценариев, делая каждое пространство уникальным и
-                запоминающимся.
-              </div>
-            </div>
-            <div class="header-service-page__row header-service-page__row3">
-              <div class="header-service-page__right">
-                <div class="header-service-page__nums">
+            </section>
+            <section class="service-page__image">
+              <img src="images/service-page/1.png" alt="" />
+            </section>
+            <section class="projects">
+                <div class="projects__list list-projects">
+                  <h2 class="projects__title title-h2">Реализованные проекты</h2>
                   <ul>
+                    <span class="list-projects__date-mark">2023</span>
                     <li>
-                      <span class="header-service-page__nums-small">
-                        Поставщики
-                      </span>
-                      <span class="header-service-page__nums-big">
-                        500 брендов
-                      </span>
+                      <div class="list-projects__name hovered">
+                        <div class="list-projects__title">
+                          <a href="#">МСД Фармаcьютикалс</a>
+                        </div>
+                        <div class="list-projects__subtitle">Частные объекты</div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 1"
+                      />
                     </li>
                     <li>
-                      <span class="header-service-page__nums-small">
-                        Опыт более
-                      </span>
-                      <span class="header-service-page__nums-big">
-                        23 лет
-                      </span>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Многофункциональный комплекс</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Общественные пространства
+                        </div>
+                        <div class="list-projects__inprocess">В работе</div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 2"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Частные резиденции в поселке Променад</a>
+                        </div>
+                        <div class="list-projects__subtitle">Офисы</div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 3"
+                      />
                     </li>
                   </ul>
+                  <ul>
+                    <span class="list-projects__date-mark">2022</span>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Частная резиденция в Серебряном бору</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Ландшафтное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 4"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Частные апартаменты в Ереване</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Архитектурное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 5"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Творческая выставка в Японии</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Архитектурное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 6"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Частная вилла в Барселоне</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Архитектурное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 7"
+                      />
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <span class="list-projects__date-mark">2021</span>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#"
+                            >Частные апартаменты в Подсосенском переулке</a
+                          >
+                        </div>
+                        <div class="list-projects__subtitle">Музеи и галереи</div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 8"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Реконструкция Дорогомиловского рынка</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Архитектурное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 9"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Малоэтажный ЖК «Золотой остров» в ЦАО</a>
+                        </div>
+                        <div class="list-projects__subtitle">Ритейл</div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 10"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#"
+                            >Туристический центр в Троице-Сергиев Варницком мужском
+                            монастыре</a
+                          >
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Архитектурное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 11"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Офис компании Технопрогресс</a>
+                        </div>
+                        <div class="list-projects__subtitle">HoReCa</div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 12"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Отделения Росбанк по России</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Архитектурное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 13"
+                      />
+                    </li>
+                    <li>
+                      <div class="list-projects__name">
+                        <div class="list-projects__title">
+                          <a href="#">Офис компании ГК «ДИКСИ»</a>
+                        </div>
+                        <div class="list-projects__subtitle">
+                          Архитектурное освещение
+                        </div>
+                      </div>
+                      <img
+                        class="list-projects__image"
+                        src="images/projects/projects.jpg"
+                        alt="Project Image 14"
+                      />
+                    </li>
+                  </ul>
+                  <a href="#" class="list-projects__more-btn">
+                    <span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.27072 5.58837V4.48438H11.8787V12.0924H10.7627V8.57638L10.8227 6.32037L4.67872 12.5004L3.88672 11.7084L10.0187 5.52837L7.66672 5.58837H4.27072Z" fill="currentColor"/>
+                        </svg>  
+                    </span>
+                    Смотреть все
+                  </a>
                 </div>
+  
+              <h2
+                class="service-page__title service-page__title--bottom title-h2"
+              >
+                Для любой сложной задачи мы выбираем лучшее решение
+              </h2>
+            </section>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer__container container">
+            <div class="footer__logo logo-footer">
+              <div class="logo-footer__inner">
+                <img src="images/logo.png" alt="" />
               </div>
             </div>
-          </section>
-          <section class="service-page__image">
-            <img src="images/service-page/1.png" alt="" />
-          </section>
-          <section class="projects">
-              <div class="projects__list list-projects">
-                <h2 class="projects__title title-h2">Реализованные проекты</h2>
+            <div class="footer__main">
+              <div class="footer__top">
                 <ul>
                   <li>
-                    <div class="list-projects__name hovered">
-                      <span class="list-projects__date-mark">2023</span>
-                      <div class="list-projects__title">
-                        <a href="#">МСД Фармаcьютикалс</a>
-                      </div>
-                      <div class="list-projects__subtitle">Частные объекты</div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 1"
-                    />
+                    <a href=""> info@lharmony.ru </a>
                   </li>
                   <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Многофункциональный комплекс</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Общественные пространства
-                      </div>
-                      <div class="list-projects__inprocess">В работе</div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 2"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Частные резиденции в поселке Променад</a>
-                      </div>
-                      <div class="list-projects__subtitle">Офисы</div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 3"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <span class="list-projects__date-mark">2022</span>
-                      <div class="list-projects__title">
-                        <a href="#">Частная резиденция в Серебряном бору</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Ландшафтное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 4"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Частные апартаменты в Ереване</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Архитектурное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 5"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Творческая выставка в Японии</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Архитектурное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 6"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Частная вилла в Барселоне</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Архитектурное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 7"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <span class="list-projects__date-mark">2021</span>
-                      <div class="list-projects__title">
-                        <a href="#"
-                          >Частные апартаменты в Подсосенском переулке</a
-                        >
-                      </div>
-                      <div class="list-projects__subtitle">Музеи и галереи</div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 8"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Реконструкция Дорогомиловского рынка</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Архитектурное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 9"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Малоэтажный ЖК «Золотой остров» в ЦАО</a>
-                      </div>
-                      <div class="list-projects__subtitle">Ритейл</div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 10"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#"
-                          >Туристический центр в Троице-Сергиев Варницком мужском
-                          монастыре</a
-                        >
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Архитектурное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 11"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Офис компании Технопрогресс</a>
-                      </div>
-                      <div class="list-projects__subtitle">HoReCa</div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 12"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Отделения Росбанк по России</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Архитектурное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 13"
-                    />
-                  </li>
-                  <li>
-                    <div class="list-projects__name">
-                      <div class="list-projects__title">
-                        <a href="#">Офис компании ГК «ДИКСИ»</a>
-                      </div>
-                      <div class="list-projects__subtitle">
-                        Архитектурное освещение
-                      </div>
-                    </div>
-                    <img
-                      class="list-projects__image"
-                      src="images/projects/projects.jpg"
-                      alt="Project Image 14"
-                    />
+                    <a href=""> +7(495) 660-0475 </a>
                   </li>
                 </ul>
-                <a href="#" class="list-projects__more-btn">Смотреть все</a>
               </div>
-
-            <h2
-              class="service-page__title service-page__title--bottom title-h2"
-            >
-              Для любой сложной задачи мы выбираем лучшее решение
-            </h2>
-          </section>
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="footer__container container">
-          <div class="footer__logo logo-footer">
-            <div class="logo-footer__inner">
-              <img src="images/logo.png" alt="" />
+              <div class="footer__menu footer__menu1">
+                <ul>
+                  <li>
+                    <a href="">О нас</a>
+                  </li>
+                  <li>
+                    <a href="">Проекты</a>
+                  </li>
+                  <li>
+                    <a href="">Услуги</a>
+                  </li>
+                  <li>
+                    <a href="">Новости</a>
+                  </li>
+                  <li>
+                    <a href="">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__menu footer__menu2">
+                <ul>
+                  <li>
+                    <a href="">Светодизайн</a>
+                  </li>
+                  <li>
+                    <a href="">Проектирование</a>
+                  </li>
+                  <li>
+                    <a href="">Поставка</a>
+                  </li>
+                  <li>
+                    <a href="">Сопровождение</a>
+                  </li>
+                  <li>
+                    <a href="">Консалтинг</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__bottom">
+                <ul>
+                  <li><a href="">© LightHarmony 2001-2024 </a></li>
+                  <li><a href="">Политика конфиденциальности</a></li>
+                  <li><a href="">Разработано в Bofer.ru</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="footer__main">
-            <div class="footer__top">
-              <ul>
-                <li>
-                  <a href=""> info@lharmony.ru </a>
-                </li>
-                <li>
-                  <a href=""> +7(495) 660-0475 </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__menu footer__menu1">
-              <ul>
-                <li>
-                  <a href="">О нас</a>
-                </li>
-                <li>
-                  <a href="">Проекты</a>
-                </li>
-                <li>
-                  <a href="">Услуги</a>
-                </li>
-                <li>
-                  <a href="">Новости</a>
-                </li>
-                <li>
-                  <a href="">Контакты</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__menu footer__menu2">
-              <ul>
-                <li>
-                  <a href="">Светодизайн</a>
-                </li>
-                <li>
-                  <a href="">Проектирование</a>
-                </li>
-                <li>
-                  <a href="">Поставка</a>
-                </li>
-                <li>
-                  <a href="">Сопровождение</a>
-                </li>
-                <li>
-                  <a href="">Консалтинг</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__bottom">
-              <ul>
-                <li><a href="">© LightHarmony 2001-2024 </a></li>
-                <li><a href="">Политика конфиденциальности</a></li>
-                <li><a href="">Разработано в Bofer.ru</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
 
     <script src="js/libs/jquery-3.7.1.min.js"></script>

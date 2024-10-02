@@ -19,497 +19,499 @@
   </head>
 
   <body>
-    <div id="followBig" class="follow follow-big"></div>
-    <div id="followSmall" class="follow follow-small"></div>
-    <div class="up-click">
-      <svg
-        width="12"
-        height="11"
-        viewBox="0 0 12 11"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1.05217 6.16048L0.271529 5.37984L5.65121 0.000155992L11.0309 5.37982L10.2417 6.16896L7.75556 3.68277L6.20275 2.04511L6.2282 10.7595L5.10814 10.7595L5.07421 2.05359L3.45351 3.75915L1.05217 6.16048Z"
-          fill="#C9C9C9"
-        />
-      </svg>
-    </div>
-    <div class="preloader">
-      <div class="preloader__anim">
-        <div id="squaresAnim" class="preloader__squares squares-anim">
-          <div class="squares-anim__square squares-anim__square1"></div>
-          <div class="squares-anim__square squares-anim__square2"></div>
-          <div class="squares-anim__square squares-anim__square3"></div>
-          <div class="squares-anim__square squares-anim__square4"></div>
+    <div class="page">
+      <div id="followBig" class="follow follow-big"></div>
+      <div id="followSmall" class="follow follow-small"></div>
+      <div class="up-click">
+        <svg
+          width="12"
+          height="11"
+          viewBox="0 0 12 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.05217 6.16048L0.271529 5.37984L5.65121 0.000155992L11.0309 5.37982L10.2417 6.16896L7.75556 3.68277L6.20275 2.04511L6.2282 10.7595L5.10814 10.7595L5.07421 2.05359L3.45351 3.75915L1.05217 6.16048Z"
+            fill="#C9C9C9"
+          />
+        </svg>
+      </div>
+      <div class="preloader">
+        <div class="preloader__anim">
+          <div id="squaresAnim" class="preloader__squares squares-anim">
+            <div class="squares-anim__square squares-anim__square1"></div>
+            <div class="squares-anim__square squares-anim__square2"></div>
+            <div class="squares-anim__square squares-anim__square3"></div>
+            <div class="squares-anim__square squares-anim__square4"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="wrapper">
-      <header class="header">
-        <div id="headerOptions" class="header__options options-header">
-          <div class="options-header__row">
-            <div class="settings">
-              <div class="setting">
-                <label for="darkMode">Тёмный режим</label>
-                <input type="checkbox" id="darkMode" class="toggle" />
+      <div class="wrapper">
+        <header class="header">
+          <div id="headerOptions" class="header__options options-header">
+            <div class="options-header__row">
+              <div class="settings">
+                <div class="setting">
+                  <label for="darkMode">Тёмный режим</label>
+                  <input type="checkbox" id="darkMode" class="toggle" />
+                </div>
+                <div class="setting">
+                  <label for="orangeTheme">Оранжевая тема</label>
+                  <input type="checkbox" id="orangeTheme" class="toggle" />
+                </div>
+                <div class="setting">
+                  <label for="animation">Анимация</label>
+                  <input type="checkbox" id="animation" class="toggle" checked />
+                </div>
               </div>
-              <div class="setting">
-                <label for="orangeTheme">Оранжевая тема</label>
-                <input type="checkbox" id="orangeTheme" class="toggle" />
-              </div>
-              <div class="setting">
-                <label for="animation">Анимация</label>
-                <input type="checkbox" id="animation" class="toggle" checked />
-              </div>
-            </div>
-            <div class="sliders">
-              <div class="slider">
-                <label for="generalLight">Общий свет</label>
-                <input
-                  type="range"
-                  id="generalLight"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="slider-range"
-                />
-              </div>
-              <div class="slider">
-                <label for="accentLight">Акцентный свет</label>
-                <input
-                  type="range"
-                  id="accentLight"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="slider-range"
-                />
-              </div>
-              <div class="slider">
-                <label for="fontBrightness">Яркость шрифтов</label>
-                <input
-                  type="range"
-                  id="fontBrightness"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="slider-range"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="header__container container">
-          <div class="header__logo">
-            <div class="header__logo-inner">
-              <a href="#"><img src="images/logo.png" alt="" /></a>
-            </div>
-          </div>
-          <div class="header__btns">
-            <div id="headerOptionsBtn1" class="header__options-btn">
-              <img src="images/options.png" alt="" />
-            </div>
-            <div class="header__search">
-              <input
-                class="header__search-input"
-                type="text"
-                placeholder="Новости"
-              />
-              <div class="header__search-btn">
-                <img src="images/arrow.png" alt="" />
+              <div class="sliders">
+                <div class="slider">
+                  <label for="generalLight">Общий свет</label>
+                  <input
+                    type="range"
+                    id="generalLight"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider-range"
+                  />
+                </div>
+                <div class="slider">
+                  <label for="accentLight">Акцентный свет</label>
+                  <input
+                    type="range"
+                    id="accentLight"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider-range"
+                  />
+                </div>
+                <div class="slider">
+                  <label for="fontBrightness">Яркость шрифтов</label>
+                  <input
+                    type="range"
+                    id="fontBrightness"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="slider-range"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <nav class="header__nav">
-            <div id="burderHeader" class="header__burger burder-header">
-              <span></span>
-              <span></span>
-              <span></span>
+  
+          <div class="header__container container">
+            <div class="header__logo">
+              <div class="header__logo-inner">
+                <a href="#"><img src="images/logo.png" alt="" /></a>
+              </div>
             </div>
-            <div id="menu" class="header__menu menu">
-              <ul class="menu__list">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Проекты</a></li>
-                <li class="menu__dropdown dropdown">
-                  <a class="dropdown__btn">Услуги</a>
-                  <ul class="dropdown__menu">
-                    <li><a href="#">Светодизайн</a></li>
-                    <li><a href="#">Проектирование</a></li>
-                    <li><a href="#">Поставка</a></li>
-                    <li><a href="#">Сопровождение</a></li>
-                    <li><a href="#">Консалтинг</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Контакты</a></li>
-              </ul>
-              <div class="header__bottom-mob">
-                <div class="header__lang lang">
-                  <div class="lang__dropdown dropdown">
-                    <div class="dropdown__btn">ru</div>
+            <div class="header__btns">
+              <div id="headerOptionsBtn1" class="header__options-btn">
+                <img src="images/options.png" alt="" />
+              </div>
+              <div class="header__search">
+                <input
+                  class="header__search-input"
+                  type="text"
+                  placeholder="Новости"
+                />
+                <div class="header__search-btn">
+                  <img src="images/arrow.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <nav class="header__nav">
+              <div id="burderHeader" class="header__burger burder-header">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div id="menu" class="header__menu menu">
+                <ul class="menu__list">
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Проекты</a></li>
+                  <li class="menu__dropdown dropdown">
+                    <a class="dropdown__btn">Услуги</a>
                     <ul class="dropdown__menu">
-                      <li class="dropdown__btn"><a href="#">en</a></li>
+                      <li><a href="#">Светодизайн</a></li>
+                      <li><a href="#">Проектирование</a></li>
+                      <li><a href="#">Поставка</a></li>
+                      <li><a href="#">Сопровождение</a></li>
+                      <li><a href="#">Консалтинг</a></li>
                     </ul>
-                    <ul class="dropdown__menu-mobile dropdown__menu">
-                      <li class="dropdown__btn active"><a href="#">ru</a></li>
-                      <li class="dropdown__btn"><a href="#">en</a></li>
-                    </ul>
+                  </li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="header__bottom-mob">
+                  <div class="header__lang lang">
+                    <div class="lang__dropdown dropdown">
+                      <div class="dropdown__btn">ru</div>
+                      <ul class="dropdown__menu">
+                        <li class="dropdown__btn"><a href="#">en</a></li>
+                      </ul>
+                      <ul class="dropdown__menu-mobile dropdown__menu">
+                        <li class="dropdown__btn active"><a href="#">ru</a></li>
+                        <li class="dropdown__btn"><a href="#">en</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="headerOptionsBtn2" class="header__options-btn">
+                    <img src="images/options.png" alt="" />
                   </div>
                 </div>
-                <div id="headerOptionsBtn2" class="header__options-btn">
-                  <img src="images/options.png" alt="" />
+              </div>
+            </nav>
+          </div>
+        </header>
+        <main class="main projects-page internal-page">
+          <div class="projects-page__container container">
+            <section class="projects-page__header header-projects-page">
+              <h1 class="projects-page__title title-h1">Проекты</h1>
+              <div class="header-projects-page__row">
+                <div class="header-projects-page__left">
+                  Мы создаем проекты, выполненные не только согласно всем
+                  требованиям клиентов, но и превосходящие ожидания, обеспечивая
+                  качество и сервис. 
                 </div>
+                <div class="header-projects-page__right">
+                  <div id="header-projects-page__filter" class="header-projects-page__filter">
+                    <span
+                      >Фильтрация по типу
+                      <svg
+                        width="13"
+                        height="12"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z"
+                          fill="#212121"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="header-projects-page__types">
+                    <div class="filter-wrapper">
+                      <div class="filter-closer">x</div>
+                      <ul id="filter-list">
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="private"
+                            value="private"
+                          />
+                          <label for="private">Частные объекты</label>
+                        </li>
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="public"
+                            value="public"
+                          />
+                          <label for="public">Общественные пространства</label>
+                        </li>
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="office"
+                            value="office"
+                          />
+                          <label for="office">Офисы</label>
+                        </li>
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="landscape"
+                            value="landscape"
+                          />
+                          <label for="landscape">Ландшафтное освещение</label>
+                        </li>
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="architecture"
+                            value="architecture"
+                          />
+                          <label for="architecture"
+                            >Архитектурное освещение</label
+                          >
+                        </li>
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="museum"
+                            value="museum"
+                          />
+                          <label for="museum">Музеи и галереи</label>
+                        </li>
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="retail"
+                            value="retail"
+                          />
+                          <label for="retail">Ритейл</label>
+                        </li>
+                        <li>
+                          <input
+                            type="checkbox"
+                            class="filter-option"
+                            id="horeca"
+                            value="horeca"
+                          />
+                          <label for="horeca">HoReCa</label>
+                        </li>
+                      </ul>
+                      <button id="clear-filter" disabled>Очистить фильтр</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="projects-page__items">
+              <div class="projects-page__row">
+                <div
+                  class="projects-page__item item-projects-page"
+                  data-type="private"
+                >
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/13.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Москва</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="projects-page__item item-projects-page"
+                  data-type="public"
+                >
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/11.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Санкт-Петербург</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="projects-page__item item-projects-page projects-page__item--big"
+                  data-type="office"
+                >
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/12.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Алматы</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="projects-page__item item-projects-page projects-page__item--big"
+                  data-type="landscape"
+                >
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/13.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Москва</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects-page__item item-projects-page">
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/11.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Санкт-Петербург</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects-page__item item-projects-page">
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/12.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Алматы</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="projects-page__item item-projects-page projects-page__item--big"
+                >
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/11.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Санкт-Петербург</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="projects-page__item item-projects-page projects-page__item--big"
+                >
+                  <div class="item-projects-page__column">
+                    <div class="item-projects-page__img">
+                      <img src="images/projects-page/12.png" alt="" />
+                    </div>
+                    <div class="item-projects-page__title">
+                      Музей истории «Океанрыбфлота»
+                    </div>
+                    <div class="item-projects-page__loc">Алматы</div>
+                    <div class="item-projects-page__desc">
+                      <ul>
+                        <li><a href="#" class="">Ландшафтное освещение</a></li>
+                        <li><a href="#" class="">Архитектурное освещение</a></li>
+                        <li><a href="#" class="">Музеи и галереи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="footer__container container">
+            <div class="footer__logo logo-footer">
+              <div class="logo-footer__inner">
+                <img src="images/logo.png" alt="" />
               </div>
             </div>
-          </nav>
-        </div>
-      </header>
-      <main class="main projects-page internal-page">
-        <div class="projects-page__container container">
-          <section class="projects-page__header header-projects-page">
-            <h1 class="projects-page__title title-h1">Проекты</h1>
-            <div class="header-projects-page__row">
-              <div class="header-projects-page__left">
-                Мы создаем проекты, выполненные не только согласно всем
-                требованиям клиентов, но и превосходящие ожидания, обеспечивая
-                качество и сервис. 
+            <div class="footer__main">
+              <div class="footer__top">
+                <ul>
+                  <li>
+                    <a href=""> info@lharmony.ru </a>
+                  </li>
+                  <li>
+                    <a href=""> +7(495) 660-0475 </a>
+                  </li>
+                </ul>
               </div>
-              <div class="header-projects-page__right">
-                <div id="header-projects-page__filter" class="header-projects-page__filter">
-                  <span
-                    >Фильтрация по типу
-                    <svg
-                      width="13"
-                      height="12"
-                      viewBox="0 0 13 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z"
-                        fill="#212121"
-                      />
-                    </svg>
-                  </span>
-                </div>
-                <div class="header-projects-page__types">
-                  <div class="filter-wrapper">
-                    <div class="filter-closer">x</div>
-                    <ul id="filter-list">
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="private"
-                          value="private"
-                        />
-                        <label for="private">Частные объекты</label>
-                      </li>
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="public"
-                          value="public"
-                        />
-                        <label for="public">Общественные пространства</label>
-                      </li>
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="office"
-                          value="office"
-                        />
-                        <label for="office">Офисы</label>
-                      </li>
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="landscape"
-                          value="landscape"
-                        />
-                        <label for="landscape">Ландшафтное освещение</label>
-                      </li>
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="architecture"
-                          value="architecture"
-                        />
-                        <label for="architecture"
-                          >Архитектурное освещение</label
-                        >
-                      </li>
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="museum"
-                          value="museum"
-                        />
-                        <label for="museum">Музеи и галереи</label>
-                      </li>
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="retail"
-                          value="retail"
-                        />
-                        <label for="retail">Ритейл</label>
-                      </li>
-                      <li>
-                        <input
-                          type="checkbox"
-                          class="filter-option"
-                          id="horeca"
-                          value="horeca"
-                        />
-                        <label for="horeca">HoReCa</label>
-                      </li>
-                    </ul>
-                    <button id="clear-filter" disabled>Очистить фильтр</button>
-                  </div>
-                </div>
+              <div class="footer__menu footer__menu1">
+                <ul>
+                  <li>
+                    <a href="">О нас</a>
+                  </li>
+                  <li>
+                    <a href="">Проекты</a>
+                  </li>
+                  <li>
+                    <a href="">Услуги</a>
+                  </li>
+                  <li>
+                    <a href="">Новости</a>
+                  </li>
+                  <li>
+                    <a href="">Контакты</a>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </section>
-          <section class="projects-page__items">
-            <div class="projects-page__row">
-              <div
-                class="projects-page__item item-projects-page"
-                data-type="private"
-              >
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/13.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Москва</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="footer__menu footer__menu2">
+                <ul>
+                  <li>
+                    <a href="">Светодизайн</a>
+                  </li>
+                  <li>
+                    <a href="">Проектирование</a>
+                  </li>
+                  <li>
+                    <a href="">Поставка</a>
+                  </li>
+                  <li>
+                    <a href="">Сопровождение</a>
+                  </li>
+                  <li>
+                    <a href="">Консалтинг</a>
+                  </li>
+                </ul>
               </div>
-              <div
-                class="projects-page__item item-projects-page"
-                data-type="public"
-              >
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/11.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Санкт-Петербург</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="footer__bottom">
+                <ul>
+                  <li><a href="">© LightHarmony 2001-2024 </a></li>
+                  <li><a href="">Политика конфиденциальности</a></li>
+                  <li><a href="">Разработано в Bofer.ru</a></li>
+                </ul>
               </div>
-              <div
-                class="projects-page__item item-projects-page projects-page__item--big"
-                data-type="office"
-              >
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/12.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Алматы</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="projects-page__item item-projects-page projects-page__item--big"
-                data-type="landscape"
-              >
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/13.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Москва</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="projects-page__item item-projects-page">
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/11.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Санкт-Петербург</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="projects-page__item item-projects-page">
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/12.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Алматы</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="projects-page__item item-projects-page projects-page__item--big"
-              >
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/11.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Санкт-Петербург</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="projects-page__item item-projects-page projects-page__item--big"
-              >
-                <div class="item-projects-page__column">
-                  <div class="item-projects-page__img">
-                    <img src="images/projects-page/12.png" alt="" />
-                  </div>
-                  <div class="item-projects-page__title">
-                    Музей истории «Океанрыбфлота»
-                  </div>
-                  <div class="item-projects-page__loc">Алматы</div>
-                  <div class="item-projects-page__desc">
-                    <ul>
-                      <li><a href="#" class="">Ландшафтное освещение</a></li>
-                      <li><a href="#" class="">Архитектурное освещение</a></li>
-                      <li><a href="#" class="">Музеи и галереи</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="footer__container container">
-          <div class="footer__logo logo-footer">
-            <div class="logo-footer__inner">
-              <img src="images/logo.png" alt="" />
             </div>
           </div>
-          <div class="footer__main">
-            <div class="footer__top">
-              <ul>
-                <li>
-                  <a href=""> info@lharmony.ru </a>
-                </li>
-                <li>
-                  <a href=""> +7(495) 660-0475 </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__menu footer__menu1">
-              <ul>
-                <li>
-                  <a href="">О нас</a>
-                </li>
-                <li>
-                  <a href="">Проекты</a>
-                </li>
-                <li>
-                  <a href="">Услуги</a>
-                </li>
-                <li>
-                  <a href="">Новости</a>
-                </li>
-                <li>
-                  <a href="">Контакты</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__menu footer__menu2">
-              <ul>
-                <li>
-                  <a href="">Светодизайн</a>
-                </li>
-                <li>
-                  <a href="">Проектирование</a>
-                </li>
-                <li>
-                  <a href="">Поставка</a>
-                </li>
-                <li>
-                  <a href="">Сопровождение</a>
-                </li>
-                <li>
-                  <a href="">Консалтинг</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__bottom">
-              <ul>
-                <li><a href="">© LightHarmony 2001-2024 </a></li>
-                <li><a href="">Политика конфиденциальности</a></li>
-                <li><a href="">Разработано в Bofer.ru</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
 
     <script src="js/libs/jquery-3.7.1.min.js"></script>
