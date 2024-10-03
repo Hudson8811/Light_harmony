@@ -35,7 +35,7 @@
   align-items: flex-end;
   position: relative;
 }
-.project-page__header span {
+.project-page__header > span {
   position: absolute;
   bottom: 0;
   right: 0;

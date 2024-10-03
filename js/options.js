@@ -6,7 +6,9 @@ $(document).ready(function () {
   const $headerOptions = $("#headerOptions");
   const $headerOptionsBtn1 = $("#headerOptionsBtn1");
   const $headerOptionsBtn2 = $("#headerOptionsBtn2");
-
+  $('.title-h2, .internal-page .title-h1').html(function(_, html) {
+    return '<span>' + html + '</span>';
+  });
   $headerOptionsBtn1.on("click", function () {
     $headerOptions.toggleClass("show");
   });
@@ -16,24 +18,28 @@ $(document).ready(function () {
 
   $darkModeToggle.on("change", function () {
     if ($darkModeToggle.is(":checked")) {
-      $("body").css({
-        backgroundColor: "#1e1e1e",
-        color: "#ffffff",
+      $("body").removeClass('orange-active');
+      $("body").addClass('dark-active');
+      $(".intro__anim").css({
+        backgroundColor: "transparent",
       });
+      $('.header__logo-inner img').attr('src', 'images/logo-white.png');
+      $('.logo-footer__inner img').attr('src', 'images/logo-white.png');
     } else {
-      $("body").css({
-        backgroundColor: "#fff",
-        color: "#212121",
-      });
+      $("body").removeClass('dark-active');
+      $('.header__logo-inner img').attr('src', 'images/logo.png');
+      $('.logo-footer__inner img').attr('src', 'images/logo.png');
     }
   });
 
   $orangeThemeToggle.on("change", function () {
     if ($orangeThemeToggle.is(":checked")) {
+      $("body").addClass('orange-active');
       $(".intro__anim").css({
         backgroundColor: "#F55F23",
       });
     } else {
+      $("body").removeClass('orange-active');
       $(".intro__anim").css({
         backgroundColor: "transparent",
       });

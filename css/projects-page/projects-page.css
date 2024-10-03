@@ -92,16 +92,6 @@
 .projects-page .filter-wrapper button:disabled {
   background-color: var(--light-theme-bg);
 }
-.projects-page p,
-.projects-page span {
-  font-size: 21px;
-}
-@media (max-width: 1279px) {
-  .projects-page p,
-  .projects-page span {
-    font-size: 18px;
-  }
-}
 .projects-page__items {
   margin-top: 50px;
 }
