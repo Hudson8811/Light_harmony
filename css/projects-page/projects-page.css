@@ -1,6 +1,11 @@
 .projects-page {
   font-weight: 300;
 }
+@media (max-width: 639px) {
+  .projects-page {
+    padding-top: 107px;
+  }
+}
 .projects-page .filter-wrapper {
   background-color: var(--light-theme-grey-bg);
   padding: 20px;
@@ -100,6 +105,11 @@
 .projects-page__items {
   margin-top: 50px;
 }
+@media (max-width: 639px) {
+  .projects-page__items {
+    margin-top: 32px;
+  }
+}
 .projects-page__row {
   display: flex;
   flex-wrap: wrap;
@@ -114,15 +124,15 @@
 }
 @media (max-width: 639px) {
   .projects-page__row {
-    row-gap: 40px;
+    row-gap: 43px;
   }
 }
 .projects-page__item {
-  flex: 0 1 calc(25% - 20px);
+  flex: 0 1 calc(25.4% - 20px);
 }
 @media (max-width: 1279px) {
   .projects-page__item {
-    flex: 0 1 calc(50% - 20px);
+    flex: 0 1 calc(50% - 10px);
   }
 }
 @media (max-width: 639px) {
@@ -131,7 +141,19 @@
   }
 }
 .projects-page__item--big {
-  flex: 0 1 calc(50% - 20px);
+  flex: 0 1 49%;
+}
+@media (max-width: 1919px) {
+  .projects-page__item--big .item-projects-page__img {
+    aspect-ratio: 1/0.7578;
+    width: 100%;
+    padding-top: 0;
+  }
+}
+@media (max-width: 1279px) {
+  .projects-page__item--big .item-projects-page__img {
+    aspect-ratio: 1/0.74;
+  }
 }
 @media (max-width: 1279px) {
   .projects-page__item--big {
@@ -168,6 +190,11 @@
   .header-projects-page__row {
     flex-direction: column;
     align-items: flex-end;
+  }
+}
+@media (max-width: 639px) {
+  .header-projects-page__row {
+    margin-top: 58px;
   }
 }
 .header-projects-page__left {
@@ -214,6 +241,18 @@
   position: relative;
   padding-top: 100%;
 }
+@media (max-width: 1919px) {
+  .item-projects-page__img {
+    aspect-ratio: 1/1.014;
+    width: 100%;
+    padding-top: 0;
+  }
+}
+@media (max-width: 1279px) {
+  .item-projects-page__img {
+    aspect-ratio: 1/1;
+  }
+}
 .item-projects-page__img img {
   position: absolute;
   top: 0;
@@ -226,10 +265,12 @@
 .item-projects-page__title {
   margin-top: 20px;
   font-size: 21px;
+  line-height: 1.17em;
 }
 @media (max-width: 1279px) {
   .item-projects-page__title {
     margin-top: 18px;
+    font-size: 18px;
   }
 }
 .item-projects-page__loc {
@@ -259,4 +300,5 @@
 }
 .item-projects-page__desc li a {
   color: var(--light-theme-light-text);
+  line-height: 1.17em;
 }/*# sourceMappingURL=projects-page.css.map */

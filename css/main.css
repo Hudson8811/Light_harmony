@@ -75,12 +75,13 @@ body {
     font-size: 104px;
     line-height: 120%;
     color: var(--light-theme-dark-text);
-    font-weight: 800;
+    letter-spacing: -0.03em;
 }
 
 @media (max-width: 1919px) {
     .title-h1 {
-        font-size: 80px;
+        font-size: 84px;
+        letter-spacing: -0.02em;
     }
 }
 

@@ -1,35 +1,63 @@
 .contacts-page {
   font-weight: 300;
   font-size: 21px;
+
+  @media (max-width: 1919px) {
+    padding-bottom: 174px;
+  }
+
   @media (max-width: 1279px) {
+    padding-bottom: 86px;
     font-size: 18px;
   }
+
+  @media (max-width: 639px) {
+    padding-top: 107px;
+    padding-bottom: 48px;
+  }
+
   &__content {
     margin-top: 100px;
+
+    @media (max-width: 1919px) {
+      margin-top: 134px;
+    }
+
+    @media (max-width: 1279px) {
+      margin-top: 98px;
+    }
+
     @media (max-width: 639px) {
       margin-top: 60px;
     }
   }
+
   &__row {
     display: flex;
   }
+
   &__left {
-    flex: 0 1 40%;
+    flex: 0 1 40.64%;
+
     @media (max-width: 1279px) {
       flex: 1 1 100%;
     }
   }
+
   &__right {
-    flex: 0 1 60%;
+    flex: 0 1 59.36%;
+
     @media (max-width: 1279px) {
       flex: 1 1 100%;
     }
+
     ul {
       li {
         a {
           position: relative;
           display: inline-block;
           padding-left: 36px;
+
           &::before,
           &::after {
             content: "";
@@ -38,12 +66,14 @@
             left: 8px;
             transform: translate(-50%, -50%);
           }
+
           &::before {
-            width: 16px;
-            height: 16px;
+            width: 22px;
+            height: 22px;
             background-color: var(--light-theme-banner);
             z-index: 2;
           }
+
           &::after {
             width: 46px;
             height: 46px;
@@ -52,6 +82,7 @@
             z-index: 1;
             transition: all 0.3s ease 0s;
           }
+
           &:hover {
             &::after {
               opacity: 1;
@@ -61,124 +92,216 @@
       }
     }
   }
-  &__address {
-  }
+
+  &__address {}
+
   &__email {
     margin-top: 72px;
-    @media (max-width: 639px) {
-      margin-top: 30px;
+
+    @media (max-width: 1919px) {
+      margin-top: 84px;
     }
+
+    @media (max-width: 1279px) {
+      margin-top: 69px;
+    }
+
+    @media (max-width: 639px) {
+      margin-top: 34px;
+    }
+
     li {
       @media (max-width: 639px) {
         margin-top: 21px;
       }
     }
   }
+
   &__phone {
     margin-top: 44px;
-    @media (max-width: 639px) {
-      margin-top: 30px;
+
+    @media (max-width: 1919px) {
+      margin-top: 48px;
     }
+
+    @media (max-width: 1279px) {
+      margin-top: 39px;
+    }
+
+    @media (max-width: 639px) {
+      margin-top: 38px;
+    }
+
     li {
       margin-top: 44px;
+
       &:first-child {
         margin-top: 0;
       }
+
+      @media (max-width: 1919px) {
+        margin-top: 48px;
+      }
+
+      @media (max-width: 1279px) {
+        margin-top: 39px;
+      }
+
       @media (max-width: 639px) {
-        margin-top: 21px;
+        margin-top: 24px;
+
         &:first-child {
-          margin-top: 21px;
+          margin-top: 24px;
         }
       }
     }
   }
-  &__map {
-  }
+
+  &__map {}
+
   &__question {
     margin-top: 110px;
-    @media (max-width: 639px){
-        margin-top: 60px;
+
+    @media (max-width: 1279px) {
+      margin-top: 104px;
+    }
+
+    @media (max-width: 639px) {
+      margin-top: 60px;
     }
   }
 }
+
 .address-contacts-page {
   &__info {
     span {
       display: inline-block;
+
       &:first-child {
         margin-right: 25px;
       }
     }
   }
+
   &__title {
     margin-top: 25px;
     margin-bottom: 25px;
+
+    @media (max-width: 1919px) {
+      font-size: 52px;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 1279px) {
+      font-size: 50px;
+    }
+
+    @media (max-width: 639px) {
+      font-size: 28px;
+    }
   }
 
   @media (max-width: 1279px) {
     .contacts-page__row {
       flex-wrap: wrap;
-      > * {
+
+      >* {
         flex: 1 1 100%;
       }
+
       .contacts-page__right {
         margin-top: 50px;
+
+        @media (max-width: 639px) {
+          margin-top: 22px;
+        }
       }
     }
   }
+
   @media (max-width: 639px) {
     .contacts-page__right {
       margin-top: 30px;
     }
   }
 }
+
 .email-contacts-page {
-  &__info {
-  }
+  &__info {}
+
   @media (max-width: 1279px) {
     .contacts-page__row {
-      > * {
+      >* {
         flex: 0 1 50%;
       }
     }
   }
+
   @media (max-width: 639px) {
     .contacts-page__row {
       flex-wrap: wrap;
-      > * {
+
+      >* {
         flex: 0 1 100%;
       }
     }
   }
 }
+
 .phone-contacts-page {
-  &__info {
-  }
+  &__info {}
+
   @media (max-width: 1279px) {
     .contacts-page__row {
-      > * {
+      >* {
         flex: 0 1 50%;
       }
     }
   }
+
   @media (max-width: 639px) {
     .contacts-page__row {
       flex-wrap: wrap;
-      > * {
+
+      >* {
         flex: 0 1 100%;
       }
     }
   }
 }
+
 .map-contacts-page {
   margin-top: 80px;
-  @media (max-width: 639px){
-      margin-top: 30px;
+
+  @media (max-width: 1279px) {
+    margin-top: 62px;
   }
+
+  @media (max-width: 639px) {
+    margin-top: 30px;
+  }
+
   &__info {
     position: relative;
     padding-top: 66%;
     min-height: 80vh;
+
+    @media (max-width: 1919px) {
+      padding-top: 59%;
+      min-height: 437px;
+    }
+
+    @media (max-width: 1279px) {
+      padding-top: 59%;
+      min-height: 368px;
+    }
+
+    @media (max-width: 639px) {
+      padding-top: 59%;
+      min-height: 500px;
+    }
+
     iframe {
       width: 100%;
       height: 100%;
@@ -188,45 +311,63 @@
       object-fit: cover;
     }
   }
+
   @media (max-width: 1279px) {
     .contacts-page__row {
       flex-wrap: wrap;
-      > * {
+
+      >* {
         flex: 0 1 100%;
       }
     }
   }
 }
+
 .question-contacts-page {
-  &__info {
-  }
+  &__info {}
+
   &__form {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
+
   &__inputs {
-    flex: 0 1 calc(33.333% - 10px);
+    flex: 0 0 calc(34% - 10px);
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: 1919px) {
+      flex-basis: 360px;
+    }
   }
+
   &__input {
     background-color: var(--light-theme-form);
     padding: 21px 30px;
     color: var(--light-theme-dark-text);
     font-size: 21px;
     font-weight: 300;
+
     @media (max-width: 1279px) {
       font-size: 18px;
     }
   }
+
   &__input::placeholder {
     color: var(--light-theme-dark-text);
     font-family: "Pragmatica";
     font-weight: 300;
   }
+
   &__textarea {
-    flex: 0 1 66.666%;
+    flex: 0 0 calc(66% - 10px);
+
+    @media (max-width: 1919px) {
+      flex-basis: 100%;
+    }
+
     textarea {
       color: var(--light-theme-dark-text);
       padding: 21px 30px;
@@ -235,24 +376,35 @@
       width: 100%;
       background-color: var(--light-theme-form);
       font-size: 21px;
+
       @media (max-width: 1279px) {
         font-size: 18px;
       }
     }
+
     textarea::placeholder {
       color: var(--light-theme-dark-text);
       font-weight: 300;
     }
   }
+
   &__textarea-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-left: auto;
     gap: 20px;
-    @media (max-width: 639px){
-        flex-wrap: wrap;
+
+    @media (max-width: 1919px) {
+      flex-basis: 100%;
+      margin-top: 0;
     }
+
+    @media (max-width: 639px) {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     label {
       display: flex;
       align-items: center;
@@ -274,8 +426,7 @@
     }
 
     input[type="checkbox"]:checked::before {
-      background: url("../../images/arrow-checkbox.png") 0 0 / 100% 100%
-        no-repeat;
+      background: url("../../images/arrow-checkbox.png") 0 0 / 100% 100% no-repeat;
       content: "";
       position: absolute;
       top: 4px;
@@ -290,44 +441,54 @@
       padding: 11px;
       background-color: var(--light-theme-dark-text);
       color: var(--dark-theme-light-text);
+
       @media (max-width: 1279px) {
         width: 50%;
       }
-      @media (max-width: 639px){
-          width: 100%;
+
+      @media (max-width: 639px) {
+        width: 100%;
       }
     }
   }
-  &__checkbox {
-  }
-  &__send-button {
-  }
+
+  &__checkbox {}
+
+  &__send-button {}
+
   @media (max-width: 1279px) {
     .contacts-page__row {
       flex-wrap: wrap;
-      > * {
+
+      >* {
         flex: 0 1 100%;
       }
+
       .contacts-page__right {
         margin-top: 50px;
       }
     }
+
     .question-contacts-page__form {
       flex-wrap: wrap;
-      > * {
+
+      >* {
         flex: 0 1 100%;
       }
+
       .question-contacts-page__inputs {
         flex: 0 1 50%;
       }
     }
   }
-  @media (max-width: 639px){
+
+  @media (max-width: 639px) {
     .contacts-page__row {
       .contacts-page__right {
         margin-top: 20px;
       }
     }
+
     .question-contacts-page__form {
       .question-contacts-page__inputs {
         flex: 0 1 100%;
