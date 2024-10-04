@@ -69,7 +69,7 @@
   background-color: var(--light-theme-bg);
 }
 .options-header .toggle:checked::before {
-  left: 22px;
+  left: 15px;
 }
 .options-header input.slider-range {
   width: 200px;

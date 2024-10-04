@@ -167,6 +167,9 @@ body.dark-active .question-contacts-page__textarea-footer button {
 body.dark-active .question-contacts-page__textarea-footer input[type="checkbox"]:checked::before {
     background: url("../../images/arrow-checkbox-white.png") 0 0 / 100% 100% no-repeat;
 }
+body.dark-active .toggle:checked::before {
+    background-color: var(--light-theme-banner);
+}
 
 body.orange-active .title-h2 span,
 body.orange-active .internal-page .title-h1 span {
