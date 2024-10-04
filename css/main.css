@@ -53,10 +53,10 @@ body.dark-active .item-banners__name::before {
 body.dark-active .intro__anim,
 body.dark-active .logo-footer {
     background:
-        url("../../../images/cross-white.png") 0 0/15px 15px no-repeat,
-        url("../../../images/cross-white.png") 0 100%/15px 15px no-repeat,
-        url("../../../images/cross-white.png") 100% 0/15px 15px no-repeat,
-        url("../../../images/cross-white.png") 100% 100%/15px 15px no-repeat;
+        url("../../images/cross-white.png") 0 0/15px 15px no-repeat,
+        url("../../images/cross-white.png") 0 100%/15px 15px no-repeat,
+        url("../../images/cross-white.png") 100% 0/15px 15px no-repeat,
+        url("../../images/cross-white.png") 100% 100%/15px 15px no-repeat;
 }
 body.dark-active .header-projects-page__filter span svg path {
     fill: var(--dark-theme-light-text);
