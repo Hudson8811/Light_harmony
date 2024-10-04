@@ -79,7 +79,8 @@ body.dark-active .options-header input[type="range"]::-webkit-slider-thumb {
 body.dark-active .header__search {
     background-color: var(--light-theme-dark-grey);
 }
-body.dark-active .header__lang .dropdown__btn {
+body.dark-active .header__lang .dropdown__btn,
+body.dark-active .header__lang .dropdown__btn a {
     background-color: var(--light-theme-dark-grey);
     color: var(--dark-theme-light-text);
 }
@@ -107,6 +108,9 @@ body.dark-active .footer__container .footer__main .footer__menu a:hover {
 }
 body.dark-active .up-click::after {
     background-color: var(--dark-theme-light-text);
+}
+body.dark-active .up-click svg path {
+    fill: var(--light-theme-dark-text);
 }
 body.dark-active .dropdown__menu * {
     color: var(--dark-theme-dark-bg);
@@ -153,15 +157,15 @@ body.dark-active .question-contacts-page__textarea textarea,
 body.dark-active .question-contacts-page__textarea textarea::placeholder {
     color: var(--dark-theme-light-text);
 }
-body.dark-active .question-contacts-page__textarea-footer input[type=checkbox] {
+body.dark-active .question-contacts-page__textarea-footer input[type="checkbox"] {
     border-color: var(--dark-theme-light-text);
 }
 body.dark-active .question-contacts-page__textarea-footer button {
     background-color: var(--dark-theme-light-text);
     color: var(--dark-theme-dark-bg);
 }
-body.dark-active .question-contacts-page__textarea-footer input[type=checkbox]:checked::before {
-    background: url('../../images/arrow-checkbox-white.png') 0 0 / 100% 100% no-repeat;
+body.dark-active .question-contacts-page__textarea-footer input[type="checkbox"]:checked::before {
+    background: url("../../images/arrow-checkbox-white.png") 0 0 / 100% 100% no-repeat;
 }
 
 body.orange-active .title-h2 span,
