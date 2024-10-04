@@ -32,6 +32,8 @@ $(document).ready(function () {
         height: "8px",
       });
       $('.swiper-arrow img').attr('src', 'images/swiper-arrow-white.png');
+      $('.item-projects-page__loc::before').css({
+      });
     } else {
       $("body").removeClass('dark-active');
       $('.header__logo-inner img').attr('src', 'images/logo.png');
@@ -39,6 +41,8 @@ $(document).ready(function () {
       $('#headerOptionsBtn1 img').attr('src', 'images/options.png');
       $('.header__search-btn img').attr('src', 'images/arrow.png');
       $('.swiper-arrow img').attr('src', 'images/swiper-arrow.png');
+      $('.item-projects-page__loc::before').css({
+      });
     }
   });
 
