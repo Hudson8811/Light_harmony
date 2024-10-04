@@ -311,6 +311,10 @@
       a {
         color: var(--light-theme-light-text);
         line-height: 1.17em;
+        &:hover{
+          
+          color: var(--orange-theme);
+        }
       }
     }
   }

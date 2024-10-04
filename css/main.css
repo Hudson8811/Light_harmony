@@ -111,15 +111,57 @@ body.dark-active .up-click::after {
 body.dark-active .dropdown__menu * {
     color: var(--dark-theme-dark-bg);
 }
-body.dark-active .item-last-about-us-page__el::before,
-body.dark-active .item-last-about-us-page__el::after {
-    color: var(--dark-theme-dark-bg);
+body.dark-active .last-about-us-page__item:hover .item-last-about-us-page__el {
+    background-color: var(--dark-theme-dark-bg);
 }
-body.dark-active .item-last-about-us-page__el {
+body.dark-active .item-last-about-us-page__el::before {
     background-color: var(--dark-theme-light-text);
+}
+body.dark-active .item-last-about-us-page__el::after {
+    background: url("../images/arrow.png") 0 0 / 100% 100% no-repeat;
+    transform: translate(-50%, -50%) rotate(-90deg);
 }
 body.dark-active .project-page__media-desc-item a span::before {
     background-color: var(--dark-theme-light-text);
+}
+body.dark-active .item-projects-page__loc::before {
+    background: url("../images/loc-white.svg") 0 0 / 100% 100% no-repeat;
+}
+body.dark-active .project-page__media-desc-item a:hover span {
+    background-color: var(--dark-theme-dark-bg);
+}
+body.dark-active .sec1-about-us-page__point::before {
+    background-color: var(--dark-theme-light-text);
+}
+body.dark-active .contacts-page__right ul li a::before {
+    background-color: var(--dark-theme-light-text);
+}
+body.dark-active .contacts-page__right ul li a::after {
+    background-color: var(--dark-theme-dark-bg);
+}
+body.dark-active .question-contacts-page__input {
+    background-color: var(--dark-theme-dark-bg);
+}
+body.dark-active .question-contacts-page__textarea textarea {
+    background-color: var(--dark-theme-dark-bg);
+}
+body.dark-active .question-contacts-page__input,
+body.dark-active .question-contacts-page__input::placeholder {
+    color: var(--dark-theme-light-text);
+}
+body.dark-active .question-contacts-page__textarea textarea,
+body.dark-active .question-contacts-page__textarea textarea::placeholder {
+    color: var(--dark-theme-light-text);
+}
+body.dark-active .question-contacts-page__textarea-footer input[type=checkbox] {
+    border-color: var(--dark-theme-light-text);
+}
+body.dark-active .question-contacts-page__textarea-footer button {
+    background-color: var(--dark-theme-light-text);
+    color: var(--dark-theme-dark-bg);
+}
+body.dark-active .question-contacts-page__textarea-footer input[type=checkbox]:checked::before {
+    background: url('../../images/arrow-checkbox-white.png') 0 0 / 100% 100% no-repeat;
 }
 
 body.orange-active .title-h2 span,

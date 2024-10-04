@@ -291,4 +291,7 @@
 .item-projects-page__desc li a {
   color: var(--light-theme-light-text);
   line-height: 1.17em;
+}
+.item-projects-page__desc li a:hover {
+  color: var(--orange-theme);
 }/*# sourceMappingURL=projects-page.css.map */
