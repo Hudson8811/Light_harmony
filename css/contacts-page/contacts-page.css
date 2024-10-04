@@ -191,6 +191,9 @@
     font-size: 28px;
   }
 }
+.address-contacts-page__title span {
+  display: inline;
+}
 @media (max-width: 1279px) {
   .address-contacts-page .contacts-page__row {
     flex-wrap: wrap;

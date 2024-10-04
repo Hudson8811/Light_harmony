@@ -6,7 +6,7 @@ $(document).ready(function () {
   const $headerOptions = $("#headerOptions");
   const $headerOptionsBtn1 = $("#headerOptionsBtn1");
   const $headerOptionsBtn2 = $("#headerOptionsBtn2");
-  $('.title-h2, .internal-page .title-h1').html(function(_, html) {
+  $('.title-h2, .internal-page .title-h1, .sec1-about-us-page__left-big-text').html(function(_, html) {
     return '<span>' + html + '</span>';
   });
   $headerOptionsBtn1.on("click", function () {

@@ -118,7 +118,7 @@ body.orange-active .logo-footer__inner::before {
     }
 }
 
-.title-h1 span {
+h1.title-h1 span {
     font-family: "Literata";
     font-weight: 800;
     font-size: 104px;
@@ -128,25 +128,25 @@ body.orange-active .logo-footer__inner::before {
 }
 
 @media (max-width: 1919px) {
-    .title-h1 span {
+    h1.title-h1 span {
         font-size: 84px;
         letter-spacing: -0.02em;
     }
 }
 
 @media (max-width: 1279px) {
-    .title-h1 span {
+    h1.title-h1 span {
         font-size: 50px;
     }
 }
 
 @media (max-width: 639px) {
-    .title-h1 span {
+    h1.title-h1 span {
         font-size: 26px;
     }
 }
 
-.title-h2 span {
+h2.title-h2 span {
     font-family: "Literata";
     font-weight: 800;
     font-size: 64px;
@@ -157,13 +157,13 @@ body.orange-active .logo-footer__inner::before {
 }
 
 @media (max-width: 1279px) {
-    .title-h2 span {
+    h2.title-h2 span {
         font-size: 50px;
     }
 }
 
 @media (max-width: 639px) {
-    .title-h2 span {
+    h2.title-h2 span {
         font-size: 26px;
         letter-spacing: -0.02em;
     }

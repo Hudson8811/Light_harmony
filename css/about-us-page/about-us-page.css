@@ -344,22 +344,22 @@
     flex: 1 1 calc(50% - 20px);
   }
 }
-.sec1-about-us-page__left-big-text {
+.sec1-about-us-page span.sec1-about-us-page__left-big-text span {
   font-family: Literata;
   font-size: 110px !important;
 }
 @media (max-width: 1919px) {
-  .sec1-about-us-page__left-big-text {
+  .sec1-about-us-page span.sec1-about-us-page__left-big-text span {
     font-size: 84px !important;
   }
 }
 @media (max-width: 1279px) {
-  .sec1-about-us-page__left-big-text {
+  .sec1-about-us-page span.sec1-about-us-page__left-big-text span {
     font-size: 60px !important;
   }
 }
 @media (max-width: 639px) {
-  .sec1-about-us-page__left-big-text {
+  .sec1-about-us-page span.sec1-about-us-page__left-big-text span {
     font-size: 28px !important;
     margin-top: 0;
   }
