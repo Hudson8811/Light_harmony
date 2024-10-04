@@ -76,7 +76,7 @@
 }
 .options-header input[type=range] {
   -webkit-appearance: none;
-  height: 5px;
+  height: 3px;
   background: var(--dark-theme-dark-bg);
   outline: none;
   opacity: 0.7;

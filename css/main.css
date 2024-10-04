@@ -61,9 +61,66 @@ body.dark-active .logo-footer {
 body.dark-active .header-projects-page__filter span svg path {
     fill: var(--dark-theme-light-text);
 }
-
-
-
+body.dark-active .options-header {
+    background-color: var(--light-theme-bg);
+}
+body.dark-active .options-header * {
+    color: var(--dark-theme-dark-bg);
+}
+body.dark-active .options-header .toggle {
+    background-color: var(--light-theme-grey-bg);
+}
+body.dark-active .options-header input[type="range"] {
+    background: var(--light-theme-grey-bg);
+}
+body.dark-active .options-header input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--light-theme-dark-text);
+}
+body.dark-active .header__search {
+    background-color: var(--light-theme-dark-grey);
+}
+body.dark-active .header__lang .dropdown__btn {
+    background-color: var(--light-theme-dark-grey);
+    color: var(--dark-theme-light-text);
+}
+body.dark-active .header__options-btn {
+    background-color: var(--light-theme-dark-grey);
+}
+body.dark-active .header__search-input::placeholder {
+    color: var(--dark-theme-light-text);
+}
+body.dark-active .list-projects__more-btn span {
+    background-color: var(--dark-theme-light-text);
+}
+body.dark-active .swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: var(--dark-theme-light-text);
+}
+body.dark-active .swiper-suppliers__icon {
+    background-color: transparent;
+}
+body.dark-active .swiper-suppliers__icon:hover {
+    background-color: var(--orange-theme);
+}
+body.dark-active .footer__container .footer__main .footer__menu a:hover {
+    background-color: var(--dark-theme-light-text);
+    color: var(--dark-theme-bg) !important;
+}
+body.dark-active .up-click::after {
+    background-color: var(--dark-theme-light-text);
+}
+body.dark-active .dropdown__menu * {
+    color: var(--dark-theme-dark-bg);
+}
+body.dark-active .item-last-about-us-page__el::before,
+body.dark-active .item-last-about-us-page__el::after {
+    color: var(--dark-theme-dark-bg);
+}
+body.dark-active .item-last-about-us-page__el {
+    background-color: var(--dark-theme-light-text);
+}
+body.dark-active .project-page__media-desc-item a span::before {
+    background-color: var(--dark-theme-light-text);
+}
 
 body.orange-active .title-h2 span,
 body.orange-active .internal-page .title-h1 span {
@@ -73,7 +130,7 @@ body.orange-active .logo-footer__inner {
     position: relative;
 }
 body.orange-active .logo-footer__inner::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -83,7 +140,6 @@ body.orange-active .logo-footer__inner::before {
     transform: translate(-50%, -50%);
     z-index: -1;
 }
-
 
 .page {
     overflow: hidden;

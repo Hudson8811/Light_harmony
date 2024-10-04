@@ -25,10 +25,20 @@ $(document).ready(function () {
       });
       $('.header__logo-inner img').attr('src', 'images/logo-white.png');
       $('.logo-footer__inner img').attr('src', 'images/logo-white.png');
+      $('#headerOptionsBtn1 img').attr('src', 'images/options-white.png');
+      $('.header__search-btn img').attr('src', 'images/arrow-white.png');
+      $(".header__search-btn").css({
+        width: "8px",
+        height: "8px",
+      });
+      $('.swiper-arrow img').attr('src', 'images/swiper-arrow-white.png');
     } else {
       $("body").removeClass('dark-active');
       $('.header__logo-inner img').attr('src', 'images/logo.png');
       $('.logo-footer__inner img').attr('src', 'images/logo.png');
+      $('#headerOptionsBtn1 img').attr('src', 'images/options.png');
+      $('.header__search-btn img').attr('src', 'images/arrow.png');
+      $('.swiper-arrow img').attr('src', 'images/swiper-arrow.png');
     }
   });
 
