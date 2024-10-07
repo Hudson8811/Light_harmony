@@ -107,6 +107,7 @@
 @media (max-width: 1919px) {
   .intro__anim::after {
     width: calc(100% + 40px);
+    height: calc(100% + 40px);
   }
 }
 .intro__anim img {
