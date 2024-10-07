@@ -191,7 +191,9 @@
 
           &.active {
             background-color: var(--light-theme-dark-grey);
-            color: var(--light-theme-bg);
+            a{
+              color: var(--light-theme-bg);
+            }
           }
         }
       }

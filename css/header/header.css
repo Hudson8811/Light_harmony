@@ -179,6 +179,8 @@
   }
   .header__lang .dropdown__menu-mobile.dropdown__menu .dropdown__btn.active {
     background-color: var(--light-theme-dark-grey);
+  }
+  .header__lang .dropdown__menu-mobile.dropdown__menu .dropdown__btn.active a {
     color: var(--light-theme-bg);
   }
 }
@@ -386,4 +388,6 @@
   .dropdown:hover .dropdown__menu {
     display: block;
   }
-}/*# sourceMappingURL=header.css.map */
+}
+
+/*# sourceMappingURL=header.css.map */

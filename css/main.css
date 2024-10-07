@@ -46,9 +46,16 @@ body a {
 body.dark-active {
     background-color: var(--dark-theme-bg);
 }
-body.dark-active  a {
+body.dark-active a {
     color: var(--dark-theme-light-text);
 }
+
+@media (max-width: 1279px) {
+    body.dark-active a {
+        color: var(--light-theme-dark-text);
+    }
+}
+
 body.dark-active .main * {
     color: var(--dark-theme-light-text);
 }
@@ -95,6 +102,15 @@ body.dark-active .header__lang .dropdown__btn a {
     background-color: var(--light-theme-dark-grey);
     color: var(--dark-theme-light-text);
 }
+
+@media (max-width: 1279px) {
+    body.dark-active .header__lang .dropdown__btn:not(.active),
+    body.dark-active .header__lang .dropdown__btn:not(.active) a {
+        background-color: var(--light-theme-bg);
+        color: var(--light-theme-dark-grey);
+    }
+}
+
 body.dark-active .header__options-btn {
     background-color: var(--light-theme-dark-grey);
 }

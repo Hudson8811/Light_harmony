@@ -32,6 +32,7 @@ $(document).ready(function () {
     $('.header__logo-inner img').attr('src', 'images/logo-white.png');
     $('.logo-footer__inner img').attr('src', 'images/logo-white.png');
     $('#headerOptionsBtn1 img').attr('src', 'images/options-white.png');
+    $('#headerOptionsBtn2 img').attr('src', 'images/options-white.png');
     $('.header__search-btn img').attr('src', 'images/arrow-white.png');
     $(".header__search-btn").css({
       width: "8px",
@@ -44,6 +45,7 @@ $(document).ready(function () {
     $('.header__logo-inner img').attr('src', 'images/logo.png');
     $('.logo-footer__inner img').attr('src', 'images/logo.png');
     $('#headerOptionsBtn1 img').attr('src', 'images/options.png');
+    $('#headerOptionsBtn2 img').attr('src', 'images/options.png');
     $('.header__search-btn img').attr('src', 'images/arrow.png');
     $('.swiper-arrow img').attr('src', 'images/swiper-arrow.png');
   }
@@ -108,19 +110,19 @@ $(document).ready(function () {
 
 
   let darkOption = getCookie('option-dark');
-  if (darkOption && darkOption === '0') {
+  if (darkOption === '0') {
     $darkModeToggle.prop('checked', false);
     disableDark();
-  } else {
+  } else if (darkOption != null) {
     $darkModeToggle.prop('checked', true);
     initDark();
   }
 
   let orangeOption = getCookie('option-orange');
-  if (orangeOption && orangeOption === '0') {
+  if (orangeOption === '0') {
     $orangeThemeToggle.prop('checked', false);
     disableOrange();
-  } else {
+  } else if (orangeOption != null) {
     $orangeThemeToggle.prop('checked', true);
     initOrange();
   }
