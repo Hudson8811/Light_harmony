@@ -3,14 +3,14 @@
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.5s ease;
   overflow: hidden;
-  background-color: var(--light-theme-dark-text);
+  background-color: var(--light-theme-options-bg);
   padding: 0;
   margin: 0;
   position: relative;
   z-index: 13;
 }
 .options-header * {
-  color: var(--light-theme-bg);
+  color: var(--light-theme-options-text);
 }
 .options-header__row {
   display: flex;
@@ -46,9 +46,7 @@
 .options-header .toggle {
   width: 30px;
   height: 16px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-color: var(--dark-theme-dark-bg);
   border-radius: 50px;
   position: relative;
@@ -106,4 +104,6 @@
 .options-header.show .options-header__row {
   opacity: 1;
   padding: 30px 30px 110px 30px;
-}/*# sourceMappingURL=options.css.map */
+}
+
+/*# sourceMappingURL=options.css.map */

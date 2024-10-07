@@ -3,14 +3,14 @@
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.5s ease;
   overflow: hidden;
-  background-color: var(--light-theme-dark-text);
+  background-color: var(--light-theme-options-bg);
   padding: 0;
   margin: 0;
   position: relative;
   z-index: 13;
 
   * {
-    color: var(--light-theme-bg);
+    color: var(--light-theme-options-text);
   }
 
   &__row {

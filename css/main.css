@@ -30,13 +30,24 @@
     --dark-theme-dark-bg: rgba(78, 78, 78, 1);
     /*текст в тёмной теме*/
     --dark-theme-light-text: rgba(219, 219, 219, 1);
+
+    --light-theme-options-bg: rgba(33, 33, 33, 1);
+    --light-theme-options-text: rgba(226, 226, 226, 1);
+    --dark-theme-options-bg: rgba(226, 226, 226, 1);
+    --dark-theme-options-text: rgba(78, 78, 78, 1);
 }
 
 body {
     background-color: var(--light-theme-bg);
 }
+body a {
+    color: var(--light-theme-dark-text);
+}
 body.dark-active {
     background-color: var(--dark-theme-bg);
+}
+body.dark-active  a {
+    color: var(--dark-theme-light-text);
 }
 body.dark-active .main * {
     color: var(--dark-theme-light-text);
@@ -50,7 +61,7 @@ body.dark-active .footer__main * {
 body.dark-active .item-banners__name::before {
     background-color: var(--dark-theme-light-text);
 }
-body.dark-active .intro__anim,
+body.dark-active .intro__anim::before,
 body.dark-active .logo-footer {
     background:
         url("../images/cross-white.png") 0 0/15px 15px no-repeat,
@@ -62,10 +73,10 @@ body.dark-active .header-projects-page__filter span svg path {
     fill: var(--dark-theme-light-text);
 }
 body.dark-active .options-header {
-    background-color: var(--light-theme-bg);
+    background-color: var(--dark-theme-options-bg);
 }
 body.dark-active .options-header * {
-    color: var(--dark-theme-dark-bg);
+    color: var(--dark-theme-options-text);
 }
 body.dark-active .options-header .toggle {
     background-color: var(--light-theme-grey-bg);

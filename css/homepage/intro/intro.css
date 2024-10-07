@@ -80,7 +80,83 @@
   z-index: -1;
   padding: 60px 40px;
   transform: translate(-50%, 0%);
+}
+.intro__anim::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
   background: url("../../../images/cross.png") 0 0/15px 15px no-repeat, url("../../../images/cross.png") 0 100%/15px 15px no-repeat, url("../../../images/cross.png") 100% 0/15px 15px no-repeat, url("../../../images/cross.png") 100% 100%/15px 15px no-repeat;
+}
+.intro__anim::after {
+  content: "";
+  display: block;
+  width: calc(100% + 64px);
+  height: calc(100% + 64px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+@media (max-width: 1919px) {
+  .intro__anim::after {
+    width: calc(100% + 40px);
+  }
+}
+.intro__anim img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+.intro__anim:not(.orange-bg) img.head_img_or {
+  display: none !important;
+}
+.intro__anim.orange-bg::before {
+  width: 800px;
+}
+@media (max-width: 1919px) {
+  .intro__anim.orange-bg::before {
+    width: 670px;
+  }
+}
+@media (max-width: 1279px) {
+  .intro__anim.orange-bg::before {
+    width: 560px;
+  }
+}
+@media (max-width: 639px) {
+  .intro__anim.orange-bg::before {
+    width: 290px;
+  }
+}
+.intro__anim.orange-bg::after {
+  background-color: var(--orange-theme);
+  width: 864px;
+}
+@media (max-width: 1919px) {
+  .intro__anim.orange-bg::after {
+    width: 710px;
+  }
+}
+@media (max-width: 1279px) {
+  .intro__anim.orange-bg::after {
+    width: 600px;
+  }
+}
+@media (max-width: 639px) {
+  .intro__anim.orange-bg::after {
+    width: 330px;
+  }
+}
+.intro__anim.orange-bg img.head_img {
+  display: none !important;
 }
 @media (max-width: 1919px) {
   .intro__anim {
@@ -108,7 +184,15 @@
     top: 85px;
   }
 }
-.intro__anim img {
+.intro__anim .head_3d {
+  width: calc(100% + 40px);
+  height: 100%;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  z-index: 3;
+}
+.intro__anim .head_3d canvas {
   width: 100%;
   height: 100%;
 }
@@ -168,4 +252,6 @@
 }
 .intro__socials a:hover {
   opacity: 0.7;
-}/*# sourceMappingURL=intro.css.map */
+}
+
+/*# sourceMappingURL=intro.css.map */

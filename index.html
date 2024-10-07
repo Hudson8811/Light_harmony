@@ -187,7 +187,9 @@
               </div>
             </div>
             <div class="intro__anim">
-              <img src="images/intro/intro-anim.png" alt="" />
+              <div class="head_3d"></div>
+              <img class="head_img" src="images/intro/intro-anim.png" alt="" />
+              <img class="head_img_or" src="images/intro/intro-anim_or.png" alt="" />
             </div>
           </section>
           <section class="banners">
@@ -1151,6 +1153,8 @@
     <script src="js/libs/jquery-3.7.1.min.js"></script>
     <script src="js/libs/swiper-bundle.min.js"></script>
 
+
+
     <script src="js/header.js"></script>
     <script src="js/options.js"></script>
     <script src="js/cursor.js"></script>
@@ -1158,5 +1162,16 @@
     <script src="js/homepage/suppliers.js"></script>
 
     <script src="js/script.js"></script>
+
+    <script src="js/libs/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./js/libs/three.module.js",
+            "three/addons/": "./js/libs/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/homepage/model.js"></script>
   </body>
 </html>

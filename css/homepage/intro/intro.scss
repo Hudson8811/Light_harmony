@@ -76,11 +76,82 @@
     z-index: -1;
     padding: 60px 40px;
     transform: translate(-50%, 0%);
-    background: url("../../../images/cross.png") 0 0 / 15px 15px no-repeat,
+    &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 2;
+      background: url("../../../images/cross.png") 0 0 / 15px 15px no-repeat,
       url("../../../images/cross.png") 0 100% / 15px 15px no-repeat,
       url("../../../images/cross.png") 100% 0 / 15px 15px no-repeat,
       url("../../../images/cross.png") 100% 100% / 15px 15px no-repeat;
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: calc(100% + 64px);
+      height: calc(100% + 64px);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 1;
+      @media (max-width: 1919px) {
+        width: calc(100% + 40px);
+      }
+    }
 
+    img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 3;
+    }
+
+    &:not(.orange-bg){
+      img {
+        &.head_img_or{
+          display: none !important;
+        }
+      }
+    }
+    &.orange-bg{
+      &::before{
+        width: 800px;
+        @media (max-width: 1919px) {
+          width: 670px;
+        }
+        @media (max-width: 1279px) {
+          width: 560px;
+        }
+        @media (max-width: 639px) {
+          width: 290px;
+        }
+      }
+      &::after{
+        background-color: var(--orange-theme);
+        width: 864px;
+        @media (max-width: 1919px) {
+          width: 710px;
+        }
+        @media (max-width: 1279px) {
+          width: 600px;
+        }
+        @media (max-width: 639px) {
+          width: 330px;
+        }
+      }
+      img {
+        &.head_img{
+          display: none !important;
+        }
+      }
+    }
     @media (max-width: 1919px) {
       width: 456px;
       height: 670px;
@@ -104,9 +175,18 @@
       top: 85px;
     }
 
-    img {
-      width: 100%;
+
+    .head_3d{
+      width: calc(100% + 40px);
       height: 100%;
+      position: absolute;
+      left: -20px;
+      top: 0;
+      z-index: 3;
+      canvas{
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
