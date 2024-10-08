@@ -93,7 +93,8 @@
     }
   }
 
-  &__address {}
+  &__address {
+  }
 
   &__email {
     margin-top: 80px;
@@ -157,7 +158,8 @@
     }
   }
 
-  &__map {}
+  &__map {
+  }
 
   &__question {
     margin-top: 112px;
@@ -209,7 +211,7 @@
     .contacts-page__row {
       flex-wrap: wrap;
 
-      >* {
+      > * {
         flex: 1 1 100%;
       }
 
@@ -231,11 +233,12 @@
 }
 
 .email-contacts-page {
-  &__info {}
+  &__info {
+  }
 
   @media (max-width: 1279px) {
     .contacts-page__row {
-      >* {
+      > * {
         flex: 0 1 50%;
       }
     }
@@ -245,7 +248,7 @@
     .contacts-page__row {
       flex-wrap: wrap;
 
-      >* {
+      > * {
         flex: 0 1 100%;
       }
     }
@@ -253,11 +256,12 @@
 }
 
 .phone-contacts-page {
-  &__info {}
+  &__info {
+  }
 
   @media (max-width: 1279px) {
     .contacts-page__row {
-      >* {
+      > * {
         flex: 0 1 50%;
       }
     }
@@ -267,7 +271,7 @@
     .contacts-page__row {
       flex-wrap: wrap;
 
-      >* {
+      > * {
         flex: 0 1 100%;
       }
     }
@@ -302,8 +306,7 @@
     @media (max-width: 639px) {
       padding-top: 59%;
       min-height: 500px;
-    min-height: 80vh;
-
+      min-height: 80vh;
     }
 
     iframe {
@@ -320,7 +323,7 @@
     .contacts-page__row {
       flex-wrap: wrap;
 
-      >* {
+      > * {
         flex: 0 1 100%;
       }
     }
@@ -328,7 +331,8 @@
 }
 
 .question-contacts-page {
-  &__info {}
+  &__info {
+  }
 
   &__form {
     display: flex;
@@ -431,11 +435,13 @@
     }
 
     input[type="checkbox"]:checked::before {
-      background: url("../../images/arrow-checkbox.png") 0 0 / 100% 100% no-repeat;
+      background: url("../../images/arrow-checkbox.svg") 0 0 / 100% 100%
+        no-repeat;
       content: "";
       position: absolute;
-      top: 4px;
-      left: 4px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 10px;
       height: 10px;
       font-size: 18px;
@@ -457,15 +463,17 @@
     }
   }
 
-  &__checkbox {}
+  &__checkbox {
+  }
 
-  &__send-button {}
+  &__send-button {
+  }
 
   @media (max-width: 1279px) {
     .contacts-page__row {
       flex-wrap: wrap;
 
-      >* {
+      > * {
         flex: 0 1 100%;
       }
 
@@ -477,7 +485,7 @@
     .question-contacts-page__form {
       flex-wrap: wrap;
 
-      >* {
+      > * {
         flex: 0 1 100%;
       }
 

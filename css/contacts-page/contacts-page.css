@@ -406,11 +406,12 @@
   margin-right: 10px;
 }
 .question-contacts-page__textarea-footer input[type=checkbox]:checked::before {
-  background: url("../../images/arrow-checkbox.png") 0 0/100% 100% no-repeat;
+  background: url("../../images/arrow-checkbox.svg") 0 0/100% 100% no-repeat;
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
   font-size: 18px;

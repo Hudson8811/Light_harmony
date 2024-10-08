@@ -572,10 +572,11 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 8px;
-    row-gap: 40px;
+    column-gap: 23px;
+    row-gap: 48px;
 
     @media (max-width: 1919px) {
+      column-gap: 10px;
       row-gap: 43px;
     }
 
@@ -589,7 +590,7 @@
   }
 
   &__item {
-    flex: 0 1 calc(33.333%);
+    flex: 0 1 calc(32%);
 
     @media (max-width: 1919px) {
       flex: 0 1 calc(50% - 8px);
@@ -620,10 +621,10 @@
 .item-last-about-us-page {
   &__el {
     float: left;
-    width: 70px;
-    height: 70px;
+    width: 67px;
+    height: 67px;
     margin: 7px 7px 7px 0px;
-    margin-top: -35px;
+    margin-top: -25px;
     position: relative;
     transition: all 0.3s ease 0s;
 
