@@ -20,7 +20,7 @@
   }
 }
 .contacts-page__content {
-  margin-top: 100px;
+  margin-top: 110px;
 }
 @media (max-width: 1919px) {
   .contacts-page__content {
@@ -41,7 +41,7 @@
   display: flex;
 }
 .contacts-page__left {
-  flex: 0 1 40.64%;
+  flex: 0 1 40%;
 }
 @media (max-width: 1279px) {
   .contacts-page__left {
@@ -49,7 +49,7 @@
   }
 }
 .contacts-page__right {
-  flex: 0 1 59.36%;
+  flex: 0 1 60%;
 }
 @media (max-width: 1279px) {
   .contacts-page__right {
@@ -86,7 +86,7 @@
   opacity: 1;
 }
 .contacts-page__email {
-  margin-top: 72px;
+  margin-top: 80px;
 }
 @media (max-width: 1919px) {
   .contacts-page__email {
@@ -109,7 +109,7 @@
   }
 }
 .contacts-page__phone {
-  margin-top: 44px;
+  margin-top: 55px;
 }
 @media (max-width: 1919px) {
   .contacts-page__phone {
@@ -151,7 +151,7 @@
   }
 }
 .contacts-page__question {
-  margin-top: 110px;
+  margin-top: 112px;
 }
 @media (max-width: 1279px) {
   .contacts-page__question {
@@ -171,8 +171,8 @@
   margin-right: 25px;
 }
 .address-contacts-page__title {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 12px;
 }
 @media (max-width: 1919px) {
   .address-contacts-page__title {
@@ -259,8 +259,7 @@
 }
 .map-contacts-page__info {
   position: relative;
-  padding-top: 66%;
-  min-height: 80vh;
+  padding-top: 59%;
 }
 @media (max-width: 1919px) {
   .map-contacts-page__info {
@@ -278,6 +277,7 @@
   .map-contacts-page__info {
     padding-top: 59%;
     min-height: 500px;
+    min-height: 80vh;
   }
 }
 .map-contacts-page__info iframe {
@@ -304,7 +304,7 @@
   gap: 20px;
 }
 .question-contacts-page__inputs {
-  flex: 0 0 calc(34% - 10px);
+  flex: 0 0 calc(33.333% - 10px);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -337,7 +337,7 @@
   font-weight: 300;
 }
 .question-contacts-page__textarea {
-  flex: 0 0 calc(66% - 10px);
+  flex: 0 0 calc(66.666% - 10px);
 }
 @media (max-width: 1919px) {
   .question-contacts-page__textarea {
@@ -372,11 +372,13 @@
   align-items: center;
   margin-left: auto;
   gap: 20px;
+  width: 66.666%;
 }
 @media (max-width: 1919px) {
   .question-contacts-page__textarea-footer {
     flex-basis: 100%;
     margin-top: 0;
+    width: auto;
   }
 }
 @media (max-width: 639px) {

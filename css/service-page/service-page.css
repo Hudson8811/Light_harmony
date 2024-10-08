@@ -19,6 +19,9 @@
     padding-bottom: 31px;
   }
 }
+.service-page .projects {
+  margin-top: 165px;
+}
 @media (max-width: 1919px) {
   .service-page .projects {
     margin-top: 162px;
@@ -37,7 +40,7 @@
 .header-service-page__row1 {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 110px;
 }
 @media (max-width: 1279px) {
   .header-service-page__row1 {
@@ -74,7 +77,8 @@
 }
 .header-service-page__row2 {
   margin-top: 30px;
-  max-width: 30%;
+  max-width: 29%;
+  line-height: 112%;
   margin-left: auto;
   font-size: 20px;
 }

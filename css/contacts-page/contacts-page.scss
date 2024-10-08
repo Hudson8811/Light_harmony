@@ -17,7 +17,7 @@
   }
 
   &__content {
-    margin-top: 100px;
+    margin-top: 110px;
 
     @media (max-width: 1919px) {
       margin-top: 134px;
@@ -37,7 +37,7 @@
   }
 
   &__left {
-    flex: 0 1 40.64%;
+    flex: 0 1 40%;
 
     @media (max-width: 1279px) {
       flex: 1 1 100%;
@@ -45,7 +45,7 @@
   }
 
   &__right {
-    flex: 0 1 59.36%;
+    flex: 0 1 60%;
 
     @media (max-width: 1279px) {
       flex: 1 1 100%;
@@ -96,7 +96,7 @@
   &__address {}
 
   &__email {
-    margin-top: 72px;
+    margin-top: 80px;
 
     @media (max-width: 1919px) {
       margin-top: 84px;
@@ -118,7 +118,7 @@
   }
 
   &__phone {
-    margin-top: 44px;
+    margin-top: 55px;
 
     @media (max-width: 1919px) {
       margin-top: 48px;
@@ -160,7 +160,7 @@
   &__map {}
 
   &__question {
-    margin-top: 110px;
+    margin-top: 112px;
 
     @media (max-width: 1279px) {
       margin-top: 104px;
@@ -184,8 +184,8 @@
   }
 
   &__title {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 12px;
 
     @media (max-width: 1919px) {
       font-size: 52px;
@@ -287,8 +287,7 @@
 
   &__info {
     position: relative;
-    padding-top: 66%;
-    min-height: 80vh;
+    padding-top: 59%;
 
     @media (max-width: 1919px) {
       padding-top: 59%;
@@ -303,6 +302,8 @@
     @media (max-width: 639px) {
       padding-top: 59%;
       min-height: 500px;
+    min-height: 80vh;
+
     }
 
     iframe {
@@ -336,7 +337,7 @@
   }
 
   &__inputs {
-    flex: 0 0 calc(34% - 10px);
+    flex: 0 0 calc(33.333% - 10px);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -365,7 +366,7 @@
   }
 
   &__textarea {
-    flex: 0 0 calc(66% - 10px);
+    flex: 0 0 calc(66.666% - 10px);
 
     @media (max-width: 1919px) {
       flex-basis: 100%;
@@ -397,10 +398,11 @@
     align-items: center;
     margin-left: auto;
     gap: 20px;
-
+    width: 66.666%;
     @media (max-width: 1919px) {
       flex-basis: 100%;
       margin-top: 0;
+      width: auto;
     }
 
     @media (max-width: 639px) {

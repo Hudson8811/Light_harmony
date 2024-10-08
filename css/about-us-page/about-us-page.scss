@@ -332,7 +332,7 @@
   span.sec1-about-us-page__left-big-text span {
     font-family: Literata;
     font-size: 154px !important;
-
+    line-height: 105%;
     @media (max-width: 1919px) {
       font-size: 84px !important;
     }
@@ -432,7 +432,7 @@
   }
 
   &__quote {
-    padding: 78px;
+    padding: 94px;
     background: url("../../../images/cross.svg") 0 0 / 15px 15px no-repeat,
       url("../../../images/cross.svg") 0 100% / 15px 15px no-repeat,
       url("../../../images/cross.svg") 50% 0% / 15px 15px no-repeat,
@@ -479,7 +479,7 @@
 }
 
 .last-about-us-page {
-  margin-top: 130px;
+  margin-top: 110px;
   font-size: 21px;
 
   @media (max-width: 1919px) {
@@ -525,7 +525,7 @@
 
   &__content {
     display: flex;
-    margin-top: 130px;
+    margin-top: 124px;
 
     @media (max-width: 1919px) {
       margin-top: 122px;
@@ -572,7 +572,7 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20px;
+    column-gap: 8px;
     row-gap: 40px;
 
     @media (max-width: 1919px) {
@@ -589,10 +589,10 @@
   }
 
   &__item {
-    flex: 0 1 33.333%;
+    flex: 0 1 calc(33.333%);
 
     @media (max-width: 1919px) {
-      flex: 0 1 calc(50% - 20px);
+      flex: 0 1 calc(50% - 8px);
     }
 
     @media (max-width: 639px) {
@@ -665,7 +665,7 @@
   }
 
   &__title {
-    margin-bottom: 42px;
+    margin-bottom: 30px;
 
     @media (max-width: 1279px) {
       margin-bottom: 21px;
