@@ -31,7 +31,7 @@
   }
 
   &__title {
-    text-indent: 150px;
+    text-indent: 250px;
 
     @media (max-width: 1919px) {
       text-indent: 0px;
@@ -288,7 +288,6 @@
     }
 
     @media (max-width: 1919px) {
-      justify-content: space-between;
       margin-top: 118px;
     }
 
@@ -304,10 +303,10 @@
       grid-template-columns: 1fr 1fr;
       margin-top: 58px;
     }
-
     .sec1-about-us-page__right {
+      flex: 0 1 747px;
       @media (max-width: 1919px) {
-        flex: 0 1 358px;
+        flex: 0 1 736px;
 
         p {
           display: none;
@@ -332,7 +331,7 @@
 
   span.sec1-about-us-page__left-big-text span {
     font-family: Literata;
-    font-size: 110px !important;
+    font-size: 154px !important;
 
     @media (max-width: 1919px) {
       font-size: 84px !important;
@@ -434,12 +433,12 @@
 
   &__quote {
     padding: 78px;
-    background: url("../../../images/cross.png") 0 0 / 15px 15px no-repeat,
-      url("../../../images/cross.png") 0 100% / 15px 15px no-repeat,
-      url("../../../images/cross.png") 50% 0% / 15px 15px no-repeat,
-      url("../../../images/cross.png") 50% 100% / 15px 15px no-repeat,
-      url("../../../images/cross.png") 100% 0 / 15px 15px no-repeat,
-      url("../../../images/cross.png") 100% 100% / 15px 15px no-repeat;
+    background: url("../../../images/cross.svg") 0 0 / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 0 100% / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 50% 0% / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 50% 100% / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 100% 0 / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 100% 100% / 15px 15px no-repeat;
 
     @media (max-width: 1919px) {
       padding: 65px;
@@ -652,7 +651,7 @@
       position: absolute;
       width: 22px;
       height: 22px;
-      background: url("../../images/about-us-page/arrow.png") 0 0 / 100% 100% no-repeat;
+      background: url("../../images/arrow.svg") center / 8px 8px no-repeat;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);

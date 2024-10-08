@@ -139,6 +139,18 @@ body.dark-active .up-click::after {
 body.dark-active .up-click svg path {
     fill: var(--light-theme-dark-text);
 }
+body.dark-active #headerOptionsBtn1 svg rect {
+    fill: var(--light-theme-bg);
+}
+body.dark-active .header__search-btn svg path {
+    fill: var(--light-theme-bg);
+}
+body.dark-active .header__logo-inner svg path {
+    fill: var(--light-theme-bg);
+}
+body.dark-active .logo-footer__inner svg path {
+    fill: var(--light-theme-bg);
+}
 body.dark-active .dropdown__menu * {
     color: var(--dark-theme-dark-bg);
 }
@@ -149,8 +161,8 @@ body.dark-active .item-last-about-us-page__el::before {
     background-color: var(--dark-theme-light-text);
 }
 body.dark-active .item-last-about-us-page__el::after {
-    background: url("../images/arrow.png") 0 0 / 100% 100% no-repeat;
-    transform: translate(-50%, -50%) rotate(-90deg);
+    background: url("../images/arrow-black.svg") 0 0 / 100% 100% no-repeat;
+    transform: translate(-50%, -50%) rotate(0deg);
 }
 body.dark-active .project-page__media-desc-item a span::before {
     background-color: var(--dark-theme-light-text);
@@ -192,7 +204,7 @@ body.dark-active .question-contacts-page__textarea-footer button {
     color: var(--dark-theme-dark-bg);
 }
 body.dark-active .question-contacts-page__textarea-footer input[type="checkbox"]:checked::before {
-    background: url("../../images/arrow-checkbox-white.png") 0 0 / 100% 100% no-repeat;
+    background: url("../../images/arrow-checkbox-white.svg") 0 0 / 100% 100% no-repeat;
 }
 body.dark-active .toggle:checked::before {
     background-color: var(--light-theme-banner);
