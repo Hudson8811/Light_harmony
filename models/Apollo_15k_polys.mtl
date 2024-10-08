@@ -2,11 +2,11 @@
 # File Created: 17.01.2024 05:01:19
 
 newmtl wire_134006006
-    Ns 10                      # Low specular exponent for a matte finish
+    Ns 32                      # Low specular exponent for a matte finish
     d 1
     Tr 0
     Tf 1 1 1
-    illum 1                    # Use illumination model 1 for a simpler shading model
+    illum 2                    # Use illumination model 1 for a simpler shading model
     Ka 0.7 0.7 0.7             # Gray ambient reflectivity
     Kd 0.7 0.7 0.7             # Gray diffuse reflectivity
-    Ks 0.1 0.1 0.1             # Low specular reflectivity for a matte finish
+    Ks 0.2 0.2 0.2            # Low specular reflectivity for a matte finish

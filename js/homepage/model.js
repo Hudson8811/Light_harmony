@@ -55,7 +55,7 @@ function initAnimation() {
 
 	scene.add( new THREE.AmbientLight( 0xFFFFFF ) );
 
-	const spotLight = new THREE.SpotLight( 0xffffff, 20 );
+	const spotLight = new THREE.SpotLight( 0xffffff, 30 );
 	spotLight.angle = Math.PI / 5;
 	spotLight.penumbra = 0.2;
 	spotLight.position.set( 2, 0.5, 3 );
