@@ -60,7 +60,7 @@
   }
 }
 .project-page__block1 {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 @media (max-width: 1279px) {
   .project-page__block1 {
@@ -96,17 +96,17 @@
   color: var(--light-theme-progress-text);
 }
 .project-page__info-item {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .project-page__info-item:first-child {
   margin-top: 0;
 }
 .project-page__info-point {
-  margin-top: 5px;
+  margin-top: 9px;
 }
 .project-page__desc {
   flex: 0 1 60%;
-  padding-top: 200px;
+  padding-top: 210px;
 }
 @media (max-width: 1279px) {
   .project-page__desc {
@@ -130,6 +130,8 @@
 }
 .project-page__desc-item {
   flex: 0 1 33.333%;
+  padding: 7px;
+  line-height: 120%;
 }
 @media (max-width: 1279px) {
   .project-page__desc-item {
@@ -143,7 +145,7 @@
 }
 .project-page__block2 {
   margin-top: 40px;
-  max-width: calc(60% - 15px);
+  max-width: calc(60% - 10px);
   margin-left: auto;
 }
 @media (max-width: 1279px) {
@@ -154,7 +156,7 @@
 }
 .project-page__image {
   position: relative;
-  padding-top: 51%;
+  padding-top: 52%;
 }
 .project-page__image img {
   position: absolute;
@@ -258,6 +260,7 @@
 }
 .project-page__task-desc-item {
   flex: 0 1 33.333%;
+  line-height: 120%;
 }
 @media (max-width: 1279px) {
   .project-page__task-desc-item {
@@ -266,6 +269,12 @@
 }
 .project-page__block4 {
   margin-top: 40px;
+  margin-bottom: 100px;
+}
+@media (max-width: 1919px) {
+  .project-page__block4 {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 1279px) {
   .project-page__block4 {
@@ -391,7 +400,7 @@
   }
 }
 .quote-project-page__text span {
-  padding: 65px 115px;
+  padding: 95px 100px;
   display: block;
   max-width: 50%;
   background: url("../../../images/cross.png") 0 0/15px 15px no-repeat, url("../../../images/cross.png") 0 100%/15px 15px no-repeat, url("../../../images/cross.png") 100% 0/15px 15px no-repeat, url("../../../images/cross.png") 100% 100%/15px 15px no-repeat;
