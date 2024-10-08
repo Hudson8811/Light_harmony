@@ -18,7 +18,7 @@
 .header__container {
   display: flex;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 12px;
   padding-bottom: 20px;
 }
 @media (max-width: 1919px) {
@@ -46,6 +46,7 @@
 }
 .header__logo-inner {
   width: 136px;
+  margin-top: 15px;
 }
 @media (max-width: 1279px) {
   .header__logo-inner {
