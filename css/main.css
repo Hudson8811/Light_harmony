@@ -40,6 +40,9 @@
 body {
     background-color: var(--light-theme-bg);
 }
+body.overflow-hidden {
+    overflow: hidden;
+}
 body a {
     color: var(--light-theme-dark-text);
 }
@@ -75,6 +78,16 @@ body.dark-active .logo-footer {
         url("../images/cross-white.png") 0 100%/15px 15px no-repeat,
         url("../images/cross-white.png") 100% 0/15px 15px no-repeat,
         url("../images/cross-white.png") 100% 100%/15px 15px no-repeat;
+}
+body.dark-active .quote-project-page__text span {
+    background:
+        url("../images/cross-white.png") 0 0/15px 15px no-repeat,
+        url("../images/cross-white.png") 0 100%/15px 15px no-repeat,
+        url("../images/cross-white.png") 50% 0%/15px 15px no-repeat,
+        url("../images/cross-white.png") 50% 100%/15px 15px no-repeat,
+        url("../images/cross-white.png") 100% 0/15px 15px no-repeat,
+        url("../images/cross-white.png") 100% 100%/15px 15px no-repeat;
+    max-width: 100%;
 }
 body.dark-active .header-projects-page__filter span svg path {
     fill: var(--dark-theme-light-text);
@@ -140,6 +153,9 @@ body.dark-active .up-click svg path {
     fill: var(--light-theme-dark-text);
 }
 body.dark-active #headerOptionsBtn1 svg rect {
+    fill: var(--light-theme-bg);
+}
+body.dark-active #headerOptionsBtn2 svg rect {
     fill: var(--light-theme-bg);
 }
 body.dark-active .header__search-btn svg path {
@@ -287,6 +303,7 @@ h1.title-h1 span {
 @media (max-width: 639px) {
     h1.title-h1 span {
         font-size: 26px;
+        font-weight: 700;
     }
 }
 
@@ -310,6 +327,7 @@ h2.title-h2 span {
     h2.title-h2 span {
         font-size: 26px;
         letter-spacing: -0.02em;
+        font-weight: 700;
     }
 }
 

@@ -118,6 +118,7 @@
     }
     @media (max-width: 639px) {
       flex: 1 1 100%;
+      padding: 10px;
     }
   }
   &__block2 {
@@ -341,6 +342,12 @@
       }
       @media (max-width: 1279px) {
         max-width: 100%;
+        background: url("../../../images/cross.png") 0 0 / 15px 15px no-repeat,
+          url("../../../images/cross.png") 0 100% / 15px 15px no-repeat,
+          url("../../../images/cross.png") 50% 0% / 15px 15px no-repeat,
+          url("../../../images/cross.png") 50% 100% / 15px 15px no-repeat,
+          url("../../../images/cross.png") 100% 0 / 15px 15px no-repeat,
+          url("../../../images/cross.png") 100% 100% / 15px 15px no-repeat;
       }
       @media (max-width: 639px) {
         padding: 45px 30px;

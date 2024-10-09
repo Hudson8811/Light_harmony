@@ -188,19 +188,24 @@
   &__title {
     margin-top: 10px;
     margin-bottom: 12px;
-
-    @media (max-width: 1919px) {
-      font-size: 52px;
+    @media (max-width: 1919px){
       margin-top: 10px;
       margin-bottom: 18px;
+        
     }
+    span {
 
-    @media (max-width: 1279px) {
-      font-size: 50px;
-    }
-
-    @media (max-width: 639px) {
-      font-size: 28px;
+      @media (max-width: 1919px) {
+        font-size: 52px!important;
+      }
+      
+      @media (max-width: 1279px) {
+        font-size: 50px!important;
+      }
+      
+      @media (max-width: 639px) {
+        font-size: 28px!important;
+      }
     }
     span {
       display: inline;
@@ -417,7 +422,6 @@
     label {
       display: flex;
       align-items: center;
-      font-family: Arial, sans-serif;
       font-size: 14px;
       color: var(--light-theme-light-text);
       cursor: pointer;

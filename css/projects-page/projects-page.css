@@ -246,6 +246,11 @@
     aspect-ratio: 1/1;
   }
 }
+@media (max-width: 639px) {
+  .item-projects-page__img {
+    aspect-ratio: 1/1 !important;
+  }
+}
 .item-projects-page__img img {
   position: absolute;
   top: 0;

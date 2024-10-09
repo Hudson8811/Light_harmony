@@ -257,6 +257,10 @@
     @media (max-width: 1279px) {
       aspect-ratio: 1 / 1;
     }
+    @media (max-width: 639px){
+      aspect-ratio: 1 / 1!important;
+        
+    }
 
     img {
       position: absolute;

@@ -19,6 +19,12 @@
     padding-bottom: 31px;
   }
 }
+@media (max-width: 639px) {
+  .service-page .service-page__title span {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+  }
+}
 .service-page .projects {
   margin-top: 165px;
 }

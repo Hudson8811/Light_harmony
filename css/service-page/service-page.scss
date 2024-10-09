@@ -15,7 +15,14 @@
     padding-top: 107px;
     padding-bottom: 31px;
   }
-
+  .service-page__title {
+    span {
+      @media (max-width: 639px) {
+        font-size: 28px !important;
+        font-weight: 700 !important;
+      }
+    }
+  }
   .projects {
     margin-top: 165px;
     @media (max-width: 1919px) {
@@ -29,16 +36,18 @@
     @media (max-width: 1279px) {
       margin-top: 52px;
     }
-
   }
 
-  &__header {}
+  &__header {
+  }
 
-  &__title {}
+  &__title {
+  }
 }
 
 .header-service-page {
-  &__row {}
+  &__row {
+  }
 
   &__row1 {
     display: flex;
@@ -75,9 +84,11 @@
     }
   }
 
-  &__left {}
+  &__left {
+  }
 
-  &__right {}
+  &__right {
+  }
 
   &__row2 {
     margin-top: 30px;
@@ -103,7 +114,8 @@
       margin-top: 20px;
     }
 
-    .header-projects-page__right {}
+    .header-projects-page__right {
+    }
   }
 
   &__row3 {
@@ -120,7 +132,8 @@
       margin-top: 29px;
     }
 
-    .header-projects-page__right {}
+    .header-projects-page__right {
+    }
   }
 
   &__nums {
@@ -159,7 +172,8 @@
     }
   }
 
-  &__nums-small {}
+  &__nums-small {
+  }
 
   &__nums-big {
     font-size: 60px;
@@ -200,7 +214,6 @@
 
 .service-page__title--bottom {
   margin-top: 190px;
-
 
   @media (max-width: 1919px) {
     font-size: 52px;
