@@ -10,6 +10,8 @@ $(document).ready(function () {
   });
   $headerOptionsBtn1.on("click", function () {
     $headerOptions.toggleClass("show");
+    $('body').toggleClass("overflow-hidden");
+    $('body').toggleClass("reduce-width");
   });
   $headerOptionsBtn2.on("click", function () {
     $headerOptions.toggleClass("show");

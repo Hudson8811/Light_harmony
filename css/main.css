@@ -255,6 +255,40 @@ body.orange-active .logo-footer__inner::before {
     flex-direction: column;
     min-height: 100%;
     position: relative;
+    transition: all 0.5s ease 0s;
+}
+body.reduce-width .wrapper {
+    margin: 0 20px;
+    position: relative;
+}
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-color: var(--dark-theme-bg);
+    transition: all 0.5s ease 0s;
+}
+body::before {
+    left: 0;
+    transform: translate(-110%, 0);
+}
+body::after {
+    right: 0;
+    transform: translate(110%, 0);
+}
+body.reduce-width::before {
+    transform: translate(0%, 0);
+    left: 0;
+}
+body.reduce-width::after {
+    transform: translate(0%, 0);
+    right: 0;
+}
+body.reduce-width .header {
+    border-radius: 10px;
 }
 
 .main {

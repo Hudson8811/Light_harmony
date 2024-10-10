@@ -10,6 +10,11 @@
   z-index: 13;
 }
 .options-header * {
+  font-family: "Pragmatica";
+  font-size: 21px;
+  line-height: 117%;
+  letter-spacing: -0.01em;
+  font-weight: 300;
   color: var(--light-theme-options-text);
 }
 .options-header__row {
