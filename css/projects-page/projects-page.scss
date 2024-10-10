@@ -60,13 +60,14 @@
       border-color: var(--light-theme-dark-text);
     }
 
-    li input[type="checkbox"]:checked+label {}
+    li input[type="checkbox"]:checked + label {
+    }
 
     li:hover {
       color: var(--orange-theme);
     }
 
-    li input[type="checkbox"]+label {
+    li input[type="checkbox"] + label {
       display: inline;
       color: var(--light-theme-dark-text);
       transition: all 0.3s ease 0s;
@@ -104,8 +105,8 @@
 
   font-weight: 300;
 
-
-  &__title {}
+  &__title {
+  }
 
   &__items {
     margin-top: 50px;
@@ -140,6 +141,31 @@
     @media (max-width: 639px) {
       flex: 1 1 100%;
     }
+    @media (min-width: 1280px) {
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(8) {
+        flex: 0 1 49%;
+
+        .item-projects-page__img {
+          padding-top: 85%;
+          @media (max-width: 1919px) {
+            aspect-ratio: 1 / 0.7578;
+            width: 100%;
+            padding-top: 0;
+          }
+
+          @media (max-width: 1279px) {
+            aspect-ratio: 1 / 0.74;
+          }
+        }
+
+        @media (max-width: 1279px) {
+          flex: 1 1 100%;
+        }
+      }
+    }
   }
 
   &__item--big {
@@ -157,7 +183,6 @@
         aspect-ratio: 1 / 0.74;
       }
     }
-
 
     @media (max-width: 1279px) {
       flex: 1 1 100%;
@@ -257,9 +282,8 @@
     @media (max-width: 1279px) {
       aspect-ratio: 1 / 1;
     }
-    @media (max-width: 639px){
-      aspect-ratio: 1 / 1!important;
-        
+    @media (max-width: 639px) {
+      aspect-ratio: 1 / 1 !important;
     }
 
     img {
@@ -272,7 +296,8 @@
     }
   }
 
-  &__column {}
+  &__column {
+  }
 
   &__title {
     margin-top: 20px;
@@ -316,8 +341,7 @@
       a {
         color: var(--light-theme-light-text);
         line-height: 1.17em;
-        &:hover{
-          
+        &:hover {
           color: var(--orange-theme);
         }
       }
