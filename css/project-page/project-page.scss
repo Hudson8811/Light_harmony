@@ -221,8 +221,8 @@
   &__block4 {
     margin-top: 40px;
     margin-bottom: 100px;
-    @media (max-width: 1919px){
-        margin-bottom: 0;
+    @media (max-width: 1919px) {
+      margin-bottom: 0;
     }
     @media (max-width: 1279px) {
       margin-top: 50px;
@@ -329,7 +329,7 @@
       margin-bottom: 30px;
     }
     span {
-      padding: 95px 100px;
+      padding: 95px 103px;
       display: block;
       max-width: 50%;
       background: url("../../images/cross.png") 0 0 / 15px 15px no-repeat,
@@ -337,7 +337,7 @@
         url("../../images/cross.png") 100% 0 / 15px 15px no-repeat,
         url("../../images/cross.png") 100% 100% / 15px 15px no-repeat;
       @media (max-width: 1919px) {
-        max-width: 80%;
+        max-width: 432px;
         padding: 65px;
       }
       @media (max-width: 1279px) {
@@ -354,7 +354,7 @@
       }
     }
     &--empty {
-      margin: 0!important;
+      margin: 0 !important;
       height: 0;
       span {
         background: none;

@@ -401,14 +401,14 @@
   }
 }
 .quote-project-page__text span {
-  padding: 95px 100px;
+  padding: 95px 103px;
   display: block;
   max-width: 50%;
   background: url("../../images/cross.png") 0 0/15px 15px no-repeat, url("../../images/cross.png") 0 100%/15px 15px no-repeat, url("../../images/cross.png") 100% 0/15px 15px no-repeat, url("../../images/cross.png") 100% 100%/15px 15px no-repeat;
 }
 @media (max-width: 1919px) {
   .quote-project-page__text span {
-    max-width: 80%;
+    max-width: 432px;
     padding: 65px;
   }
 }
