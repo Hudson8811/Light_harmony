@@ -416,4 +416,32 @@
   .dropdown:hover .dropdown__menu {
     display: block;
   }
+}
+
+#headerOptions #burderHeader1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+@media (max-width: 1279px) {
+  #headerOptions #burderHeader1 {
+    display: block;
+    transition: all 0.3s ease 0s;
+    width: 37px;
+    height: 37px;
+    margin-top: 0;
+    width: 37px;
+    height: 37px;
+  }
+  #headerOptions #burderHeader1 span:nth-child(1) {
+    transform: translate(0, -50%) rotate(45deg);
+    top: 50%;
+    left: 22%;
+  }
+  #headerOptions #burderHeader1 span:nth-child(3) {
+    transform: translate(0, -50%) rotate(-45deg);
+    top: 23%;
+    left: 23%;
+  }
 }/*# sourceMappingURL=header.css.map */

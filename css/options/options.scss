@@ -8,6 +8,12 @@
   margin: 0;
   position: relative;
   z-index: 13;
+  @media (max-width: 1279px){
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+  }
   * {
     font-family: "Pragmatica";
     font-size: 21px;

@@ -9,6 +9,14 @@
   position: relative;
   z-index: 13;
 }
+@media (max-width: 1279px) {
+  .options-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
 .options-header * {
   font-family: "Pragmatica";
   font-size: 21px;
