@@ -37,10 +37,9 @@
 }
 .project-page__header > span {
   position: absolute;
-  bottom: 0;
+  bottom: -14px;
   right: 0;
   color: var(--light-theme-progress-text);
-  margin-top: 14px;
 }
 .project-page__title {
   font-size: 100px;
