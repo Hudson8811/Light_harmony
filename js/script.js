@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
-  function manageBigItemsClass() {
+  /* function manageBigItemsClass() {
     if ($(window).width() < 1280) {
       $(".projects-page__item").each(function (index) {
         if ((index + 1) % 3 === 0) {
@@ -19,5 +19,5 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     manageBigItemsClass();
-  });
+  }); */
 });
