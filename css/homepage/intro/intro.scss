@@ -1,5 +1,5 @@
 .intro {
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   display: flex;
   position: relative;
 
@@ -21,7 +21,7 @@
 
   &__inner {
     padding-left: 94px;
-    padding-bottom: 140px;
+    padding-bottom: 155px;
 
     @media (max-width: 1279px) {
       padding-left: 0;
@@ -86,10 +86,10 @@
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
       z-index: 2;
-      background: url("../../../images/cross.png") 0 0 / 15px 15px no-repeat,
-      url("../../../images/cross.png") 0 100% / 15px 15px no-repeat,
-      url("../../../images/cross.png") 100% 0 / 15px 15px no-repeat,
-      url("../../../images/cross.png") 100% 100% / 15px 15px no-repeat;
+      background: url("../../../images/cross.svg") 0 0 / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 0 100% / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 100% 0 / 15px 15px no-repeat,
+      url("../../../images/cross.svg") 100% 100% / 15px 15px no-repeat;
     }
     &::after{
       content: "";

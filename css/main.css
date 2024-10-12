@@ -267,26 +267,22 @@ body.orange-active .logo-footer__inner::before {
         content: '';
         position: absolute;
         top: 0;
-        width: 20px;
+        width: 0;
         height: 100%;
-        background-color: var(--dark-theme-bg);
+        background-color: var(--light-theme-options-bg);
         transition: all 0.5s ease 0s;
     }
     body::before {
         left: 0;
-        transform: translate(-110%, 0);
     }
     body::after {
         right: 0;
-        transform: translate(110%, 0);
     }
     body.reduce-width::before {
-        transform: translate(0%, 0);
-        left: 0;
+        width: 20px;
     }
     body.reduce-width::after {
-        transform: translate(0%, 0);
-        right: 0;
+        width: 20px;
     }
     body.reduce-width .header {
         border-radius: 10px;
@@ -415,17 +411,19 @@ h2.title-h2 span {
 }
 
 .up-click {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
+    position: absolute;
+    bottom: 9px;
+    right: 9px;
+    width: 46px;
+    height: 46px;
     cursor: pointer;
     z-index: 99;
 }
 
 @media (max-width: 992px) {
     .up-click {
-        bottom: 22px;
-        right: 22px;
+        bottom: 9px;
+        right: 9px;
     }
 }
 
@@ -434,12 +432,13 @@ h2.title-h2 span {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 46px;
-    height: 46px;
-    background-color: var(--light-theme-progress-text);
+    width: 0;
+    height: 0;
+    background-color: var(--light-theme-grey-bg);
     transform: translate(-50%, -50%);
     z-index: 1;
     opacity: 0;
+    transition: all 0.3s ease 0s;
 }
 
 .up-click::after {
@@ -456,6 +455,8 @@ h2.title-h2 span {
 
 .up-click:hover::before {
     opacity: 1;
+    width: 46px;
+    height: 46px;
 }
 
 .up-click svg {
@@ -464,4 +465,9 @@ h2.title-h2 span {
     left: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
     z-index: 99;
+    opacity: 0;
+    transition: all 0.1s ease 0s;
+}
+.up-click:hover svg {
+    opacity: 1;
 }

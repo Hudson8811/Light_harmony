@@ -8,6 +8,40 @@
   background-color: var(--light-theme-bg);
   animation: preloader 2s 1.7s ease forwards;
 }
+.preloader::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  animation: load-line 3s 0s ease-out forwards;
+  background-color: var(--light-theme-dark-text);
+}
+@keyframes load-line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.preloader #load-number {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--light-theme-light-text);
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "Pragmatica";
+}
+.preloader #load-number span {
+  display: block;
+  margin-bottom: 5px;
+}
 .preloader__anim {
   position: absolute;
   bottom: 50%;
@@ -15,7 +49,7 @@
   transform: translate(-50%, 50%);
   width: 270px;
   height: 270px;
-  background: url("../../images/cross.png") 0 0/15px 15px no-repeat, url("../../images/cross.png") 0 100%/15px 15px no-repeat, url("../../images/cross.png") 100% 0/15px 15px no-repeat, url("../../images/cross.png") 100% 100%/15px 15px no-repeat;
+  background: url("../../images/cross.svg") 0 0/15px 15px no-repeat, url("../../images/cross.svg") 0 100%/15px 15px no-repeat, url("../../images/cross.svg") 100% 0/15px 15px no-repeat, url("../../images/cross.svg") 100% 100%/15px 15px no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,86 +59,34 @@
   width: 66px;
   height: 66px;
   background-color: var(--light-theme-grey-bg);
-  display: flex;
-  flex-wrap: wrap;
   animation: preloader__squares 1s 2.2s ease forwards;
+  position: relative;
 }
 
 .squares-anim__square {
   background-color: var(--light-theme-dark-text);
-  flex: 0 1 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
 }
-.squares-anim__square1 {
-  opacity: 0;
-  animation: square1 0.6s 0s ease forwards infinite;
-}
-.squares-anim__square2 {
-  opacity: 0;
-  animation: square2 0.6s 0.3s ease forwards infinite;
-}
-.squares-anim__square4 {
-  opacity: 0;
-  animation: square3 0.6s 0.6s ease forwards infinite;
-}
-.squares-anim__square3 {
-  opacity: 0;
-  animation: square4 0.6s 0.9s ease forwards infinite;
+.squares-anim__square {
+  animation: square 1.2s 0s ease forwards infinite;
 }
 
-@keyframes square1 {
+@keyframes square {
+  0% {
+    transform: translate(0, 0);
+  }
   25% {
-    opacity: 0;
+    transform: translate(100%, 0);
   }
   50% {
-    opacity: 0;
+    transform: translate(100%, 100%);
   }
   75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes square2 {
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes square3 {
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes square4 {
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+    transform: translate(0, 100%);
   }
 }
 @keyframes preloader {

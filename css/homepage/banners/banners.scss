@@ -1,5 +1,6 @@
 .banners {
-  &__container {}
+  &__container {
+  }
 
   &__item {
     margin-top: 60px;
@@ -23,6 +24,14 @@
     position: relative;
     padding-top: 53.9%;
 
+    @media (min-width: 1280px) {
+      max-width: 60%;
+      margin: 0 auto;
+      transition: all 0.7s ease 0s;
+      &.visible {
+        max-width: 100%;
+      }
+    }
     img {
       position: absolute;
       top: 0;
@@ -50,7 +59,7 @@
       margin-top: 12px;
       flex-wrap: wrap;
 
-      &>* {
+      & > * {
         flex: 1 1 100%;
       }
     }

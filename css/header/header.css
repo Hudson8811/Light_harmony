@@ -86,6 +86,13 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.header__options-btn:hover {
+  background-color: var(--dark-theme-dark-bg);
+}
+.header__options-btn:hover svg rect {
+  fill: var(--light-theme-bg);
 }
 @media (max-width: 1279px) {
   .header__options-btn {
@@ -105,6 +112,22 @@
   margin-left: 20px;
   min-height: 30px;
   background-color: var(--light-theme-grey-bg);
+  transition: all 0.3s ease 0s;
+}
+.header__search:hover {
+  background-color: var(--dark-theme-dark-bg);
+}
+.header__search:hover input {
+  color: var(--light-theme-bg) !important;
+}
+.header__search:hover input::-moz-placeholder {
+  color: var(--light-theme-bg) !important;
+}
+.header__search:hover input::placeholder {
+  color: var(--light-theme-bg) !important;
+}
+.header__search:hover svg path {
+  fill: var(--light-theme-bg);
 }
 @media (max-width: 1279px) {
   .header__search {

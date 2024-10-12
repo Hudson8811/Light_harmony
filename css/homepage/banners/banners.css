@@ -19,6 +19,16 @@
   position: relative;
   padding-top: 53.9%;
 }
+@media (min-width: 1280px) {
+  .item-banners__image {
+    max-width: 60%;
+    margin: 0 auto;
+    transition: all 0.7s ease 0s;
+  }
+  .item-banners__image.visible {
+    max-width: 100%;
+  }
+}
 .item-banners__image img {
   position: absolute;
   top: 0;

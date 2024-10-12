@@ -3,21 +3,26 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
-  /* function manageBigItemsClass() {
-    if ($(window).width() < 1280) {
-      $(".projects-page__item").each(function (index) {
-        if ((index + 1) % 3 === 0) {
-          $(this).addClass("projects-page__item--big");
-        } else {
-          $(this).removeClass("projects-page__item--big");
-        }
-      });
+  $(window).on("scroll", function () {
+    $(".item-banners__image").each(function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+      var viewportTop = $(window).scrollTop() - 200;
+      var viewportBottom = viewportTop + $(window).height();
+
+      if (elementBottom > viewportTop && elementTop < viewportBottom) {
+        $(this).addClass("visible");
+      }
+    });
+  });
+
+  var count = 0;
+  var interval = setInterval(function() {
+    if (count <= 100) {
+      $('#load-number span').text(count);
+      count++;
+    } else {
+      clearInterval(interval); 
     }
-  }
-
-  manageBigItemsClass();
-
-  $(window).resize(function () {
-    manageBigItemsClass();
-  }); */
+  }, 3000);
 });
