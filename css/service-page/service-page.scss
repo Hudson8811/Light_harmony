@@ -92,7 +92,7 @@
 
   &__row2 {
     margin-top: 30px;
-    max-width: 29%;
+    max-width: 29.7%;
     line-height: 112%;
     margin-left: auto;
     font-size: 20px;
@@ -165,8 +165,9 @@
         }
       }
 
-      span {
+      .header-service-page__nums-big {
         font-family: Literata;
+        font-weight: 700;
         display: block;
       }
     }

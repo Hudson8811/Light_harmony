@@ -40,7 +40,7 @@ clearButton.on("click", function () {
 });
 
 filterOpenBtn.on("click", function () {
-  filterWindow.slideToggle("active");
+  filterWindow.slideDown();
   filterOpenBtn.toggleClass("active");
   filterCloser.removeClass("active");
 });
@@ -48,3 +48,15 @@ $(".filter-closer").on("click", function () {
   filterWindow.slideUp("active");
 });
 
+
+$(document).on("click", function (event) {
+  console.log(filterWindow);
+  if (
+    !$('.header-projects-page .header-projects-page__right').is(event.target) &&
+    $('.header-projects-page .header-projects-page__right').has(event.target).length === 0
+  ) {
+    filterWindow.slideUp();
+    $("#header-projects-page__filter").removeClass("active");
+    $(".filter-closer").removeClass("active");
+  }
+});

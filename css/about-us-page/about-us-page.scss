@@ -151,7 +151,7 @@
       font-size: 22px !important;
     }
 
-    &+div {
+    & + div {
       margin-top: 30px;
 
       @media (max-width: 1279px) {
@@ -177,8 +177,8 @@
       gap: 12px;
     }
 
-    >p,
-    >div {
+    > p,
+    > div {
       flex: 0 0 calc(33.333% - 20px);
 
       @media (max-width: 1919px) {
@@ -222,7 +222,7 @@
     }
 
     .sec1-about-us-page__right {
-      &>div {
+      & > div {
         margin-top: 20px;
 
         &:first-child {
@@ -333,6 +333,7 @@
     font-family: Literata;
     font-size: 154px !important;
     line-height: 105%;
+    font-weight: 700;
     @media (max-width: 1919px) {
       font-size: 84px !important;
     }
@@ -348,7 +349,8 @@
   }
 }
 
-.about-us-page__director {}
+.about-us-page__director {
+}
 
 .director-about-us-page {
   margin-top: 110px;
@@ -363,7 +365,8 @@
     margin-top: 62px;
   }
 
-  &__title {}
+  &__title {
+  }
 
   &__row {
     margin-top: 16px;
@@ -433,12 +436,12 @@
 
   &__quote {
     padding: 94px;
-    background: url("../../../images/cross.svg") 0 0 / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 0 100% / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 50% 0% / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 50% 100% / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 100% 0 / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 100% 100% / 15px 15px no-repeat;
+    background: url("../../images/cross.svg") 0 0 / 15px 15px no-repeat,
+      url("../../images/cross.svg") 0 100% / 15px 15px no-repeat,
+      url("../../images/cross.svg") 50% 0% / 15px 15px no-repeat,
+      url("../../images/cross.svg") 50% 100% / 15px 15px no-repeat,
+      url("../../images/cross.svg") 100% 0 / 15px 15px no-repeat,
+      url("../../images/cross.svg") 100% 100% / 15px 15px no-repeat;
 
     @media (max-width: 1919px) {
       padding: 65px;
@@ -497,17 +500,16 @@
 
   &__title {
     span {
-
       @media (max-width: 1919px) {
-        font-size: 52px!important;
+        font-size: 52px !important;
       }
-      
+
       @media (max-width: 1279px) {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
-      
+
       @media (max-width: 639px) {
-        font-size: 28px!important;
+        font-size: 28px !important;
         line-height: 1.15em;
       }
     }
@@ -623,31 +625,31 @@
 
 .item-last-about-us-page {
   &__el {
-    float: left;
-    width: 67px;
-    height: 67px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--dark-theme-bg);
     margin: 7px 7px 7px 0px;
-    margin-top: -25px;
-    position: relative;
+    margin-top: -28px;
+    position: absolute;
     transition: all 0.3s ease 0s;
-
-    @media (max-width: 1279px) {
-      width: 60px;
-      height: 60px;
-      margin: 0;
-      margin-top: -19px;
+    top: 29px;
+    left: 23px;
+    @media (max-width: 1279px){
+        left: 20px;
     }
+    
 
     &::before {
       content: "";
       position: absolute;
-      width: 22px;
-      height: 22px;
-      background-color: var(--dark-theme-bg);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1;
+      width: 0;
+      height: 0;
+      z-index: -1;
+      transition: all 0.3s ease 0s;
     }
 
     &::after {
@@ -661,7 +663,7 @@
       transform: translate(-50%, -50%);
       z-index: 2;
       opacity: 0;
-
+      transition: all 0.3s ease 0s;
       @media (max-width: 1279px) {
         opacity: 1;
       }
@@ -691,18 +693,28 @@
 
     &::before {
       content: "";
-      position: absolute;
-      top: 60%;
-      left: 60%;
-      width: 15px;
-      height: 15px;
+      float: left;
+      width: 75px;
+      height: 40px;
+      @media (max-width: 1279px) {
+        width: 68px;
+      }
     }
   }
 
   &:hover {
     .item-last-about-us-page__el {
-      background-color: var(--light-theme-grey-bg);
+      &::before {
+        background-color: var(--light-theme-grey-bg);
 
+        width: 67px;
+        height: 67px;
+        @media (max-width: 1279px){
+          width: 60px;
+          height: 60px;
+            
+        }
+      }
       &::after {
         opacity: 1;
       }

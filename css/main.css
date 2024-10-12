@@ -257,14 +257,14 @@ body.orange-active .logo-footer__inner::before {
     position: relative;
     transition: all 0.5s ease 0s;
 }
-@media (min-width: 1280px){
+@media (min-width: 1280px) {
     body.reduce-width .wrapper {
         margin: 0 20px;
         position: relative;
     }
     body::before,
     body::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         width: 0;
@@ -286,6 +286,10 @@ body.orange-active .logo-footer__inner::before {
     }
     body.reduce-width .header {
         border-radius: 10px;
+    }
+    body.dark-active::before,
+    body.dark-active::after {
+        background-color: var(--light-theme-bg);
     }
 }
 
@@ -341,11 +345,10 @@ h1.title-h1 span {
 
 h2.title-h2 span {
     font-family: "Literata";
-    font-weight: 800;
+    font-weight: 700;
     font-size: 64px;
     line-height: 120%;
     color: var(--light-theme-dark-text);
-    font-weight: 800;
     letter-spacing: -0.03em;
 }
 

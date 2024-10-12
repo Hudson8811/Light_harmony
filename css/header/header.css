@@ -345,6 +345,12 @@
   padding: 10px 0;
   margin-left: 25px;
 }
+.menu__list > li > a {
+  color: var(--light-theme-light-text);
+}
+.menu__list > li.active > a {
+  color: var(--light-theme-dark-text);
+}
 @media (max-width: 1919px) {
   .menu__list > li {
     padding: 0;
@@ -467,4 +473,8 @@
     top: 23%;
     left: 23%;
   }
+}
+
+.homepage header.header ul.menu__list li > a {
+  color: var(--light-theme-dark-text);
 }/*# sourceMappingURL=header.css.map */

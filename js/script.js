@@ -62,4 +62,51 @@ $(document).ready(function () {
       $(this).find(".tooltip").hide();
     }
   );
+
+
+
+
+
+
+
+
+  
+});
+$(document).ready(function () {
+  var player;
+  
+  // Функция YouTube API должна быть глобальной для правильной работы
+  window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('video', {
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  };
+
+  // Скрытие изображения и кнопки Play, запуск видео
+  function hideThumbnail() {
+    $('.thumbnail-container').hide();
+    $('#video').show();
+    player.playVideo();
+  }
+
+  // Показ изображения при паузе или остановке видео
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+      $('.thumbnail-container').show();
+      $('#video').hide();
+    }
+  }
+
+  // Событие при нажатии на картинку или кнопку play
+  $('.thumbnail-container, .play-button').click(function () {
+    hideThumbnail();
+  });
+
+  // Подключение YouTube API
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 });

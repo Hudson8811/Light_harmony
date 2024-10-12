@@ -350,6 +350,7 @@
   font-family: Literata;
   font-size: 154px !important;
   line-height: 105%;
+  font-weight: 700;
 }
 @media (max-width: 1919px) {
   .sec1-about-us-page span.sec1-about-us-page__left-big-text span {
@@ -455,7 +456,7 @@
 }
 .director-about-us-page__quote {
   padding: 94px;
-  background: url("../../../images/cross.svg") 0 0/15px 15px no-repeat, url("../../../images/cross.svg") 0 100%/15px 15px no-repeat, url("../../../images/cross.svg") 50% 0%/15px 15px no-repeat, url("../../../images/cross.svg") 50% 100%/15px 15px no-repeat, url("../../../images/cross.svg") 100% 0/15px 15px no-repeat, url("../../../images/cross.svg") 100% 100%/15px 15px no-repeat;
+  background: url("../../images/cross.svg") 0 0/15px 15px no-repeat, url("../../images/cross.svg") 0 100%/15px 15px no-repeat, url("../../images/cross.svg") 50% 0%/15px 15px no-repeat, url("../../images/cross.svg") 50% 100%/15px 15px no-repeat, url("../../images/cross.svg") 100% 0/15px 15px no-repeat, url("../../images/cross.svg") 100% 100%/15px 15px no-repeat;
 }
 @media (max-width: 1919px) {
   .director-about-us-page__quote {
@@ -654,32 +655,32 @@
 }
 
 .item-last-about-us-page__el {
-  float: left;
-  width: 67px;
-  height: 67px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--dark-theme-bg);
   margin: 7px 7px 7px 0px;
-  margin-top: -25px;
-  position: relative;
+  margin-top: -28px;
+  position: absolute;
   transition: all 0.3s ease 0s;
+  top: 29px;
+  left: 23px;
 }
 @media (max-width: 1279px) {
   .item-last-about-us-page__el {
-    width: 60px;
-    height: 60px;
-    margin: 0;
-    margin-top: -19px;
+    left: 20px;
   }
 }
 .item-last-about-us-page__el::before {
   content: "";
   position: absolute;
-  width: 22px;
-  height: 22px;
-  background-color: var(--dark-theme-bg);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
 }
 .item-last-about-us-page__el::after {
   content: "";
@@ -692,6 +693,7 @@
   transform: translate(-50%, -50%);
   z-index: 2;
   opacity: 0;
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 1279px) {
   .item-last-about-us-page__el::after {
@@ -723,14 +725,25 @@
 }
 .item-last-about-us-page__text::before {
   content: "";
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  width: 15px;
-  height: 15px;
+  float: left;
+  width: 75px;
+  height: 40px;
 }
-.item-last-about-us-page:hover .item-last-about-us-page__el {
+@media (max-width: 1279px) {
+  .item-last-about-us-page__text::before {
+    width: 68px;
+  }
+}
+.item-last-about-us-page:hover .item-last-about-us-page__el::before {
   background-color: var(--light-theme-grey-bg);
+  width: 67px;
+  height: 67px;
+}
+@media (max-width: 1279px) {
+  .item-last-about-us-page:hover .item-last-about-us-page__el::before {
+    width: 60px;
+    height: 60px;
+  }
 }
 .item-last-about-us-page:hover .item-last-about-us-page__el::after {
   opacity: 1;

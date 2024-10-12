@@ -359,6 +359,14 @@
     & > li {
       padding: 10px 0;
       margin-left: 25px;
+      > a {
+        color: var(--light-theme-light-text);
+      }
+      &.active {
+        > a {
+          color: var(--light-theme-dark-text);
+        }
+      }
       @media (max-width: 1919px) {
         padding: 0;
         margin-left: 27px;
@@ -493,6 +501,18 @@
       transform: translate(0, -50%) rotate(-45deg);
       top: 23%;
       left: 23%;
+    }
+  }
+}
+
+.homepage {
+  header.header {
+    ul.menu__list {
+      li {
+        > a {
+          color: var(--light-theme-dark-text);
+        }
+      }
     }
   }
 }
