@@ -153,17 +153,6 @@
     min-height: 106px;
   }
 }
-.swiper-suppliers__icon::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 30%;
-  background-color: var(--red-theme);
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  opacity: 0;
-}
 .swiper-suppliers__icon:hover {
   background-color: var(--orange-theme);
 }

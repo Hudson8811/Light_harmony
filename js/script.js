@@ -16,13 +16,50 @@ $(document).ready(function () {
     });
   });
 
-  var count = 0;
-  var interval = setInterval(function() {
-    if (count <= 100) {
-      $('#load-number span').text(count);
-      count++;
-    } else {
-      clearInterval(interval); 
+  var countload = 0;
+  interval = setInterval(function () {
+    $("#load-number span").html(countload++); // Обновляем число в элементе
+    if (countload > 100) clearInterval(interval); // Останавливаем, когда достигнем 100
+  }, 27);
+
+  $(".button").hover(
+    function () {
+      let $tooltip = $(this).find(".tooltip");
+      $tooltip.show();
+
+      // Позиционирование всплывающего элемента
+      let tooltipWidth = $tooltip.outerWidth();
+      let tooltipHeight = $tooltip.outerHeight();
+      let buttonOffset = $(this).offset();
+      let buttonWidth = $(this).outerWidth();
+      let buttonHeight = $(this).outerHeight();
+
+      // Рассчитываем начальное положение (снизу от кнопки)
+      let top = buttonOffset.top + buttonHeight;
+      let left = buttonOffset.left;
+
+      // Проверяем, не выходит ли элемент за пределы экрана по горизонтали
+      if (left + tooltipWidth > $(window).width()) {
+        left = $(window).width() - tooltipWidth - 10; // Добавляем отступ
+      }
+      if (left < 0) {
+        left = 10; // Если слишком слева, корректируем вправо
+      }
+
+      // Проверяем, не выходит ли элемент за пределы экрана по вертикали
+      if (top + tooltipHeight > $(window).height()) {
+        top = buttonOffset.top - tooltipHeight; // Отображаем сверху кнопки
+      }
+
+      // Применяем новые координаты
+      $tooltip.css({
+        top: top + "px",
+        left: left + "px",
+      });
+    },
+    function () {
+      // Скрываем элемент при уходе курсора
+      $(this).find(".tooltip").hide();
     }
-  }, 3000);
+  );
 });

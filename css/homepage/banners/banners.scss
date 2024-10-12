@@ -97,20 +97,6 @@
         font-size: 22px;
       }
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: calc(100%);
-        transform: translate(0, -80%);
-        left: 60%;
-        width: 15px;
-        height: 15px;
-        background-color: var(--orange-theme);
-        border-radius: 50%;
-        opacity: 0;
-        transition: all 0.3s ease 0s;
-      }
-
       &:hover {
         color: var(--orange-theme);
 

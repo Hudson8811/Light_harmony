@@ -170,18 +170,6 @@
       min-height: 106px;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: 30%;
-      background-color: var(--red-theme);
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      opacity: 0;
-    }
-
     &:hover {
       background-color: var(--orange-theme);
 
