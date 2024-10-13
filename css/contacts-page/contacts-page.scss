@@ -70,22 +70,28 @@
           &::before {
             width: 22px;
             height: 22px;
+            background: url("../../images/arrow.svg") center / 0 0 no-repeat;
             background-color: var(--light-theme-banner);
             z-index: 2;
+            transition: all 0.3s ease 0s;
           }
-
+          
           &::after {
-            width: 46px;
-            height: 46px;
+            width: 0;
+            height: 0;
             background-color: var(--light-theme-form);
-            opacity: 0;
             z-index: 1;
             transition: all 0.3s ease 0s;
           }
-
+          
           &:hover {
+            &::before{
+              background: url("../../images/arrow.svg") center / 8px 8px no-repeat;
+              background-color: var(--light-theme-banner);
+            }
             &::after {
-              opacity: 1;
+              width: 46px;
+              height: 46px;
             }
           }
         }
@@ -134,7 +140,7 @@
     }
 
     li {
-      margin-top: 44px;
+      margin-top: 55px;
 
       &:first-child {
         margin-top: 0;
@@ -187,7 +193,7 @@
 
   &__title {
     margin-top: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
     @media (max-width: 1919px){
       margin-top: 10px;
       margin-bottom: 18px;
@@ -407,7 +413,7 @@
     align-items: center;
     margin-left: auto;
     gap: 20px;
-    width: 66.666%;
+    width: calc(66.666% - 10px);
     @media (max-width: 1919px) {
       flex-basis: 100%;
       margin-top: 0;

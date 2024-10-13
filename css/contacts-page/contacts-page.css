@@ -71,19 +71,25 @@
 .contacts-page__right ul li a::before {
   width: 22px;
   height: 22px;
+  background: url("../../images/arrow.svg") center/0 0 no-repeat;
   background-color: var(--light-theme-banner);
   z-index: 2;
+  transition: all 0.3s ease 0s;
 }
 .contacts-page__right ul li a::after {
-  width: 46px;
-  height: 46px;
+  width: 0;
+  height: 0;
   background-color: var(--light-theme-form);
-  opacity: 0;
   z-index: 1;
   transition: all 0.3s ease 0s;
 }
+.contacts-page__right ul li a:hover::before {
+  background: url("../../images/arrow.svg") center/8px 8px no-repeat;
+  background-color: var(--light-theme-banner);
+}
 .contacts-page__right ul li a:hover::after {
-  opacity: 1;
+  width: 46px;
+  height: 46px;
 }
 .contacts-page__email {
   margin-top: 80px;
@@ -127,7 +133,7 @@
   }
 }
 .contacts-page__phone li {
-  margin-top: 44px;
+  margin-top: 55px;
 }
 .contacts-page__phone li:first-child {
   margin-top: 0;
@@ -172,7 +178,7 @@
 }
 .address-contacts-page__title {
   margin-top: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 @media (max-width: 1919px) {
   .address-contacts-page__title {
@@ -376,7 +382,7 @@
   align-items: center;
   margin-left: auto;
   gap: 20px;
-  width: 66.666%;
+  width: calc(66.666% - 10px);
 }
 @media (max-width: 1919px) {
   .question-contacts-page__textarea-footer {
