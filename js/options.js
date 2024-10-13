@@ -12,8 +12,23 @@ $(document).ready(function () {
   });
   $headerOptionsBtn1.on("click", function () {
     $headerOptions.toggleClass("show");
-    $("body").toggleClass("overflow-hidden");
+    /* $("body").toggleClass("overflow-hidden"); */
     $("body").toggleClass("reduce-width");
+
+    if ($("body").hasClass("overflow-hidden")) {
+      // Возвращаем скролл
+      $("body").css("padding-right", "0").removeClass("overflow-hidden");
+    } else {
+      // Получаем ширину скроллбара
+      var scrollbarWidth = window.innerWidth - $(document).width();
+      // Плавно скрываем скроллбар
+      $("body").css("padding-right", scrollbarWidth + "px");
+
+      // Добавляем задержку перед удалением скролла для плавного эффекта
+      setTimeout(function () {
+        $("body").addClass("overflow-hidden");
+      }, 500); // 500ms задержка перед скрытием
+    }
   });
   $(document).on("click", function (event) {
     if (

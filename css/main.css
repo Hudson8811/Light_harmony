@@ -45,6 +45,10 @@ body {
 body.overflow-hidden {
     overflow: hidden;
 }
+body.overflow-hidden::-webkit-scrollbar {
+    width: 8px; /* Уменьшаем ширину скроллбара */
+}
+
 body a {
     color: var(--light-theme-dark-text);
 }
