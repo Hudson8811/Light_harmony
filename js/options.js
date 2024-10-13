@@ -15,22 +15,6 @@ $(document).ready(function () {
     $("body").toggleClass("overflow-hidden");
     $("body").toggleClass("reduce-width");
   });
-
-  if ($("body").hasClass("overflow-hidden")) {
-    // Возвращаем скролл
-    $("body").css("padding-right", "0").removeClass("overflow-hidden");
-  } else {
-    // Получаем ширину скроллбара
-    var scrollbarWidth = window.innerWidth - $(document).width();
-    // Убираем скролл и компенсируем ширину
-    $("body").css("padding-right", scrollbarWidth + "px");
-
-    // Плавно скрываем скроллбар
-    setTimeout(function () {
-      $("body").addClass("overflow-hidden");
-    }, 500); // Задержка перед удалением скролла для плавного эффекта
-  }
-
   $(document).on("click", function (event) {
     if (
       !$headerOptions.is(event.target) &&
