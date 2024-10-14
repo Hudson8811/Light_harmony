@@ -175,7 +175,8 @@
 .swiper-suppliers__icon:hover {
   /* background-color: var(--orange-theme); */
 }
-.swiper-suppliers__icon:hover svg path {
+.swiper-suppliers__icon:hover svg path,
+.swiper-suppliers__icon:hover svg rect {
   fill: var(--dark-theme-light-text);
 }
 .swiper-suppliers__icon svg {

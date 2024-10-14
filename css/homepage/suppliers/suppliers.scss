@@ -201,7 +201,8 @@
       /* background-color: var(--orange-theme); */
 
       svg {
-        path {
+        path,
+        rect {
           fill: var(--dark-theme-light-text);
         }
       }
