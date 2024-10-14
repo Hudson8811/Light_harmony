@@ -167,6 +167,10 @@
 .swiper-suppliers__icon svg {
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease 0s;
+}
+.swiper-suppliers__icon svg * {
+  transition: all 0.3s ease 0s;
 }
 .swiper-suppliers__icon:hover {
   /* background-color: var(--orange-theme); */

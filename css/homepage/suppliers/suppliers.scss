@@ -192,6 +192,10 @@
     svg {
       position: relative;
       z-index: 2;
+      transition: all 0.3s ease 0s;
+      * {
+        transition: all 0.3s ease 0s;
+      }
     }
     &:hover {
       /* background-color: var(--orange-theme); */
