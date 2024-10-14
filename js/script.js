@@ -64,15 +64,6 @@ $(document).ready(function () {
   );
 
 
-
-
-
-
-
-
-  
-});
-$(document).ready(function () {
   var player;
   
   // Функция YouTube API должна быть глобальной для правильной работы
@@ -109,4 +100,54 @@ $(document).ready(function () {
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  
+
+
+  $('.swiper-suppliers__icon').append('<div class="swiper-suppliers__icon-hovered"></div>');
+
+  $('.swiper-suppliers__icon').on('mouseenter', function (e) {
+      let hoverElem = $(this).find('.swiper-suppliers__icon-hovered');
+      let direction = getDirection($(this), e);
+
+      if (direction === 'left') {
+          hoverElem.css({ left: '-100%', top: '0%' }).stop(true, true).animate({ left: '0%' }, 300);
+      } else if (direction === 'right') {
+          hoverElem.css({ left: '100%', top: '0%' }).stop(true, true).animate({ left: '0%' }, 300);
+      } else if (direction === 'top') {
+          hoverElem.css({ top: '-100%', left: '0%' }).stop(true, true).animate({ top: '0%' }, 300);
+      } else if (direction === 'bottom') {
+          hoverElem.css({ top: '100%', left: '0%' }).stop(true, true).animate({ top: '0%' }, 300);
+      }
+  });
+
+  $('.swiper-suppliers__icon').on('mouseleave', function (e) {
+      let hoverElem = $(this).find('.swiper-suppliers__icon-hovered');
+      let direction = getDirection($(this), e);
+
+      if (direction === 'left') {
+          hoverElem.stop(true, true).animate({ left: '-100%' }, 300);
+      } else if (direction === 'right') {
+          hoverElem.stop(true, true).animate({ left: '100%' }, 300);
+      } else if (direction === 'top') {
+          hoverElem.stop(true, true).animate({ top: '-100%' }, 300);
+      } else if (direction === 'bottom') {
+          hoverElem.stop(true, true).animate({ top: '100%' }, 300);
+      }
+  });
+
+  function getDirection($element, event) {
+      let w = $element.width(),
+          h = $element.height(),
+          x = (event.pageX - $element.offset().left - (w / 2)) * (w > h ? (h / w) : 1),
+          y = (event.pageY - $element.offset().top - (h / 2)) * (h > w ? (w / h) : 1);
+      let direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+
+      switch (direction) {
+          case 0: return 'top';
+          case 1: return 'right';
+          case 2: return 'bottom';
+          case 3: return 'left';
+      }
+  }
 });
