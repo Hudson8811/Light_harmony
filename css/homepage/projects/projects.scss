@@ -120,7 +120,14 @@
       & > * {
       }
     }
-
+    @media (min-width: 1280px) {
+      &-additional {
+        align-items: flex-end;
+        .list-projects__title {
+          max-width: 590px;
+        }
+      }
+    }
     &.hovered {
       .list-projects__title {
         /* a {
@@ -232,12 +239,14 @@
 
   &__more-btn {
     position: relative;
+    padding: 20px 0;
+    margin: -20px 0;
     margin-top: 50px;
     margin-left: 760px;
     padding-left: 50px;
     font-size: 21px;
     color: var(--light-theme-light-text);
-    display: block;
+    display: inline-block;
     font-weight: 300;
 
     @media (max-width: 1919px) {
@@ -290,7 +299,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
       }
       svg {
         color: inherit;

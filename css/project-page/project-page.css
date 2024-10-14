@@ -332,9 +332,11 @@
 }
 .project-page__media-desc-item a {
   color: var(--light-theme-progress-text);
-  margin-top: 30px;
+  padding: 20px 10px 20px 10px;
+  margin: -20px -10px -20px -10px;
+  margin-top: 10px;
   display: block;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   transition: all 0.3s ease 0s;
 }

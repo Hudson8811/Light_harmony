@@ -104,7 +104,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .list-projects__name {
   position: relative;
@@ -125,6 +126,14 @@
   .list-projects__name {
     gap: 6px;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1280px) {
+  .list-projects__name-additional {
+    align-items: flex-end;
+  }
+  .list-projects__name-additional .list-projects__title {
+    max-width: 590px;
   }
 }
 .list-projects__name.hovered .list-projects__title {
@@ -239,12 +248,14 @@
 }
 .list-projects__more-btn {
   position: relative;
+  padding: 20px 0;
+  margin: -20px 0;
   margin-top: 50px;
   margin-left: 760px;
   padding-left: 50px;
   font-size: 21px;
   color: var(--light-theme-light-text);
-  display: block;
+  display: inline-block;
   font-weight: 300;
 }
 @media (max-width: 1919px) {
@@ -320,6 +331,4 @@
   opacity: 1;
   width: 46px;
   height: 46px;
-}
-
-/*# sourceMappingURL=projects.css.map */
+}/*# sourceMappingURL=projects.css.map */

@@ -34,6 +34,7 @@
     --light-theme-options-bg: rgba(33, 33, 33, 1);
     --light-theme-options-text: rgba(226, 226, 226, 1);
     --dark-theme-options-bg: rgba(226, 226, 226, 1);
+    --dark-theme-input-header-bg: rgba(212, 212, 212, 1);
     --dark-theme-options-text: rgba(78, 78, 78, 1);
 }
 

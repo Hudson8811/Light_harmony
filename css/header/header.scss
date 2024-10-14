@@ -80,7 +80,7 @@
   &__options-btn {
     min-width: 30px;
     min-height: 30px;
-    background-color: var(--light-theme-grey-bg);
+    background-color: var(--dark-theme-input-header-bg);
     position: relative;
     display: flex;
     justify-content: center;
@@ -115,7 +115,7 @@
     position: relative;
     margin-left: 20px;
     min-height: 30px;
-    background-color: var(--light-theme-grey-bg);
+    background-color: var(--dark-theme-input-header-bg);
     transition: all 0.3s ease 0s;
     &:hover {
       background-color: var(--dark-theme-dark-bg);

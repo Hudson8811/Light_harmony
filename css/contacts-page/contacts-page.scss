@@ -56,8 +56,9 @@
         a {
           position: relative;
           display: inline-block;
+          padding: 20px 0;
           padding-left: 36px;
-
+          margin: -20px 0;
           &::before,
           &::after {
             content: "";
@@ -79,7 +80,7 @@
           &::after {
             width: 0;
             height: 0;
-            background-color: var(--light-theme-form);
+            background-color: var(--light-theme-grey-bg);
             z-index: 1;
             transition: all 0.3s ease 0s;
           }
