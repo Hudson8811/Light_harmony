@@ -10,6 +10,30 @@ $(document).ready(function () {
   ).html(function (_, html) {
     return "<span>" + html + "</span>";
   });
+
+  function getScrollbarWidth() {
+    let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    return scrollbarWidth;
+  }
+
+  function checkBodyScrollbar() {
+    let $headerOptions = $("#headerOptions");
+    if ($headerOptions.hasClass('show')) {
+      let sideBarWidth = getScrollbarWidth();
+      if (sideBarWidth) {
+        $("body").css('padding-right', sideBarWidth);
+        if ($(window).width() >= 1280)  {
+          let wrapperWidth = $(".wrapper").outerWidth();
+          let scale = wrapperWidth / (wrapperWidth + 34);
+          $(".wrapper").css('transform', 'scale(' + scale + ')');
+        }
+      }
+    } else {
+      $("body").css('padding-right', '');
+      $(".wrapper").css('transform', '');
+    }
+  }
+
   $headerOptionsBtn1.on("click", function () {
     $headerOptions.toggleClass("show");
     $("body").toggleClass("overflow-hidden");

@@ -43,8 +43,8 @@ $animationToggle.on("change", function () {
 function initAnimation() {
 	container = document.querySelector(".head_3d");
 
-	camera = new THREE.PerspectiveCamera( 50, container.clientWidth / container.clientHeight, 0.1, 1000 );
-	camera.position.set( -0.1, 0, 2.3 );
+	camera = new THREE.PerspectiveCamera( 52, container.clientWidth / container.clientHeight, 0.1, 1000 );
+	camera.position.set( -0.1, -0.2, 2.3 );
 	camera.lookAt(-0.1, 0, 0);
 
 	scene = new THREE.Scene();
@@ -92,7 +92,7 @@ function initAnimation() {
 		objLoader.load("models/Apollo_15k_polys.obj", function(object)
 		{
 			headObj = object;
-			let scale = 0.1;
+			let scale = 0.085;
 			headObj.scale.set(scale, scale, scale);
 			headObj.position.set(0, -0.8, 0);
 			headObj.rotation.y = THREE.MathUtils.degToRad(initialAngle);

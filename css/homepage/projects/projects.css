@@ -90,6 +90,7 @@
     height: 220px;
     left: auto;
     right: 0;
+    top: calc(100% + 25px);
   }
 }
 @media (max-width: 1279px) {
@@ -103,8 +104,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .list-projects__name {
   position: relative;
@@ -320,4 +320,6 @@
   opacity: 1;
   width: 46px;
   height: 46px;
-}/*# sourceMappingURL=projects.css.map */
+}
+
+/*# sourceMappingURL=projects.css.map */
