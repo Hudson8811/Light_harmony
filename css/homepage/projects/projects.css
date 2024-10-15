@@ -56,7 +56,6 @@
 .list-projects li {
   max-width: 1740px;
   position: relative;
-  margin-bottom: 25px;
   transition: color 0.3s;
   padding-left: 760px;
 }
@@ -69,6 +68,7 @@
 @media (max-width: 992px) {
   .list-projects li {
     padding-left: 0;
+    margin-bottom: 25px;
     padding-right: 0;
   }
 }
@@ -157,6 +157,7 @@
   color: var(--light-theme-dark-text);
   font-weight: 300;
   font-size: 32px;
+  line-height: 180%;
   letter-spacing: -0.01em;
 }
 @media (max-width: 1279px) {
@@ -180,7 +181,7 @@
   transition: all 0.3s ease 0s;
   white-space: nowrap;
   position: absolute;
-  bottom: -2px;
+  bottom: 8px;
   left: calc(100% + 15px);
 }
 @media (min-width: 1279px) {
@@ -204,6 +205,7 @@
 }
 .list-projects__date-mark {
   position: absolute;
+  top: 15px;
   left: 760px;
   transform-origin: 50% 115%;
   transform: translate(9px, 0) rotate(-90deg);
@@ -262,9 +264,9 @@
   position: relative;
   padding: 20px 0;
   margin: -20px 0;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 760px;
-  padding-left: 50px;
+  padding-left: 42px;
   font-size: 21px;
   color: var(--light-theme-light-text);
   display: inline-block;

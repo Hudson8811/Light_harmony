@@ -90,9 +90,9 @@
 }
 .header__options-btn:hover {
   background-color: var(--light-theme-input-header-bg-hover);
-}
-.header__options-btn:hover svg rect {
-  fill: var(--light-theme-bg);
+  /* svg rect {
+    fill: var(--light-theme-bg);
+  } */
 }
 @media (max-width: 1279px) {
   .header__options-btn {
@@ -116,15 +116,15 @@
 }
 .header__search:hover {
   background-color: var(--light-theme-input-header-bg-hover);
-}
-.header__search:hover input {
-  color: var(--light-theme-bg) !important;
-}
-.header__search:hover input::placeholder {
-  color: var(--light-theme-bg) !important;
-}
-.header__search:hover svg path {
-  fill: var(--light-theme-bg);
+  /* input {
+    color: var(--light-theme-bg) !important;
+  }
+  input::placeholder {
+    color: var(--light-theme-bg) !important;
+  }
+  svg path {
+    fill: var(--light-theme-bg);
+  } */
 }
 @media (max-width: 1279px) {
   .header__search {
@@ -474,6 +474,9 @@
 
 .homepage header.header ul.menu__list li > a {
   color: var(--light-theme-dark-text);
+}
+.homepage header.header ul.menu__list li a:hover {
+  color: var(--orange-theme);
 }
 
 /*# sourceMappingURL=header.css.map */
