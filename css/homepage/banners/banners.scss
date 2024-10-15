@@ -81,6 +81,9 @@
   }
 
   &__title {
+	  @media (max-width: 639px) {
+        padding-top:2px;
+      }
     a {
       position: relative;
       transition: all 0.3s ease 0s;
