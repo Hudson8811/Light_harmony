@@ -3,18 +3,26 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
-  $(window).on("scroll", function () {
-    $(".item-banners__image").each(function () {
-      var elementTop = $(this).offset().top;
-      var elementBottom = elementTop + $(this).outerHeight();
-      var viewportTop = $(window).scrollTop() - 200;
-      var viewportBottom = viewportTop + $(window).height();
 
-      if (elementBottom > viewportTop && elementTop < viewportBottom) {
-        $(this).addClass("visible");
-      }
-    });
-  });
+  if ($(".item-banners__image").length > 0){
+      gsap.registerPlugin(ScrollTrigger);
+      const bannerImages = document.querySelectorAll('.item-banners__image');
+      bannerImages.forEach(item => {
+          gsap.fromTo(item,
+              { maxWidth: '60%' },
+              {
+                  ease: 'power1.inOut',
+                  maxWidth: '100%',
+                  scrollTrigger: {
+                      trigger: item,
+                      start: 'top+=40px bottom',
+                      end: 'bottom bottom',
+                      scrub: 0.7
+                  }
+              }
+          );
+      });
+  }
 
   var countload = 0;
   interval = setInterval(function () {

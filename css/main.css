@@ -40,7 +40,6 @@
 
 body {
     background-color: var(--light-theme-bg);
-    transition: all 0.5s ease 0s;
 }
 @supports (-ms-ime-align: auto) {
     /* Стили для браузеров в Windows */
@@ -66,12 +65,16 @@ body a {
     flex-direction: column;
     min-height: 100%;
     position: relative;
+    transition: transform 0.5s ease;
+    z-index: 3;
+    background-color: var(--light-theme-bg);
+    top: 0;
+    right: 0;
+    left: 0;
 }
 @media (min-width: 1280px) {
-    body.reduce-width {
-        padding-left: 17px;
-        padding-right: 17px;
-        position: relative;
+    body.reduce-width .wrapper {
+        position: fixed;
     }
     body::before,
     body::after {
@@ -82,6 +85,7 @@ body a {
         height: 100%;
         background-color: var(--light-theme-options-bg);
         transition: all 0.5s ease 0s;
+        z-index: 4;
     }
     body::before {
         left: 0;
@@ -90,10 +94,10 @@ body a {
         right: 0;
     }
     body.reduce-width::before {
-        width: 17px;
+        width: 10px;
     }
     body.reduce-width::after {
-        width: 17px;
+        width: 10px;
     }
     body.reduce-width .header {
         border-radius: 10px;
@@ -120,7 +124,11 @@ body a {
     margin: 0 auto;
     padding: 0 20px;
 
-    @media (max-width: 1279px) {
+
+}
+
+@media (max-width: 1279px) {
+    .container{
         padding: 0 10px;
     }
 }
@@ -286,7 +294,8 @@ h2.title-h2 span {
     opacity: 1;
 }
 
-body.dark-active {
+body.dark-active,
+body.dark-active .wrapper{
     background-color: var(--dark-theme-bg);
 }
 body.dark-active a {

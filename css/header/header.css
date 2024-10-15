@@ -120,9 +120,6 @@
 .header__search:hover input {
   color: var(--light-theme-bg) !important;
 }
-.header__search:hover input::-moz-placeholder {
-  color: var(--light-theme-bg) !important;
-}
 .header__search:hover input::placeholder {
   color: var(--light-theme-bg) !important;
 }
@@ -477,4 +474,6 @@
 
 .homepage header.header ul.menu__list li > a {
   color: var(--light-theme-dark-text);
-}/*# sourceMappingURL=header.css.map */
+}
+
+/*# sourceMappingURL=header.css.map */

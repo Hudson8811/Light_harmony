@@ -23,10 +23,11 @@
   .item-banners__image {
     max-width: 60%;
     margin: 0 auto;
-    transition: all 0.7s ease 0s;
   }
-  .item-banners__image.visible {
-    max-width: 100%;
+}
+@media (max-width: 1279px) {
+  .item-banners__image {
+    max-width: 100% !important;
   }
 }
 .item-banners__image img {
@@ -35,8 +36,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .item-banners__name {
   display: flex;
@@ -110,4 +110,6 @@
   .item-banners__subtitle {
     font-size: 18px;
   }
-}/*# sourceMappingURL=banners.css.map */
+}
+
+/*# sourceMappingURL=banners.css.map */

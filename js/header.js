@@ -9,6 +9,7 @@ $(document).ready(function () {
     $("#burderHeader").removeClass("active");
 
     $("#headerOptions").removeClass("show");
+    checkBodyScrollbar();
     $('body').removeClass("overflow-hidden");
     $('body').removeClass("reduce-width");
   });

@@ -11,31 +11,9 @@ $(document).ready(function () {
     return "<span>" + html + "</span>";
   });
 
-  function getScrollbarWidth() {
-    let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    return scrollbarWidth;
-  }
-
-  function checkBodyScrollbar() {
-    let $headerOptions = $("#headerOptions");
-    if ($headerOptions.hasClass('show')) {
-      let sideBarWidth = getScrollbarWidth();
-      if (sideBarWidth) {
-        $("body").css('padding-right', sideBarWidth);
-        if ($(window).width() >= 1280)  {
-          let wrapperWidth = $(".wrapper").outerWidth();
-          let scale = wrapperWidth / (wrapperWidth + 34);
-          $(".wrapper").css('transform', 'scale(' + scale + ')');
-        }
-      }
-    } else {
-      $("body").css('padding-right', '');
-      $(".wrapper").css('transform', '');
-    }
-  }
-
   $headerOptionsBtn1.on("click", function () {
     $headerOptions.toggleClass("show");
+    checkBodyScrollbar();
     $("body").toggleClass("overflow-hidden");
     $("body").toggleClass("reduce-width");
   });
@@ -49,6 +27,7 @@ $(document).ready(function () {
       $headerOptionsBtn2.has(event.target).length === 0
     ) {
       $headerOptions.removeClass("show");
+      checkBodyScrollbar();
       $("body").removeClass("overflow-hidden");
       $("body").removeClass("reduce-width");
     }
@@ -264,4 +243,30 @@ function getCookie(name) {
     if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
   }
   return null;
+}
+
+function getScrollbarWidth() {
+  let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  return scrollbarWidth;
+}
+
+function checkBodyScrollbar() {
+  let $headerOptions = $("#headerOptions");
+  let optionsHeight = $headerOptions.innerHeight();
+  if ($headerOptions.hasClass('show')) {
+    let sideBarWidth = getScrollbarWidth();
+    if (sideBarWidth) {
+      $("body").css('padding-right', sideBarWidth);
+    }
+    if (window.innerWidth >= 1280) {
+      $('.wrapper').css('transform', 'translateY('+optionsHeight+'px)').css('padding-right', sideBarWidth);
+      $('.wrapper > .header').css('padding-right', sideBarWidth);
+    }
+  } else {
+    $("body").css('padding-right', '');
+    $('.wrapper').css('transform', '').css('padding-right', '');
+    $('.wrapper > .header').css('padding-right', '');
+  }
+
+
 }

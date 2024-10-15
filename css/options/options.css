@@ -1,13 +1,15 @@
 .options-header {
   display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
+  grid-template-rows: 1fr;
   overflow: hidden;
   background-color: var(--light-theme-options-bg);
   padding: 0;
   margin: 0;
-  position: relative;
-  z-index: 13;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 @media (max-width: 1279px) {
   .options-header {
@@ -15,6 +17,9 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 13;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
   }
 }
 .options-header * {
@@ -70,9 +75,7 @@
 .options-header .toggle {
   width: 30px;
   height: 16px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-color: var(--dark-theme-dark-bg);
   border-radius: 50px;
   position: relative;
@@ -115,19 +118,22 @@
   cursor: pointer;
 }
 
-.options-header.show {
-  grid-template-rows: 1fr;
+@media (max-width: 1279px) {
+  .options-header.show {
+    transform: translateY(0);
+  }
 }
 
 .options-header__row {
   min-height: 0;
-  padding: 0;
   margin: 0;
   opacity: 0;
   transition: opacity 0.5s ease, padding 0.5s ease;
+  padding: 30px 30px 110px 30px;
 }
 
 .options-header.show .options-header__row {
   opacity: 1;
-  padding: 30px 30px 110px 30px;
-}/*# sourceMappingURL=options.css.map */
+}
+
+/*# sourceMappingURL=options.css.map */

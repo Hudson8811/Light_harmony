@@ -10,10 +10,6 @@ $(document).ready(function () {
       checkProjectImagePos();
     });
 
-    /*$(window).on('scroll', function () {
-      checkProjectImagePos();
-    });*/
-
     function checkProjectImagePos() {
       let $image = $('.list-projects__name.hovered + .list-projects__image');
       if ($image.length > 0) {

@@ -118,14 +118,14 @@
     height: 800px;
   }
   60% {
-    bottom: 55px;
-    transform: translate(-50%, 0%);
+    bottom: 50%;
+    transform: translate(-50%, 50%);
   }
   100% {
     width: 470px;
     height: 800px;
-    bottom: 55px;
-    transform: translate(-50%, 0%);
+    bottom: 50%;
+    transform: translate(-50%, 50%);
   }
 }
 @keyframes preloader__squares {
@@ -135,4 +135,6 @@
   100% {
     opacity: 0;
   }
-}/*# sourceMappingURL=preloader.css.map */
+}
+
+/*# sourceMappingURL=preloader.css.map */
