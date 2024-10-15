@@ -59,7 +59,7 @@ $(document).ready(function () {
       width: "8px",
       height: "8px",
     });
-    $(".swiper-arrow img").attr("src", "images/swiper-arrow-white.png");
+    $(".swiper-arrow img").attr("src", "images/swiper-arrow-white.svg");
   }
   function disableDark() {
     $("body").removeClass("dark-active");
@@ -68,7 +68,7 @@ $(document).ready(function () {
     $("#headerOptionsBtn1 img").attr("src", "images/options.png");
     $("#headerOptionsBtn2 img").attr("src", "images/options.png");
     $(".header__search-btn img").attr("src", "images/arrow.png");
-    $(".swiper-arrow img").attr("src", "images/swiper-arrow.png");
+    $(".swiper-arrow img").attr("src", "images/swiper-arrow.svg");
   }
 
   $orangeThemeToggle.on("change", function () {

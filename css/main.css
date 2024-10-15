@@ -343,7 +343,9 @@ body.dark-active .quote-project-page__text span {
         url("../images/cross-white.png") 50% 100%/15px 15px no-repeat,
         url("../images/cross-white.png") 100% 0/15px 15px no-repeat,
         url("../images/cross-white.png") 100% 100%/15px 15px no-repeat;
-    max-width: 100%;
+}
+body.dark-active .quote-project-page__text.quote-project-page__text--empty span {
+    background: none;
 }
 body.dark-active .header-projects-page__filter span svg path {
     fill: var(--dark-theme-light-text);
@@ -524,6 +526,9 @@ body.dark-active .question-contacts-page__textarea-footer input[type="checkbox"]
 }
 body.dark-active .toggle:checked::before {
     background-color: var(--light-theme-banner);
+}
+body.dark-active .project-page__info-title {
+    color: var(--light-theme-light-text);
 }
 
 body.orange-active .title-h2 span,

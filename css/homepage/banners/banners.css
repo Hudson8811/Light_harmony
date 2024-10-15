@@ -36,7 +36,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .item-banners__name {
   display: flex;
@@ -110,6 +111,4 @@
   .item-banners__subtitle {
     font-size: 18px;
   }
-}
-
-/*# sourceMappingURL=banners.css.map */
+}/*# sourceMappingURL=banners.css.map */
