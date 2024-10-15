@@ -474,4 +474,7 @@
 
 .homepage header.header ul.menu__list li > a {
   color: var(--light-theme-dark-text);
+}
+.homepage header.header ul.menu__list li a:hover {
+  color: var(--orange-theme);
 }/*# sourceMappingURL=header.css.map */

@@ -512,6 +512,11 @@
         > a {
           color: var(--light-theme-dark-text);
         }
+        a {
+          &:hover{
+            color: var(--orange-theme);
+          }
+        }
       }
     }
   }
