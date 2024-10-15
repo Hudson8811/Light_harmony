@@ -227,11 +227,13 @@
   .list-projects__date-mark {
     left: 0;
     font-size: 18px;
+    top: 3px;
   }
 }
 @media (max-width: 639px) {
   .list-projects__date-mark {
     transform-origin: 45% 145%;
+    top: -2px;
   }
 }
 .list-projects__inprocess {

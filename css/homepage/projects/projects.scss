@@ -223,10 +223,12 @@
     @media (max-width: 992px) {
       left: 0;
       font-size: 18px;
+      top: 3px;
     }
 
     @media (max-width: 639px) {
       transform-origin: 45% 145%;
+      top: -2px;
     }
   }
 
