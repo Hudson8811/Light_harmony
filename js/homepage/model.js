@@ -44,8 +44,8 @@ function initAnimation() {
 	container = document.querySelector(".head_3d");
 
 	camera = new THREE.PerspectiveCamera( 52, container.clientWidth / container.clientHeight, 0.1, 1000 );
-	camera.position.set( -0.1, -0.2, 2.3 );
-	camera.lookAt(-0.1, 0, 0);
+	camera.position.set( -0.2, -0.2, 2.3 );
+	camera.lookAt(-0.2, 0, 0);
 
 	scene = new THREE.Scene();
 
