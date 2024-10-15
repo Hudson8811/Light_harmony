@@ -195,7 +195,7 @@
   }
 }
 .list-projects__subtitle:hover {
-  color: var(--orange-theme);
+  color: var(--orange-theme)!important;
 }
 @media (max-width: 1279px) {
   .list-projects__subtitle {
