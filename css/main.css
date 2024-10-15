@@ -380,8 +380,14 @@ body.dark-active .header__options-btn {
 body.dark-active .header__search-input::placeholder {
     color: var(--dark-theme-light-text);
 }
-body.dark-active .list-projects__more-btn span {
-    background-color: var(--dark-theme-light-text);
+body.dark-active .list-projects__more-btn span::after {
+    background-color: var(--light-theme-bg);
+}
+body.dark-active .list-projects__more-btn span svg path {
+    transition: all 0.3s ease 0s;
+}
+body.dark-active .list-projects__more-btn:hover span svg path {
+    fill: var(--dark-theme-dark-bg);
 }
 body.dark-active .swiper-pagination-bullets .swiper-pagination-bullet {
     background-color: var(--dark-theme-light-text);
