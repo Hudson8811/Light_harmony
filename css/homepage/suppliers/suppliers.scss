@@ -83,6 +83,7 @@
     }
 
     .suppliers-swiper-pagination {
+		margin-top:-4px;
       .swiper-pagination-bullet {
         border-radius: 0px;
         width: 5px;
@@ -90,6 +91,7 @@
         background-color: var(--light-theme-banner);
         opacity: 1;
         transition: all 0.3s ease 0s;
+	
 
         &.swiper-pagination-bullet-active {
           width: 27px;

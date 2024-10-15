@@ -17,6 +17,9 @@
     line-height: 117%;
     letter-spacing: -0.01em;
     font-weight: 300;
+	@media (max-width: 639px) {
+		font-size: 22px;
+	}
   }
 
   &__container {
@@ -99,14 +102,6 @@
       height: 32px;
       background-color: var(--light-theme-bg);
       display: none;
-    }
-
-    @media (max-width: px) {
-    }
-
-    svg {
-      width: 10px;
-      height: 10px;
     }
   }
 
@@ -326,8 +321,9 @@
   }
 
   @media (max-width: 639px) {
+	height: calc(100% - 75px);
     width: calc(100% - 20px);
-    top: 60px;
+    top: 65px;
     padding: 38px 20px 18px;
     .menu__dropdown .dropdown__menu > li a {
       font-size: 18px;
