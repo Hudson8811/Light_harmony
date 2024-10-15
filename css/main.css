@@ -100,7 +100,7 @@ body a {
     }
     body.dark-active::before,
     body.dark-active::after {
-        background-color: var(--light-theme-bg);
+        background-color: var(--dark-theme-options-bg);
     }
 }
 
@@ -349,6 +349,9 @@ body.dark-active .options-header input[type="range"]::-webkit-slider-thumb {
 }
 body.dark-active .header__search {
     background-color: var(--light-theme-dark-grey);
+}
+body.dark-active .homepage header.header ul.menu__list li > a {
+    color: var(--dark-theme-light-text);
 }
 body.dark-active .header__lang .dropdown__btn,
 body.dark-active .header__lang .dropdown__btn a {

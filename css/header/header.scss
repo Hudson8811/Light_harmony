@@ -89,9 +89,9 @@
     transition: all 0.3s ease 0s;
     &:hover {
       background-color: var(--light-theme-input-header-bg-hover);
-      svg rect {
+      /* svg rect {
         fill: var(--light-theme-bg);
-      }
+      } */
     }
 
     @media (max-width: 1279px) {
@@ -119,7 +119,7 @@
     transition: all 0.3s ease 0s;
     &:hover {
       background-color: var(--light-theme-input-header-bg-hover);
-      input {
+      /* input {
         color: var(--light-theme-bg) !important;
       }
       input::placeholder {
@@ -127,7 +127,7 @@
       }
       svg path {
         fill: var(--light-theme-bg);
-      }
+      } */
     }
     @media (max-width: 1279px) {
       margin-left: 10px;
