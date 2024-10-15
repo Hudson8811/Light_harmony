@@ -80,7 +80,7 @@
 .header__options-btn {
   min-width: 30px;
   min-height: 30px;
-  background-color: var(--dark-theme-input-header-bg);
+  background-color: var(--light-theme-grey-bg);
   position: relative;
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@
   transition: all 0.3s ease 0s;
 }
 .header__options-btn:hover {
-  background-color: var(--dark-theme-dark-bg);
+  background-color: var(--light-theme-input-header-bg-hover);
 }
 .header__options-btn:hover svg rect {
   fill: var(--light-theme-bg);
@@ -111,11 +111,11 @@
   position: relative;
   margin-left: 20px;
   min-height: 30px;
-  background-color: var(--dark-theme-input-header-bg);
+  background-color: var(--light-theme-grey-bg);
   transition: all 0.3s ease 0s;
 }
 .header__search:hover {
-  background-color: var(--dark-theme-dark-bg);
+  background-color: var(--light-theme-input-header-bg-hover);
 }
 .header__search:hover input {
   color: var(--light-theme-bg) !important;

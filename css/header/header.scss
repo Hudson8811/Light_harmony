@@ -80,7 +80,7 @@
   &__options-btn {
     min-width: 30px;
     min-height: 30px;
-    background-color: var(--dark-theme-input-header-bg);
+    background-color: var(--light-theme-grey-bg);
     position: relative;
     display: flex;
     justify-content: center;
@@ -88,7 +88,7 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
     &:hover {
-      background-color: var(--dark-theme-dark-bg);
+      background-color: var(--light-theme-input-header-bg-hover);
       svg rect {
         fill: var(--light-theme-bg);
       }
@@ -115,10 +115,10 @@
     position: relative;
     margin-left: 20px;
     min-height: 30px;
-    background-color: var(--dark-theme-input-header-bg);
+    background-color: var(--light-theme-grey-bg);
     transition: all 0.3s ease 0s;
     &:hover {
-      background-color: var(--dark-theme-dark-bg);
+      background-color: var(--light-theme-input-header-bg-hover);
       input {
         color: var(--light-theme-bg) !important;
       }
