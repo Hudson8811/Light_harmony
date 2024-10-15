@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../../images/cross.png") 0 0/15px 15px no-repeat, url("../../images/cross.png") 0 100%/15px 15px no-repeat, url("../../images/cross.png") 100% 0/15px 15px no-repeat, url("../../images/cross.png") 100% 100%/15px 15px no-repeat;
+  background: url("../../images/cross.svg") 0 0/15px 15px no-repeat, url("../../images/cross.svg") 0 100%/15px 15px no-repeat, url("../../images/cross.svg") 100% 0/15px 15px no-repeat, url("../../images/cross.svg") 100% 100%/15px 15px no-repeat;
 }
 @media (max-width: 1919px) {
   .footer__logo {
