@@ -16,23 +16,29 @@ $(document).ready(function () {
   });
 
   $('.header__search-input').click(function(){
-    $('.header__news').slideDown();
+    $('.header__news-desktop').slideDown();
+  });
+  $('.header-news-btn-mobile a').click(function(){
+    $('.header__news-mobile').slideDown();
   });
 
   $('.header__news-close').click(function(){
-    $('.header__news').slideUp();
+    $('.header__news-desktop').slideUp();
+    $('.header__news-mobile').slideUp();
   });
 
 
 
   $(document).on("click", function (event) {
     if (
-      !$('.header__news').is(event.target) &&
-      $('.header__news').has(event.target).length === 0 &&
+      !$('.header__news-desktop').is(event.target) &&
+      $('.header__news-desktop').has(event.target).length === 0 &&
       !$('.header__search-input').is(event.target) &&
-      $('.header__search-input').has(event.target).length === 0
+      $('.header__search-input').has(event.target).length === 0 &&
+      !$('.header-news-btn-mobile a').is(event.target) &&
+      $('.header-news-btn-mobile a').has(event.target).length === 0
     ) {
-      $('.header__news').slideUp();
+      $('.header__news-desktop').slideUp();
     }
   });
 });
