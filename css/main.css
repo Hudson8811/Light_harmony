@@ -50,6 +50,9 @@ body {
 body.overflow-hidden {
     overflow: hidden;
 }
+body.overflow-hidden1 {
+    overflow: hidden;
+}
 
 body a {
     color: var(--light-theme-dark-text);

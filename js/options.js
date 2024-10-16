@@ -5,6 +5,7 @@ $(document).ready(function () {
   const $headerOptions = $("#headerOptions");
   const $headerOptionsBtn1 = $("#headerOptionsBtn1");
   const $headerOptionsBtn2 = $("#headerOptionsBtn2");
+  const $burderHeader = $("#burderHeader");
   $(
     ".title-h2, .internal-page .title-h1, .sec1-about-us-page__left-big-text"
   ).html(function (_, html) {
@@ -24,7 +25,9 @@ $(document).ready(function () {
       !$headerOptionsBtn1.is(event.target) &&
       $headerOptionsBtn1.has(event.target).length === 0 &&
       !$headerOptionsBtn2.is(event.target) &&
-      $headerOptionsBtn2.has(event.target).length === 0
+      $headerOptionsBtn2.has(event.target).length === 0 &&
+      !$burderHeader.is(event.target) &&
+      $burderHeader.has(event.target).length === 0 
     ) {
       $headerOptions.removeClass("show");
       checkBodyScrollbar();
