@@ -111,6 +111,7 @@
   }
 
   &__search {
+    cursor: pointer;
     flex: 1 1 auto;
     position: relative;
     margin-left: 20px;
@@ -140,6 +141,7 @@
       padding: 0 16px;
       font-weight: 300;
       font-size: 14px;
+      pointer-events: none;
     }
 
     &-btn {

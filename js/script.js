@@ -4,24 +4,25 @@ $(document).ready(function () {
     return false;
   });
 
-  if ($(".item-banners__image").length > 0){
-      gsap.registerPlugin(ScrollTrigger);
-      const bannerImages = document.querySelectorAll('.item-banners__image');
-      bannerImages.forEach(item => {
-          gsap.fromTo(item,
-              { maxWidth: '60%' },
-              {
-                  ease: 'power1.inOut',
-                  maxWidth: '100%',
-                  scrollTrigger: {
-                      trigger: item,
-                      start: 'top+=40px bottom',
-                      end: 'bottom bottom',
-                      scrub: 0.7
-                  }
-              }
-          );
-      });
+  if ($(".item-banners__image").length > 0) {
+    gsap.registerPlugin(ScrollTrigger);
+    const bannerImages = document.querySelectorAll(".item-banners__image");
+    bannerImages.forEach((item) => {
+      gsap.fromTo(
+        item,
+        { maxWidth: "60%" },
+        {
+          ease: "power1.inOut",
+          maxWidth: "100%",
+          scrollTrigger: {
+            trigger: item,
+            start: "top+=40px bottom",
+            end: "bottom bottom",
+            scrub: 0.7,
+          },
+        }
+      );
+    });
   }
 
   var countload = 0;
@@ -71,91 +72,130 @@ $(document).ready(function () {
     }
   );
 
-
   var player;
-  
+
   // Функция YouTube API должна быть глобальной для правильной работы
-  window.onYouTubeIframeAPIReady = function() {
-    player = new YT.Player('video', {
+  window.onYouTubeIframeAPIReady = function () {
+    player = new YT.Player("video", {
       events: {
-        'onStateChange': onPlayerStateChange
-      }
+        onStateChange: onPlayerStateChange,
+      },
     });
   };
 
   // Скрытие изображения и кнопки Play, запуск видео
   function hideThumbnail() {
-    $('.thumbnail-container').hide();
-    $('#video').show();
+    $(".thumbnail-container").hide();
+    $("#video").show();
     player.playVideo();
   }
 
   // Показ изображения при паузе или остановке видео
   function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
-      $('.thumbnail-container').show();
-      $('#video').hide();
+    if (
+      event.data == YT.PlayerState.PAUSED ||
+      event.data == YT.PlayerState.ENDED
+    ) {
+      $(".thumbnail-container").show();
+      $("#video").hide();
     }
   }
 
   // Событие при нажатии на картинку или кнопку play
-  $('.thumbnail-container, .play-button').click(function () {
+  $(".thumbnail-container, .play-button").click(function () {
     hideThumbnail();
   });
 
   // Подключение YouTube API
-  var tag = document.createElement('script');
+  var tag = document.createElement("script");
   tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
+  var firstScriptTag = document.getElementsByTagName("script")[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  
+  $(".swiper-suppliers__icon").append(
+    '<div class="swiper-suppliers__icon-hovered"></div>'
+  );
 
+  $(".swiper-suppliers__icon").on("mouseenter", function (e) {
+    let hoverElem = $(this).find(".swiper-suppliers__icon-hovered");
+    let direction = getDirection($(this), e);
 
-  $('.swiper-suppliers__icon').append('<div class="swiper-suppliers__icon-hovered"></div>');
-
-  $('.swiper-suppliers__icon').on('mouseenter', function (e) {
-      let hoverElem = $(this).find('.swiper-suppliers__icon-hovered');
-      let direction = getDirection($(this), e);
-
-      if (direction === 'left') {
-          hoverElem.css({ left: '-100%', top: '0%' }).stop(true, true).animate({ left: '0%' }, 300);
-      } else if (direction === 'right') {
-          hoverElem.css({ left: '100%', top: '0%' }).stop(true, true).animate({ left: '0%' }, 300);
-      } else if (direction === 'top') {
-          hoverElem.css({ top: '-100%', left: '0%' }).stop(true, true).animate({ top: '0%' }, 300);
-      } else if (direction === 'bottom') {
-          hoverElem.css({ top: '100%', left: '0%' }).stop(true, true).animate({ top: '0%' }, 300);
-      }
+    if (direction === "left") {
+      hoverElem
+        .css({ left: "-100%", top: "0%" })
+        .stop(true, true)
+        .animate({ left: "0%" }, 300);
+    } else if (direction === "right") {
+      hoverElem
+        .css({ left: "100%", top: "0%" })
+        .stop(true, true)
+        .animate({ left: "0%" }, 300);
+    } else if (direction === "top") {
+      hoverElem
+        .css({ top: "-100%", left: "0%" })
+        .stop(true, true)
+        .animate({ top: "0%" }, 300);
+    } else if (direction === "bottom") {
+      hoverElem
+        .css({ top: "100%", left: "0%" })
+        .stop(true, true)
+        .animate({ top: "0%" }, 300);
+    }
   });
 
-  $('.swiper-suppliers__icon').on('mouseleave', function (e) {
-      let hoverElem = $(this).find('.swiper-suppliers__icon-hovered');
-      let direction = getDirection($(this), e);
+  $(".swiper-suppliers__icon").on("mouseleave", function (e) {
+    let hoverElem = $(this).find(".swiper-suppliers__icon-hovered");
+    let direction = getDirection($(this), e);
 
-      if (direction === 'left') {
-          hoverElem.stop(true, true).animate({ left: '-100%' }, 300);
-      } else if (direction === 'right') {
-          hoverElem.stop(true, true).animate({ left: '100%' }, 300);
-      } else if (direction === 'top') {
-          hoverElem.stop(true, true).animate({ top: '-100%' }, 300);
-      } else if (direction === 'bottom') {
-          hoverElem.stop(true, true).animate({ top: '100%' }, 300);
-      }
+    if (direction === "left") {
+      hoverElem.stop(true, true).animate({ left: "-100%" }, 300);
+    } else if (direction === "right") {
+      hoverElem.stop(true, true).animate({ left: "100%" }, 300);
+    } else if (direction === "top") {
+      hoverElem.stop(true, true).animate({ top: "-100%" }, 300);
+    } else if (direction === "bottom") {
+      hoverElem.stop(true, true).animate({ top: "100%" }, 300);
+    }
   });
 
   function getDirection($element, event) {
-      let w = $element.width(),
-          h = $element.height(),
-          x = (event.pageX - $element.offset().left - (w / 2)) * (w > h ? (h / w) : 1),
-          y = (event.pageY - $element.offset().top - (h / 2)) * (h > w ? (w / h) : 1);
-      let direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+    let w = $element.width(),
+      h = $element.height(),
+      x = (event.pageX - $element.offset().left - w / 2) * (w > h ? h / w : 1),
+      y = (event.pageY - $element.offset().top - h / 2) * (h > w ? w / h : 1);
+    let direction =
+      Math.round((Math.atan2(y, x) * (180 / Math.PI) + 180) / 90 + 3) % 4;
 
-      switch (direction) {
-          case 0: return 'top';
-          case 1: return 'right';
-          case 2: return 'bottom';
-          case 3: return 'left';
-      }
+    switch (direction) {
+      case 0:
+        return "top";
+      case 1:
+        return "right";
+      case 2:
+        return "bottom";
+      case 3:
+        return "left";
+    }
   }
+
+  $("*").each(function () {
+    if (window.getComputedStyle(this).cursor === "pointer") {
+      $(this).hover(
+        function () {
+          $("#followBig").addClass("active");
+        },
+        function () {
+          $("#followBig").removeClass("active");
+        }
+      );
+    }
+  });
+  /* $('.header__search').hover(
+    function () {
+      $("#followBig").addClass("active");
+    },
+    function () {
+      $("#followBig").removeClass("active");
+    }
+  ); */
 });
