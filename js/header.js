@@ -14,4 +14,25 @@ $(document).ready(function () {
     $("body").removeClass("overflow-hidden1");;
     $('body').removeClass("reduce-width");
   });
+
+  $('.header__search-input').click(function(){
+    $('.header__news').slideDown();
+  });
+
+  $('.header__news-close').click(function(){
+    $('.header__news').slideUp();
+  });
+
+
+
+  $(document).on("click", function (event) {
+    if (
+      !$('.header__news').is(event.target) &&
+      $('.header__news').has(event.target).length === 0 &&
+      !$('.header__search-input').is(event.target) &&
+      $('.header__search-input').has(event.target).length === 0
+    ) {
+      $('.header__news').slideUp();
+    }
+  });
 });
