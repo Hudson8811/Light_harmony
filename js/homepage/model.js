@@ -145,6 +145,7 @@ function onWindowMouseMove(event) {
 	if (headObj) {
 		const rotationSpeed = 0.5;
 		headObj.rotation.y = THREE.MathUtils.degToRad(initialAngle) + normalizedMouseX * rotationSpeed;
+		headObj.position.x = -normalizedMouseX * 0.1;
 	}
 }
 
