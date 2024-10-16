@@ -190,12 +190,4 @@ $(document).ready(function () {
       );
     }
   });
-  /* $('.header__search').hover(
-    function () {
-      $("#followBig").addClass("active");
-    },
-    function () {
-      $("#followBig").removeClass("active");
-    }
-  ); */
 });
