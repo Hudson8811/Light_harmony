@@ -36,6 +36,7 @@
     --light-theme-input-header-bg-hover: rgba(212, 212, 212, 1);
     --dark-theme-options-bg: rgba(226, 226, 226, 1);
     --dark-theme-options-text: rgba(78, 78, 78, 1);
+    --options-disable: #818181;
 }
 
 body {
@@ -370,6 +371,9 @@ body.dark-active .options-header {
 }
 body.dark-active .options-header * {
     color: var(--dark-theme-options-text);
+}
+body.dark-active .options-header__reset a:after {
+    background: var(--dark-theme-options-text);
 }
 body.dark-active .options-header .toggle {
     background-color: var(--light-theme-grey-bg);

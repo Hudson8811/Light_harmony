@@ -44,6 +44,7 @@ $(document).ready(function () {
       initDark();
       uncheckAndTriggerChange("#orangeTheme");
       setCookie("option-dark", "1", 90);
+      $('.js-reset-options').addClass('active');
     } else {
       disableDark();
       setCookie("option-dark", "0", 90);
@@ -80,6 +81,7 @@ $(document).ready(function () {
       uncheckAndTriggerChange("#darkMode");
       uncheckAndTriggerChange("#animation");
       setCookie("option-orange", "1", 90);
+      $('.js-reset-options').addClass('active');
     } else {
       disableOrange();
       setCookie("option-orange", "0", 90);
@@ -111,6 +113,7 @@ $(document).ready(function () {
     let rgbResult2 = getColor(value, [50, 50, 50], [33, 33, 33], [0, 0, 0]);
     setRootStyle("--dark-theme-bg", rgbResult2);
     setCookie("dark-theme-bg", rgbResult2, 90);
+    $('.js-reset-options').addClass('active');
   });
 
   $("#accentLight").on("input", function () {
@@ -125,6 +128,7 @@ $(document).ready(function () {
     );
     setRootStyle("--orange-theme", rgbResult);
     setCookie("color-orange-theme", rgbResult, 90);
+    $('.js-reset-options').addClass('active');
   });
 
   $("#fontBrightness").on("input", function () {
@@ -143,6 +147,7 @@ $(document).ready(function () {
     );
     setRootStyle("--dark-theme-light-text", rgbResult2);
     setCookie("color-dark-theme-light-text", rgbResult2, 90);
+    $('.js-reset-options').addClass('active');
   });
 
   let darkOption = getCookie("option-dark");
@@ -152,6 +157,7 @@ $(document).ready(function () {
   } else if (darkOption != null) {
     $darkModeToggle.prop("checked", true);
     initDark();
+    $('.js-reset-options').addClass('active');
   }
 
   let orangeOption = getCookie("option-orange");
@@ -161,6 +167,7 @@ $(document).ready(function () {
   } else if (orangeOption != null) {
     $orangeThemeToggle.prop("checked", true);
     initOrange();
+    $('.js-reset-options').addClass('active');
   }
 
   let generalLightValue = getCookie("generalLight-value");
@@ -181,25 +188,57 @@ $(document).ready(function () {
   let generalLight1 = getCookie("color-light-theme-bg");
   if (generalLight1) {
     setRootStyle("--light-theme-bg", generalLight1);
+    $('.js-reset-options').addClass('active');
   }
   let generalLight2 = getCookie("dark-theme-bg");
   if (generalLight2) {
     setRootStyle("--dark-theme-bg", generalLight2);
+    $('.js-reset-options').addClass('active');
   }
 
   let accentColor = getCookie("color-orange-theme");
   if (accentColor) {
     setRootStyle("--orange-theme", accentColor);
+    $('.js-reset-options').addClass('active');
   }
 
   let fontColor1 = getCookie("color-light-theme-dark-text");
   if (fontColor1) {
     setRootStyle("--light-theme-dark-text", fontColor1);
+    $('.js-reset-options').addClass('active');
   }
   let fontColor2 = getCookie("color-dark-theme-light-text");
   if (fontColor2) {
     setRootStyle("--dark-theme-light-text", fontColor2);
+    $('.js-reset-options').addClass('active');
   }
+
+
+  $('.js-reset-options').on('click',function (){
+    $(this).removeClass('active');
+    uncheckAndTriggerChange("#darkMode");
+    checkAndTriggerChange("#animation");
+
+    $("#fontBrightness, #generalLight, #accentLight").val(50);
+
+    deleteCookie('option-animate');
+    deleteCookie('option-orange');
+    deleteCookie('option-dark');
+    deleteCookie('generalLight-value');
+    deleteCookie('accentLight-value');
+    deleteCookie('fontBrightness-value');
+    deleteCookie('color-light-theme-bg');
+    deleteCookie('dark-theme-bg');
+    deleteCookie('color-orange-theme');
+    deleteCookie('color-light-theme-dark-text');
+    deleteCookie('color-dark-theme-light-text');
+
+    removeRootStyle("--dark-theme-light-text");
+    removeRootStyle("--light-theme-dark-text");
+    removeRootStyle("--orange-theme");
+    removeRootStyle("--dark-theme-bg");
+    removeRootStyle("--light-theme-bg");
+  });
 });
 
 function getColor(value, rgbStart, rgbMid, rgbEnd) {
@@ -222,9 +261,18 @@ function setRootStyle(variable, value) {
   document.documentElement.style.setProperty(variable, value);
 }
 
+function removeRootStyle(variable) {
+  document.documentElement.style.removeProperty(variable);
+}
+
 function uncheckAndTriggerChange(checkboxId) {
   var $checkbox = $(checkboxId);
   $checkbox.prop("checked", false).trigger("change");
+}
+
+function checkAndTriggerChange(checkboxId) {
+  var $checkbox = $(checkboxId);
+  $checkbox.prop("checked", true).trigger("change");
 }
 
 function setCookie(name, value, days) {
@@ -246,6 +294,10 @@ function getCookie(name) {
     if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
   }
   return null;
+}
+
+function deleteCookie(name) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
 }
 
 function getScrollbarWidth() {

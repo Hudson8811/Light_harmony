@@ -37,6 +37,7 @@ $animationToggle.on("change", function () {
 		disposeAnimation();
 		$('.intro__anim img').show();
 		setCookie('option-animate','0',90);
+		$('.js-reset-options').addClass('active');
 	}
 });
 
