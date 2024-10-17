@@ -326,6 +326,16 @@
   .menu .menu__dropdown .dropdown__menu > li a {
     font-size: 21px;
   }
+  .menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--light-theme-bg);
+    height: 11px;
+    width: 100%;
+  }
 }
 @media (max-width: 1279px) {
   .menu.show {
@@ -566,8 +576,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .header__news h3 {
   margin-top: 10px;
@@ -607,4 +616,6 @@
 }
 .header__news li:first-child {
   margin-top: 0;
-}/*# sourceMappingURL=header.css.map */
+}
+
+/*# sourceMappingURL=header.css.map */

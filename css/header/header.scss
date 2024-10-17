@@ -335,6 +335,16 @@
     .menu__dropdown .dropdown__menu > li a {
       font-size: 21px;
     }
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--light-theme-bg);
+      height: 11px;
+      width: 100%;
+    }
   }
 
   &.show {

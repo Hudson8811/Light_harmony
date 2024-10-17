@@ -312,7 +312,8 @@ body.dark-active .burder-header span {
     background-color: var(--dark-theme-light-text);
 }
 body.dark-active,
-body.dark-active .wrapper {
+body.dark-active .wrapper,
+body.dark-active .menu::after{
     background-color: var(--dark-theme-bg);
 }
 body.dark-active a {
