@@ -285,6 +285,11 @@
         margin-left: 12px;
       }
     }
+    &.active{
+      svg{
+        transform: scaleY(-1);
+      }
+    }
   }
 }
 

@@ -277,6 +277,9 @@
   height: 15px;
   margin-left: 12px;
 }
+.header-projects-page__filter.active svg {
+  transform: scaleY(-1);
+}
 
 .item-projects-page__img {
   position: relative;

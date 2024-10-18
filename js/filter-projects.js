@@ -40,8 +40,12 @@ clearButton.on("click", function () {
 });
 
 filterOpenBtn.on("click", function () {
-  filterWindow.slideDown();
   filterOpenBtn.toggleClass("active");
+  if (filterOpenBtn.hasClass('active')){
+    filterWindow.stop().slideDown();
+  } else {
+    filterWindow.stop().slideUp();
+  }
   filterCloser.removeClass("active");
 });
 $(".filter-closer").on("click", function () {
@@ -50,12 +54,11 @@ $(".filter-closer").on("click", function () {
 
 
 $(document).on("click", function (event) {
-  console.log(filterWindow);
   if (
     !$('.header-projects-page .header-projects-page__right').is(event.target) &&
     $('.header-projects-page .header-projects-page__right').has(event.target).length === 0
   ) {
-    filterWindow.slideUp();
+    filterWindow.stop().slideUp();
     $("#header-projects-page__filter").removeClass("active");
     $(".filter-closer").removeClass("active");
   }
