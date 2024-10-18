@@ -14,6 +14,7 @@ $(document).ready(function () {
 
   $headerOptionsBtn1.on("click", function () {
     $headerOptions.toggleClass("show");
+    $("body").toggleClass("side-hide");
     checkBodyScrollbar();
     $("body").toggleClass("overflow-hidden");
     $("body").toggleClass("reduce-width");
@@ -29,10 +30,13 @@ $(document).ready(function () {
       !$burderHeader.is(event.target) &&
       $burderHeader.has(event.target).length === 0 
     ) {
-      $headerOptions.removeClass("show");
-      checkBodyScrollbar();
-      $("body").removeClass("overflow-hidden");
-      $("body").removeClass("reduce-width");
+      if ($headerOptions.hasClass('show')) {
+        $headerOptions.removeClass("show");
+        $("body").removeClass("side-hide");
+        checkBodyScrollbar();
+        $("body").removeClass("overflow-hidden");
+        $("body").removeClass("reduce-width");
+      }
     }
   });
   $headerOptionsBtn2.on("click", function () {
@@ -308,20 +312,23 @@ function getScrollbarWidth() {
 function checkBodyScrollbar() {
   let $headerOptions = $("#headerOptions");
   let optionsHeight = $headerOptions.innerHeight();
-  if ($headerOptions.hasClass('show')) {
-    let sideBarWidth = getScrollbarWidth();
+  let sideBarWidth = getScrollbarWidth();
+  if ($("body").hasClass('side-hide')){
     if (sideBarWidth) {
       $("body").css('padding-right', sideBarWidth);
-    }
-    if (window.innerWidth >= 1280) {
-      $('.wrapper').css('transform', 'translateY('+optionsHeight+'px)').css('padding-right', sideBarWidth);
+      $('.wrapper').css('padding-right', sideBarWidth);
       $('.wrapper > .header').css('padding-right', sideBarWidth);
     }
   } else {
     $("body").css('padding-right', '');
-    $('.wrapper').css('transform', '').css('padding-right', '');
+    $('.wrapper').css('padding-right', '');
     $('.wrapper > .header').css('padding-right', '');
   }
-
-
+  if ($headerOptions.hasClass('show')) {
+    if (window.innerWidth >= 1280) {
+      $('.wrapper').css('transform', 'translateY('+optionsHeight+'px)');
+    }
+  } else {
+    $('.wrapper').css('transform', '');
+  }
 }

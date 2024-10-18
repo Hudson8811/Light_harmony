@@ -77,11 +77,14 @@ body a {
     left: 0;
 }
 @media (min-width: 1280px) {
-    .wrapper {
+    /*.wrapper {
         padding-top: 90px;
-    }
-    body.reduce-width .wrapper {
+    }*/
+    body.overflow-hidden .wrapper {
         position: fixed;
+    }
+    body.reduce-width .js-show-news {
+        pointer-events: none;
     }
     body::before,
     body::after {
@@ -466,8 +469,11 @@ body.dark-active #headerOptionsBtn1 svg rect {
     fill: var(--light-theme-bg);
 }
 
-body.dark-active .header__search-btn svg path {
+body.dark-active .header__search-btn--open svg path {
     fill: var(--light-theme-bg);
+}
+body.dark-active .header__search-btn--close svg path {
+    stroke: var(--light-theme-bg);
 }
 body.dark-active .header__logo-inner svg path {
     fill: var(--light-theme-bg);
@@ -547,6 +553,25 @@ body.dark-active .toggle:checked::before {
 body.dark-active .project-page__info-title {
     color: var(--light-theme-light-text);
 }
+body.dark-active .header__search-text{
+    color: var(--dark-theme-light-text);
+}
+body.dark-active .header__news h3,
+body.dark-active .header__news-telegram-link span,
+body.dark-active .header__news p {
+    color: var(--dark-theme-light-text);
+}
+body.dark-active .header__news-telegram-link{
+    border-color: var(--dark-theme-light-text);
+}
+body.dark-active .header__news-telegram-link svg path{
+    fill: var(--dark-theme-light-text);
+}
+
+body.dark-active .header__widget--news .header__news-wrapper{
+    background-color: var(--light-theme-dark-grey);
+}
+
 @media (max-width: 1279px) {
     body.dark-active .header {
         background-color: var(--dark-theme-bg);
