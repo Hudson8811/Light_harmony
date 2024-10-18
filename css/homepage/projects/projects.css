@@ -39,6 +39,9 @@
   .projects__title {
     margin-bottom: 27px;
   }
+  .projects__title span {
+    font-size: 28px !important;
+  }
 }
 .projects__title span {
   font-weight: 700 !important;
@@ -104,8 +107,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .list-projects__name {
   position: relative;
@@ -352,4 +354,6 @@
   opacity: 1;
   width: 46px;
   height: 46px;
-}/*# sourceMappingURL=projects.css.map */
+}
+
+/*# sourceMappingURL=projects.css.map */

@@ -42,6 +42,9 @@
   .suppliers__title {
     margin-bottom: 30px;
   }
+  .suppliers__title span {
+    font-size: 28px !important;
+  }
 }
 .suppliers__swiper-arrows-pagination {
   display: flex;
@@ -201,4 +204,6 @@
 .swiper-suppliers__grid--second-row {
   grid-template: 2fr 1fr 1fr/0.5fr 0.5fr;
   grid-template-areas: "big2 big2" "small21 small22" "small23 small24";
-}/*# sourceMappingURL=suppliers.css.map */
+}
+
+/*# sourceMappingURL=suppliers.css.map */
