@@ -221,6 +221,19 @@
     align-items: center;
 
     @media (max-width: 1279px) {
+      position: fixed;
+      right: 10px;
+      top: 6px;
+      z-index: 1;
+    }
+    @media (max-width: 639px) {
+      top: 14px;
+    }
+  }
+  &__nav-placeholder{
+    display: none;
+    @media (max-width: 1279px) {
+      display: block;
       justify-content: flex-end;
       flex: 1 1 auto;
     }
@@ -396,6 +409,16 @@
       background: var(--light-theme-bg);
       height: 11px;
       width: 100%;
+    }
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -10px;
+      background: var(--light-theme-bg);
+      height: calc(100% + 11px);
+      width: 10px;
     }
   }
 
