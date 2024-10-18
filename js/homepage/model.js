@@ -1,9 +1,8 @@
 import * as THREE from '../libs/three.module.js';
 
-import { MTLLoader } from '../libs/jsm/loaders/MTLLoader.js';
-import { OBJLoader } from '../libs/jsm/loaders/OBJLoader.js';
+import { FBXLoader } from '../libs/jsm/loaders/FBXLoader.js';
 
-var container, controls;
+var container;
 var camera, scene, renderer;
 var raycaster, mouse;
 var fps = 60;
@@ -53,59 +52,66 @@ function initAnimation() {
 	raycaster = new THREE.Raycaster();
 	mouse = new THREE.Vector2()
 
+	const spotLight1 = new THREE.SpotLight(0xffffff, 3.02, 0, 0.594, 0, 2.96);
+	spotLight1.position.set(0.169, 0.207, 2.465);
+	spotLight1.castShadow = true;
+	spotLight1.shadow.camera.fov = 68.0673860615418;
+	spotLight1.shadow.camera.near = 0.5;
+	spotLight1.shadow.camera.far = 500;
+	scene.add(spotLight1);
 
-	scene.add( new THREE.AmbientLight( 0xFFFFFF ) );
+	const spotLightTarget1 = new THREE.Object3D();
+	spotLightTarget1.position.set(0, 0, 0); // Установите положение цели по вашему усмотрению
+	scene.add(spotLightTarget1);
+	spotLight1.target = spotLightTarget1;
 
-	const spotLight = new THREE.SpotLight( 0xffffff, 30 );
-	spotLight.angle = Math.PI / 5;
-	spotLight.penumbra = 0.2;
-	spotLight.position.set( 2, 0.5, 3 );
-	spotLight.castShadow = true;
-	spotLight.shadow.camera.near = 1;
-	spotLight.shadow.camera.far = 1000;
-	spotLight.shadow.mapSize.width = 2048;
-	spotLight.shadow.mapSize.height = 2048;
-	spotLight.shadow.bias = 0;
-	spotLight.shadow.radius = 2;
-	scene.add( spotLight );
 
-	const dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
-	dirLight.position.set( -3, 1, 0 );
-	dirLight.castShadow = true;
-	dirLight.shadow.camera.near = 1;
-	dirLight.shadow.camera.far = 1000;
+	const spotLight2 = new THREE.SpotLight(0xffffff, 3.74, 0, 0.654, 0, 1.2);
+	spotLight2.position.set(-1.449, -0.642, 0.485);
+	spotLight2.castShadow = true;
+	spotLight2.shadow.camera.fov = 74.94287960311168;
+	spotLight2.shadow.camera.near = 0.5;
+	spotLight2.shadow.camera.far = 500;
+	scene.add(spotLight2);
 
-	dirLight.shadow.camera.right = 1;
-	dirLight.shadow.camera.left = - 1;
-	dirLight.shadow.camera.top	= 1;
-	dirLight.shadow.camera.bottom = - 1;
+	const spotLightTarget2 = new THREE.Object3D();
+	spotLightTarget2.position.set(0, 0, 0); // Установите положение цели по вашему усмотрению
+	scene.add(spotLightTarget2);
+	spotLight2.target = spotLightTarget2;
 
-	dirLight.shadow.mapSize.width = 1024;
-	dirLight.shadow.mapSize.height = 1024;
-	scene.add( dirLight );
 
-	var mtlLoader = new MTLLoader();
-	mtlLoader.load("models/Apollo_15k_polys.mtl", function(materials)
-	{
-		materials.preload();
-		var objLoader = new OBJLoader();
-		objLoader.setMaterials(materials);
-		objLoader.load("models/Apollo_15k_polys.obj", function(object)
-		{
-			headObj = object;
-			let scale = 0.085;
-			headObj.scale.set(scale, scale, scale);
-			headObj.position.set(0, -0.8, 0);
-			headObj.rotation.y = THREE.MathUtils.degToRad(initialAngle);
+	const ambientLight = new THREE.AmbientLight(0xffffff, 0.58);
+	scene.add(ambientLight);
 
-			headObj.traverse(function (child) {
-				if (child.isMesh) {
-					child.castShadow = true;
-					child.receiveShadow = true;
-				}
-			});
-			scene.add( headObj );
+
+
+
+	const statueMaterial = new THREE.MeshPhongMaterial({
+		color: 0xffffff,
+		emissive: 0x000000,
+		specular: 0x111111,
+		shininess: 19.9,
+		reflectivity: 0,
+		refractionRatio: 0.98
+	});
+
+	const fbxLoader = new FBXLoader();
+	fbxLoader.load('models/Apollo_15k_polys.fbx', function(object) {
+		headObj = object;
+		headObj.traverse(function(child) {
+			if (child.isMesh) {
+				child.material = statueMaterial;
+				child.castShadow = true;
+				child.receiveShadow = true;
+			}
 		});
+
+		let scale = 0.9;
+		headObj.scale.set(scale, scale, scale);
+		headObj.position.set(0, -0.8, 0);
+		headObj.rotation.y = THREE.MathUtils.degToRad(30);
+
+		scene.add(headObj);
 	});
 
 
@@ -114,10 +120,14 @@ function initAnimation() {
 		alpha: true
 	});
 	renderer.shadowMap.enabled = true;
+	renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( container.clientWidth, container.clientHeight );
 	renderer.useLegacyLights = false;
 	renderer.setClearColor(0x000000, 0);
+
+	renderer.outputEncoding = THREE.sRGBEncoding;
+
 
 	container.appendChild(renderer.domElement);
 
@@ -126,8 +136,6 @@ function initAnimation() {
 
 	window.addEventListener('resize', onWindowResize, false);
 	window.addEventListener("mousemove", onWindowMouseMove, false);
-
-
 
 	animate();
 }
