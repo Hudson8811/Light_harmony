@@ -392,6 +392,9 @@ body.dark-active .options-header input[type="range"]::-webkit-slider-thumb {
 body.dark-active .header__search {
     background-color: var(--light-theme-dark-grey);
 }
+body.dark-active .header__widget--btn .header__search:hover {
+    background-color: var(--light-theme-dark-grey);
+}
 body.dark-active .homepage header.header ul.menu__list li > a {
     color: var(--dark-theme-light-text);
 }

@@ -138,6 +138,12 @@
       @media (max-width: 639px) {
         display: none;
       }
+
+      .header__search{
+        &:hover {
+          background-color: var(--light-theme-input-header-bg-hover);
+        }
+      }
     }
 
     &--news{
@@ -179,9 +185,6 @@
     min-height: 30px;
     background-color: var(--light-theme-grey-bg);
     transition: all 0.3s ease 0s;
-    &:hover {
-      background-color: var(--light-theme-input-header-bg-hover);
-    }
 
     &-text {
       width: 100%;
