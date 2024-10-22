@@ -57,18 +57,29 @@ function initAnimation() {
 	targetPosition = new THREE.Vector3();
 	targetRotate = THREE.MathUtils.degToRad(initialAngle);
 
-	const cylinderGeometry = new THREE.CylinderGeometry(0.96, 0.96, 2, 32, 1, false, 0, Math.PI);
+	const cylinderGeometry = new THREE.CylinderGeometry(1.2, 1.2, 2, 32, 1, false, 0, Math.PI);
 	const cylinderMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, visible: false });
 	cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
-	cylinder.castShadow = true;
 	cylinder.rotation.y = THREE.MathUtils.degToRad(-90);
 	cylinder.receiveShadow = true;
 	scene.add(cylinder);
 
 
-	const spotLight1 = new THREE.SpotLight(0xffffff, 3.02, 0, 0.594, 0, 2.96);
+	light = new THREE.PointLight(0xf55f24, 2, 0.7, 1.2);
+	light.position.set(0, 0, 0.920);
+	light.castShadow = true;
+	light.shadow.mapSize.width = 4096;
+	light.shadow.mapSize.height = 4096;
+	light.shadow.camera.near = 0.1;
+	light.shadow.camera.far = 500;
+	scene.add(light);
+
+	const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+	scene.add(ambientLight);
+
+	const spotLight1 = new THREE.SpotLight(0xffffff, 2.02, 0, 0.594, 0, 2.96);
 	spotLight1.position.set(0.169, 0.207, 2.465);
-	spotLight1.castShadow = true;
+	//spotLight1.castShadow = true;
 	spotLight1.shadow.camera.fov = 68.0673860615418;
 	spotLight1.shadow.mapSize.width = 2048;
 	spotLight1.shadow.mapSize.height = 2048;
@@ -81,10 +92,9 @@ function initAnimation() {
 	scene.add(spotLightTarget1);
 	spotLight1.target = spotLightTarget1;
 
-
-	const spotLight2 = new THREE.SpotLight(0xffffff, 3.74, 0, 0.654, 0, 1.2);
+	const spotLight2 = new THREE.SpotLight(0xffffff, 2.74, 0, 0.7, 0, 1.2);
 	spotLight2.position.set(-1.449, -0.642, 0.485);
-	spotLight2.castShadow = true;
+	//spotLight2.castShadow = true;
 	spotLight2.shadow.camera.fov = 74.94287960311168;
 	spotLight2.shadow.mapSize.width = 2048;
 	spotLight2.shadow.mapSize.height = 2048;
@@ -96,17 +106,6 @@ function initAnimation() {
 	spotLightTarget2.position.set(0, 0, 0);
 	scene.add(spotLightTarget2);
 	spotLight2.target = spotLightTarget2;
-
-	const ambientLight = new THREE.AmbientLight(0xffffff, 0.58);
-	scene.add(ambientLight);
-
-	light = new THREE.PointLight(0xf55f24, 1, 0.5, 1.2);
-	light.position.set(0, 0, 0.920);
-	light.shadow.mapSize.width = 2048;
-	light.shadow.mapSize.height = 2048;
-	light.shadow.camera.near = 0.5;
-	light.shadow.camera.far = 500;
-	scene.add(light);
 
 	const statueMaterial = new THREE.MeshPhongMaterial({
 		color: 0xffffff,
@@ -178,25 +177,31 @@ function onWindowMouseMove(event) {
 
 	if (pivot) {
 		const rotationSpeed = 0.5;
-		targetRotate = THREE.MathUtils.degToRad(initialAngle) + normalizedMouseX * rotationSpeed;
+		targetRotate = THREE.MathUtils.degToRad(initialAngle) - normalizedMouseX * rotationSpeed;
 
 	}
 }
 
 function onWindowMouseMove2(event) {
 	const rect = renderer.domElement.getBoundingClientRect();
-	const mouseX = event.clientX;
-	const mouseY = event.clientY;
+	let mouseX = event.clientX;
+	let mouseY = event.clientY;
 
-	if (mouseX >= rect.left && mouseX <= rect.right && mouseY >= rect.top && mouseY <= rect.bottom) {
-		mouse.x = ((mouseX - rect.left) / rect.width) * 2 - 1;
-		mouse.y = -((mouseY - rect.top) / rect.height) * 2 + 1;
-		raycaster.setFromCamera(mouse, camera);
-		const intersects = raycaster.intersectObject(cylinder, true);
-		if (intersects.length > 0) {
-			const intersect = intersects[0];
-			targetPosition.copy(intersect.point);
-		}
+	if (mouseX < rect.left) mouseX = rect.left;
+	if (mouseX > rect.right) mouseX = rect.right;
+	if (mouseY < rect.top) mouseY = rect.top;
+	if (mouseY > rect.bottom) mouseY = rect.bottom;
+
+	mouse.x = ((mouseX - rect.left) / rect.width) * 2 - 1;
+	mouse.y = -((mouseY - rect.top) / rect.height) * 2 + 1;
+
+
+	raycaster.setFromCamera(mouse, camera);
+	const intersects = raycaster.intersectObject(cylinder, true);
+	if (intersects.length > 0) {
+		const intersect = intersects[0];
+		targetPosition.copy(intersect.point);
+		//targetPosition.z = 1
 	}
 }
 
@@ -204,8 +209,12 @@ function onWindowMouseMove2(event) {
 function animate(now) {
 	animationFrameId = requestAnimationFrame(animate);
 	if (now - lastTime >= interval) {
-		light.position.lerp(targetPosition, 0.1);
-		pivot.rotation.y += (targetRotate - pivot.rotation.y) * 0.05;
+		if (light) {
+			light.position.lerp(targetPosition, 0.1);
+		}
+		if (pivot) {
+			pivot.rotation.y += (targetRotate - pivot.rotation.y) * 0.05;
+		}
 		renderer.render(scene, camera);
 		lastTime = now;
 	}
@@ -216,6 +225,7 @@ function animate(now) {
 function disposeAnimation() {
 	window.removeEventListener('resize', onWindowResize);
 	window.removeEventListener("mousemove", onWindowMouseMove);
+	window.removeEventListener("mousemove", onWindowMouseMove2);
 
 	if (renderer) {
 		renderer.dispose();
@@ -270,7 +280,6 @@ function disposeAnimation() {
 function cleanMaterial(material) {
 	material.dispose();
 
-	// Dispose textures
 	for (const key of Object.keys(material)) {
 		const value = material[key];
 		if (value && typeof value === 'object' && 'minFilter' in value) {
