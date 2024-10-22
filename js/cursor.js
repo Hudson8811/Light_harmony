@@ -1,8 +1,7 @@
 $(document).ready(function() {
     $(document).mousemove(function(e) {
-        $('#followBig, #followSmall').css({
-            left: e.pageX,
-            top: e.pageY
-        });
+        const mouseX = e.pageX;
+        const mouseY = e.pageY;
+        $('#followBig, #followSmall').css('transform','translate('+mouseX+'px, '+mouseY+'px)');
     });
 });

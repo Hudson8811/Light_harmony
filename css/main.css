@@ -213,13 +213,13 @@ h2.title-h2 span {
 }
 
 .follow {
-    border-radius: 50%;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 99;
-    transform: translate(-50%, -50%);
     pointer-events: none;
+    will-change: transform;
 }
-
 @media (max-width: 992px) {
     .follow {
         display: none;
@@ -227,21 +227,41 @@ h2.title-h2 span {
 }
 
 .follow-big {
+    width: 0;
+    height: 0;
+    transition: transform 0.15s ease;
+}
+.follow-big div{
     width: 69px;
     height: 69px;
     border: 1px solid var(--orange-theme);
-    transition: all 0.15s ease 0s, width 0.4s ease 0s, height 0.4s ease 0s;
+    transition: transform 0.4s ease 0s;
+    border-radius: 50%;
+    transform: scale(1);
+    will-change: transform;
+    position: absolute;
+    left: -35px;
+    top: -35px;
 }
-.follow-big.active {
-    width: 0;
-    height: 0;
+.follow-big.active div{
+    transform: scale(0);
 }
 
 .follow-small {
+    width: 0;
+    height: 0;
+    transition: transform 0.1s ease 0s;
+}
+.follow-small::before{
+    content: "";
+    display: block;
+    border-radius: 50%;
     width: 15px;
     height: 15px;
     background-color: var(--orange-theme);
-    transition: all 0.1s ease 0s;
+    position: absolute;
+    left: -8px;
+    top: -8px;
 }
 
 .up-click {
