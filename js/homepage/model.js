@@ -31,7 +31,9 @@ if (animationOption && animationOption === '0') {
 $animationToggle.on("change", function () {
 	if ($animationToggle.is(":checked")) {
 		$('.intro__anim img').hide();
-		initAnimation();
+		if (renderer == null) {
+			initAnimation();
+		}
 		uncheckAndTriggerChange('#orangeTheme');
 		setCookie('option-animate','1',90);
 	} else {
