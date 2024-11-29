@@ -219,6 +219,7 @@ h2.title-h2 span {
     z-index: 99;
     pointer-events: none;
     will-change: transform;
+    display: none;
 }
 @media (max-width: 992px) {
     .follow {

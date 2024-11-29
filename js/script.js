@@ -178,7 +178,7 @@ $(document).ready(function () {
     }
   }
 
-  $("*").each(function () {
+  /*$("*").each(function () {
     if (window.getComputedStyle(this).cursor === "pointer") {
       $(this).hover(
         function () {
@@ -189,5 +189,5 @@ $(document).ready(function () {
         }
       );
     }
-  });
+  });*/
 });
