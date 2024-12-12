@@ -91,14 +91,29 @@
   }
 }
 .intro__anim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   left: 50%;
   top: calc(50% + 31px);
   width: 470px;
   height: 800px;
   z-index: -1;
-  padding: 60px 40px;
   transform: translate(-50%, -50%);
+  /*.head_3d {
+    width: calc(100% + 120px);
+    height: 100%;
+    position: absolute;
+    left: -60px;
+    top: 0;
+    z-index: 3;
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }*/
 }
 .intro__anim::before {
   content: "";
@@ -204,17 +219,9 @@
     top: 85px;
   }
 }
-.intro__anim .head_3d {
-  width: calc(100% + 120px);
-  height: 100%;
-  position: absolute;
-  left: -60px;
-  top: 0;
-  z-index: 3;
-}
-.intro__anim .head_3d canvas {
-  width: 100%;
-  height: 100%;
+.intro__model {
+  position: relative;
+  z-index: 5;
 }
 .intro__point {
   position: absolute;

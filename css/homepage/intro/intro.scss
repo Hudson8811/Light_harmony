@@ -18,6 +18,7 @@
     position: relative;
     min-height: 100%;
     padding-top: 63px;
+
     @media (max-width: 1279px) {
       padding-top: 0;
       justify-content: flex-end;
@@ -84,15 +85,19 @@
   }
 
   &__anim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     left: 50%;
     top: calc(50% + 31px);
     width: 470px;
     height: 800px;
     z-index: -1;
-    padding: 60px 40px;
+    //padding: 60px 40px;
     transform: translate(-50%, -50%);
-    &::before{
+
+    &::before {
       content: "";
       display: block;
       width: 100%;
@@ -103,11 +108,12 @@
       transform: translateX(-50%) translateY(-50%);
       z-index: 2;
       background: url("../../../images/cross.svg") 0 0 / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 0 100% / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 100% 0 / 15px 15px no-repeat,
-      url("../../../images/cross.svg") 100% 100% / 15px 15px no-repeat;
+        url("../../../images/cross.svg") 0 100% / 15px 15px no-repeat,
+        url("../../../images/cross.svg") 100% 0 / 15px 15px no-repeat,
+        url("../../../images/cross.svg") 100% 100% / 15px 15px no-repeat;
     }
-    &::after{
+
+    &::after {
       content: "";
       display: block;
       width: calc(100% + 64px);
@@ -117,6 +123,7 @@
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
       z-index: 1;
+
       @media (max-width: 1919px) {
         width: calc(100% + 40px);
         height: calc(100% + 40px);
@@ -130,45 +137,55 @@
       z-index: 3;
     }
 
-    &:not(.orange-bg){
+    &:not(.orange-bg) {
       img {
-        &.head_img_or{
+        &.head_img_or {
           display: none !important;
         }
       }
     }
-    &.orange-bg{
-      &::before{
+
+    &.orange-bg {
+      &::before {
         width: 800px;
+
         @media (max-width: 1919px) {
           width: 670px;
         }
+
         @media (max-width: 1279px) {
           width: 560px;
         }
+
         @media (max-width: 639px) {
           width: 290px;
         }
       }
-      &::after{
+
+      &::after {
         background-color: var(--orange-theme);
         width: 864px;
+
         @media (max-width: 1919px) {
           width: 710px;
         }
+
         @media (max-width: 1279px) {
           width: 600px;
         }
+
         @media (max-width: 639px) {
           width: 330px;
         }
       }
+
       img {
-        &.head_img{
+        &.head_img {
           display: none !important;
         }
       }
     }
+
     @media (max-width: 1919px) {
       width: 456px;
       height: 670px;
@@ -193,18 +210,24 @@
     }
 
 
-    .head_3d{
+    /*.head_3d {
       width: calc(100% + 120px);
       height: 100%;
       position: absolute;
       left: -60px;
       top: 0;
       z-index: 3;
-      canvas{
+
+      canvas {
         width: 100%;
         height: 100%;
       }
-    }
+    }*/
+  }
+
+  &__model {
+    position: relative;
+    z-index: 5;
   }
 
   &__point {

@@ -174,7 +174,8 @@
   left: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .project-page__image--big {
   padding-top: 66.6%;
@@ -491,7 +492,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery .gallery-top .swiper-slide .swiper-slide-galary-container__image {
   padding-top: 66%;
@@ -537,7 +539,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .thumbnail-container {
@@ -556,7 +559,8 @@
 .thumbnail {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .play-button {
@@ -576,6 +580,4 @@
 
 iframe {
   display: none;
-}
-
-/*# sourceMappingURL=project-page.css.map */
+}/*# sourceMappingURL=project-page.css.map */

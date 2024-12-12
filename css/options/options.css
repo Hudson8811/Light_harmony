@@ -67,7 +67,9 @@
 .options-header__reset a:not(.active) {
   color: var(--options-disable) !important;
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .options-header__reset a:not(.active)::after {
   background: var(--options-disable) !important;
@@ -109,7 +111,9 @@
 .options-header .toggle {
   width: 30px;
   height: 16px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: var(--dark-theme-dark-bg);
   border-radius: 50px;
   position: relative;
@@ -168,6 +172,4 @@
 
 .options-header.show .options-header__row {
   opacity: 1;
-}
-
-/*# sourceMappingURL=options.css.map */
+}/*# sourceMappingURL=options.css.map */

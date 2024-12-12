@@ -107,7 +107,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .list-projects__name {
   position: relative;
@@ -354,6 +355,4 @@
   opacity: 1;
   width: 46px;
   height: 46px;
-}
-
-/*# sourceMappingURL=projects.css.map */
+}/*# sourceMappingURL=projects.css.map */

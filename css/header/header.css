@@ -604,7 +604,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .header__news h3 {
   margin-top: 10px;
@@ -644,6 +645,4 @@
 }
 .header__news li:first-child {
   margin-top: 0;
-}
-
-/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=header.css.map */
