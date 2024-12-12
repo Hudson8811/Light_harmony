@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(!modelblock) return
 
+    console.log('models-script')
+
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if(scrollTop > 0 && scrollTop < modelblock.offsetHeight + 100) {
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Загружаем все картинки
       for (let i = 0; i < imagesCount; i++) {
+        console.log('start image load')
         const img = new Image();
         img.src = frameModel(i);
         imagesArr.push(img);
