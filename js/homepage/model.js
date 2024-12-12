@@ -20,8 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
       const imagesCount = 101;
       let targetImagesCount = Math.floor(imagesCount / 2)
 
-      let canvasWidth = modelblock.offsetWidth * 1.3
-      let canvasHeight = canvasWidth 
+      let canvasWidth = 760
+      let canvasHeight = 760
+      
+      let ww = window.innerWidth;
+
+      if(ww < 640) {
+        canvasWidth = 270
+        canvasHeight = 270
+      } else if (ww < 1200) {
+        canvasWidth = 570
+        canvasHeight = 570
+      } else if (ww < 1800) {
+        canvasWidth = 620
+        canvasHeight = 620
+      }
 
       //Модель
       const canvasModel = modelblock.querySelector('[data-js="renderModel"]');
@@ -48,7 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   
       const frameModel = (index) => (
-          `../Light_harmony/models/${(index + startImageIndex).toString()}.png`
+          //`../Light_harmony/models/${(index + startImageIndex).toString()}.png`
+          `../models/${(index + startImageIndex).toString()}.png`
       );
   
       // Загружаем все картинки
