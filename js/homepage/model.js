@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(!modelblock) return
 
-    console.log('models-script')
-
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if(scrollTop > 0 && scrollTop < modelblock.offsetHeight + 100) {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let canvasWidth = modelblock.offsetWidth * 1.3
       let canvasHeight = canvasWidth 
 
-      //Первый продукт
+      //Модель
       const canvasModel = modelblock.querySelector('[data-js="renderModel"]');
       const contextModel = canvasModel.getContext("2d");
       canvasModel.width = canvasWidth;
@@ -50,12 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   
       const frameModel = (index) => (
-          `../models/${(index + startImageIndex).toString()}.png`
+          `../Light_harmony/models/${(index + startImageIndex).toString()}.png`
       );
   
       // Загружаем все картинки
       for (let i = 0; i < imagesCount; i++) {
-        console.log('start image load')
         const img = new Image();
         img.src = frameModel(i);
         imagesArr.push(img);
