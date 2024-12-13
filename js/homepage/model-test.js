@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
       })
 
       function renderModel(thisFrame, thisProgress = false) {
-        console.log(thisFrame)
         contextModel.clearRect(0, 0, canvasModel.width, canvasModel.height);
         if(thisProgress !== false) {
           let currentFrame = Math.floor((imagesCount - centerImagesCount) * thisProgress + centerImagesCount)
