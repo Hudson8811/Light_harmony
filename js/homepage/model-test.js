@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const imagesArr = []
 
       const frameModel = (index) => (
-        //`../Light_harmony/models/${(index + startImageIndex).toString()}.png`
-        `../models/${(index + startImageIndex).toString()}.png`
+        `../Light_harmony/models/${(index + startImageIndex).toString()}.png`
+        //`../models/${(index + startImageIndex).toString()}.png`
       );
   
       // Загружаем все картинки
