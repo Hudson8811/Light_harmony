@@ -135,6 +135,8 @@
       height: 100%;
       position: relative;
       z-index: 3;
+      max-width: 394px;
+      max-height: 670px;
     }
 
     &:not(.orange-bg) {
