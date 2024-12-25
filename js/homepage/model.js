@@ -196,7 +196,7 @@ function initAnimation() {
         onUpdate: self => {
           setTimeout(() => {
             renderModel(anim.frame, self.progress);
-          }, 1500)
+          })
         }
     })
   
