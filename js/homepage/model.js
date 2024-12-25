@@ -140,11 +140,14 @@ function initAnimation() {
               checkBodyScrollbar();
               $("body").addClass("overflow-hidden");
             }
+            let count2 = Math.round(targetImagesCount / 5);
+            let count1 = targetImagesCount - count2;
+
             let startAnim = setInterval(function() {
               renderModel(anim.frame)
               anim.frame = anim.frame + 1
     
-              if(anim.frame > targetImagesCount) {
+              if(anim.frame > count1) {
                 clearInterval(startAnim)
                 if(!$('#headerOptions').hasClass('show')) {
                   $("body").removeClass("side-hide");
@@ -157,7 +160,26 @@ function initAnimation() {
                 });
               }
     
-            }, 2000 / targetImagesCount)
+            }, 1600 / count1)
+
+            let startAnim2 = setInterval(function() {
+              renderModel(anim.frame)
+              anim.frame = anim.frame + 1
+    
+              if(anim.frame > targetImagesCount) {
+                clearInterval(startAnim2)
+                if(!$('#headerOptions').hasClass('show')) {
+                  $("body").removeClass("side-hide");
+                  checkBodyScrollbar();
+                  $("body").removeClass("overflow-hidden");
+                }
+                modelAnim.to(anim, {
+                  frame: imagesCount,
+                  snap: "frame"
+                });
+              }
+    
+            }, 500 / count2)
           }
   
         }
@@ -172,7 +194,9 @@ function initAnimation() {
         animation: modelAnim,
         scrub: 1.5,
         onUpdate: self => {
-          renderModel(anim.frame, self.progress);
+          setTimeout(() => {
+            renderModel(anim.frame, self.progress);
+          }, 1500)
         }
     })
   
