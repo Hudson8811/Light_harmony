@@ -1,0 +1,423 @@
+<?php get_header();
+$url = get_bloginfo('template_url');
+$lang = get_bloginfo('language');
+$post_id = get_the_ID(); ?>
+
+<main class="main project-page internal-page">
+
+    <div class="project-page__container container">
+
+        <?php if (have_rows('projects')) { ?>
+
+            <?php while (have_rows('projects')):
+                the_row(); ?>
+
+                <?php switch (true) {
+
+                    // Шапка проета
+                    case get_row_layout() == 'projects_start': ?>
+
+                        <div class="project-page__header header-project-page">
+                            <h1 class="project-page__title title-h1">
+                                <span> <?= get_the_title(); ?></span>
+                            </h1>
+                            <span></span>
+                        </div>
+						<div>
+                        <div class="project-page__block1">
+                            <div class="project-page__row">
+                                <div class="project-page__date">
+                                    <span><?php $projects_start_year = get_sub_field('projects_start_year');
+                                    $projects_start_year_end = get_sub_field('projects_start_year_end');
+                                    if ($projects_start_year_end) {
+                                        $projects_start_year_end = ' - ' . $projects_start_year_end;
+                                    }
+                                    echo $projects_start_year . $projects_start_year_end; ?></span>
+                                </div>
+                                <div class="project-page__info">
+
+                                    <?php $terms = get_the_terms($post_id, 'projects-city');
+                                    if ($terms && !is_wp_error($terms)) { ?>
+                                        <div class="project-page__info-item">
+                                            <div class="project-page__info-title">
+                                                <?php switch ($lang) {
+                                                    case 'ru-RU':
+                                                        echo 'Локация:';
+                                                        break;
+
+                                                    case 'en-US':
+                                                        echo 'Location:';
+                                                        break;
+                                                } ?>
+                                            </div>
+                                            <ul class="project-page__info-list">
+                                                <li class="project-page__info-point">
+                                                    <?php $primary_term = reset($terms);
+                                                    $country = get_field('country', 'projects-city_' . $primary_term->term_id);
+                                                    echo esc_html($primary_term->name);
+                                                    if ($country) {
+                                                        echo ', ' . esc_html($country);
+                                                    } ?>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php $architects_items = get_sub_field('architects_items', $post_id);
+                                    if ($architects_items) { ?>
+                                        <div class="project-page__info-item">
+                                            <div class="project-page__info-title"><?= get_sub_field('projects_start_architects_title'); ?>:
+                                            </div>
+
+                                            <?php switch ($lang) {
+                                                case 'ru-RU':
+
+                                                    echo '<ul class="project-page__info-list">';
+                                                    foreach ($architects_items as $item) {
+                                                        echo '<li class="project-page__info-point">' . esc_html($item) . '</li>';
+                                                    }
+                                                    echo '</ul>';
+
+                                                    break;
+
+                                                case 'en-US':
+                                                    $architects_list = get_field('architects_list', 'option');
+                                                    if ($architects_items && $architects_list) {
+                                                        echo '<ul class="project-page__info-list">';
+                                                        foreach ($architects_items as $item) {
+                                                            foreach ($architects_list as $architects_item) {
+                                                                if (strpos($architects_item['architects_item'], $item) !== false) {
+                                                                    $output_item = !empty($architects_item['en_architects_item'])
+                                                                        ? $architects_item['en_architects_item']
+                                                                        : $architects_item['architects_item'];
+
+                                                                    echo '<li class="project-page__info-point">' . esc_html($output_item) . '</li>';
+                                                                }
+                                                            }
+                                                        }
+                                                        echo '</ul>';
+                                                    }
+                                                    break;
+                                            } ?>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php $equipment_items = get_sub_field('equipment_items', $post_id);
+                                    if ($equipment_items) { ?>
+                                        <div class="project-page__info-item">
+                                            <div class="project-page__info-title"><?= get_sub_field('projects_start_equipment_title'); ?>:
+                                            </div>
+                                            <?php switch ($lang) {
+                                                case 'ru-RU':
+
+                                                    echo '<ul class="project-page__info-list">';
+                                                    foreach ($equipment_items as $item) {
+                                                        echo '<li class="project-page__info-point">' . esc_html($item) . '</li>';
+                                                    }
+                                                    echo '</ul>';
+
+                                                    break;
+
+                                                case 'en-US':
+                                                    $equipment_list = get_field('equipment_list', 'option');
+                                                    if ($equipment_items && $equipment_list) {
+                                                        echo '<ul class="project-page__info-list">';
+                                                        foreach ($equipment_items as $item) {
+                                                            foreach ($equipment_list as $equipment_items) {
+                                                                if (strpos($equipment_items['equipment_item'], $item) !== false) {
+                                                                    if ($equipment_items['en_equipment_item']) {
+                                                                        echo '<li class="project-page__info-point">' . esc_html($equipment_items['en_equipment_item']) . '</li>';
+                                                                    } else {
+                                                                        echo '<li class="project-page__info-point">' . esc_html($equipment_items['equipment_item']) . '</li>';
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        echo '</ul>';
+                                                    }
+
+                                                    break;
+                                            } ?>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php $taxonomy = 'projects-cat';
+                                    $primary_cat_id = get_post_meta($post_id, '_yoast_wpseo_primary_' . $taxonomy, true);
+                                    $primary_cat = get_term($primary_cat_id, $taxonomy);
+                                    if (!is_wp_error($primary_cat) && isset($primary_cat->name)) { ?>
+                                        <div class="project-page__info-item">
+                                            <div class="project-page__info-title">
+                                                <?php switch ($lang) {
+                                                    case 'ru-RU':
+                                                        echo 'Категория:';
+                                                        break;
+
+                                                    case 'en-US':
+                                                        echo 'Category:';
+                                                        break;
+                                                } ?>
+                                            </div>
+                                            <ul class="project-page__info-list">
+                                                <li class="project-page__info-point">
+                                                    <?= esc_html($primary_cat->name); ?>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <?php } ?>
+
+                                </div>
+                                <div class="project-page__desc">
+                                    <div class="project-page__desc-btn project-page-spoiler-btn">
+                                        <?php switch ($lang) {
+                                            case 'ru-RU':
+                                                echo 'Описание';
+                                                break;
+
+                                            case 'en-US':
+                                                echo 'Description';
+                                                break;
+                                        } ?><svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z" fill="#212121" />
+                                        </svg>
+                                    </div>
+
+                                    <?php if (have_rows('projects_content')): ?>
+                                        <div class="project-page__desc-row">
+                                            <?php while (have_rows('projects_content')):
+                                                the_row(); ?>
+                                                <div class="project-page__desc-item">
+                                                    <?php
+                                                    $content_item = get_sub_field('projects_content_item');
+                                                    if ($content_item): ?>
+                                                        <?php echo wp_kses_post($content_item);
+                                                        ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+						<?php
+                        $image = get_sub_field('projects_img_right');
+                        if ($image): ?>
+						<div class="project-page__block2">
+                            <div class="project-page__image">
+                                
+                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                
+                            </div>
+                        </div>
+						<?php endif; ?>
+                        <?php /*break;
+                               * 
+						
+                    // Задача
+                    case get_row_layout() == 'projects_task': */?>
+						<?php 
+							$blocktitle = get_sub_field('task_title');
+							?>
+						<?php if (have_rows('task_content')): ?>
+                        <div class="project-page__block3 project-page__task">
+                            <div class="project-page__row">
+                                <div class="project-page__task-title"><?= $blocktitle; ?></div>
+                                <div class="project-page__task-desc">
+                                    <div class="project-page__task-desc-btn project-page-spoiler-btn">
+                                        <?= $blocktitle; ?><svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z" fill="#212121" />
+                                        </svg>
+                                    </div>
+
+                                    
+                                        <div class="project-page__task-desc-row">
+                                            <?php while (have_rows('task_content')):
+                                                the_row(); ?>
+                                                <div class="project-page__task-desc-item">
+                                                    <?php
+                                                    $content_item = get_sub_field('task_content_item');
+                                                    if ($content_item): ?>
+                                                        <?php echo wp_kses_post($content_item);
+                                                        ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+						<?php endif; ?>
+                        <?php /*break;
+
+                    // СМИ и упоминания
+                    case get_row_layout() == 'projects_media': */?>
+							<?php 
+							$blocktitle = get_sub_field('media_title');
+							?>
+					<?php if (have_rows('media_list')): ?>
+                        <div class="project-page__block4 project-page__media">
+                            <div class="project-page__row">
+                                <div class="project-page__media-title"><?= $blocktitle; ?></div>
+                                <div class="project-page__media-desc">
+                                    <div class="project-page__media-desc-btn project-page-spoiler-btn">
+                                        <?= $blocktitle; ?><svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 12L0.00480935 0.75L12.9952 0.749999L6.5 12Z" fill="#212121" />
+                                        </svg>
+                                    </div>
+
+                                    
+                                        <div class="project-page__media-desc-row">
+                                            <?php while (have_rows('media_list')):
+                                                the_row(); ?>
+                                                <div class="project-page__media-desc-item">
+                                                    <?php
+                                                    $content_item = get_sub_field('media_item_link');
+                                                    $link_target = $content_item['target'] ? $content_item['target'] : '_self';
+                                                    if ($content_item): ?>
+                                                        <p><?= $content_item['title']; ?></p>
+                                                        <a href="<?= $content_item['url']; ?>"
+                                                            target="<?php echo esc_attr($link_target); ?>"><span></span><?php switch ($lang) {
+                                                                   case 'ru-RU':
+                                                                       echo 'Перейти';
+                                                                       break;
+
+                                                                   case 'en-US':
+                                                                       echo 'Open';
+                                                                       break;
+                                                               } ?></a>
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+						<?php endif; ?>
+						</div>
+					
+                        <?php break;
+
+                    // Большое изображение (справа)
+                    case get_row_layout() == 'projects_image': ?>
+
+                        <div class="project-page__block2">
+                            <div class="project-page__image">
+                                <?php
+                                $image = get_sub_field('projects_img_right');
+                                if ($image): ?>
+                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <?php break;
+
+                    // Большое изображение (на всю ширину)
+                    case get_row_layout() == 'projects_bigimg': ?>
+
+                        <?php $image = get_sub_field('projects_image_big'); ?>
+                        <div class="project-page__image project-page__image--big">
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        </div>
+
+                        <?php break;
+
+                    // Изображение с текстом
+                    case get_row_layout() == 'projects_txtimg': ?>
+
+                        <?php $image = get_sub_field('projects_txtimg_image');
+                        $txt = get_sub_field('projects_txtimg_text'); ?>
+                        <div class="project-page__quote quote-project-page">
+                            <div class="quote-project-page__row">
+                                <div class="quote-project-page__text <?php if ($txt) {
+                                    echo ' ';
+                                } else {
+                                    echo ' quote-project-page__text--empty';
+                                } ?>">
+                                    <span>
+                                        <?= $txt; ?>
+                                    </span>
+                                </div>
+                                <div class="project-page__image project-page__image--vertical">
+                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php break;
+
+                    // Галерея изображений
+                    case get_row_layout() == 'projects_gallery': ?>
+
+
+                        <div class="gallery">
+                            <div class="swiper-container gallery-top">
+                                <div class="swiper-wrapper">
+                                    <?php
+                                    $gallery = get_sub_field('projects_gallery_slider'); // Получаем галерею
+                                    if ($gallery): ?>
+                                        <?php foreach ($gallery as $image): ?>
+                                            <div class="swiper-slide">
+                                                <div class="swiper-slide-galary-container">
+                                                    <div class="swiper-slide-galary-container__image">
+                                                        <a href="<?php echo esc_url($image['url']); ?>" data-fancybox="gallery">
+                                                            <img src="<?php echo esc_url($image['url']); ?>"
+                                                                alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+
+                            <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                    <?php
+                                    $gallery = get_sub_field('projects_gallery_slider'); // Получаем галерею
+                                    if ($gallery): ?>
+                                        <?php foreach ($gallery as $image): ?>
+                                            <div class="swiper-slide">
+                                                <div class="swiper-slide-galary-container">
+                                                    <div class="swiper-slide-galary-container__image">
+                                                        <img src="<?php echo esc_url($image['url']); ?>"
+                                                            alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php break;
+
+                    // Видео
+                    case get_row_layout() == 'projects_video': ?>
+
+                        <div class="video-block">
+                            <div class="video-block__container">
+                                <div class="thumbnail-container">
+                                    <img src="<?= get_sub_field('projects_video_image'); ?>" alt="Thumbnail" class="thumbnail" />
+                                    <button class="play-button"></button>
+                                </div>
+                                <?= get_sub_field('projects_video_iframe'); ?>
+                            </div>
+                        </div>
+
+                        <?php break;
+                } ?>
+            <?php endwhile; ?>
+        <?php } ?>
+
+    </div>
+</main>
+
+<?php get_footer(); ?>
